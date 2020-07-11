@@ -1,0 +1,49 @@
+{
+  "env": {
+
+    "node": true,
+    "es6": true,
+    "jest": true
+
+  },
+
+  "overrides": [
+    {
+      "files": ["**/*.tsx"],
+      "rules": {
+        "react/prop-types": "off"
+      }
+    },
+    {
+      "files": ["**/__tests__/*.tsx"],
+      "rules": {
+        "global-require": "off"
+      }
+    },
+    {
+      "files": ["*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ],
+  "extends": [
+      "plugin:react/recommended", // Uses the recommended rules from @eslint-plugin-react
+      "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+      "prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+      "plugin:prettier/recommended" // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
+  ],
+  "parser": "babel-eslint",
+  "plugins": ["react", "jsx-a11y", "import", "react-hooks"],
+  "settings": {
+    "import/resolver": {
+      "node": {},
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}
