@@ -1,0 +1,10 @@
+{
+  "name": "paper",
+  "version": "0.0.1",
+  "description": "Clippings Design System",
+  "main": "build/index.js",
+  "repository": "git@github.com:clippings/paper.git",
+  "author": "Evstati Zarkov <evstati.zarkov@gmail.com>",
+  "license": "MIT",
+  "private": null
+}
