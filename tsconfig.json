@@ -9,10 +9,15 @@
         "allowSyntheticDefaultImports": true,
         "moduleResolution": "node",
         "skipLibCheck": true,
-        "outDir": "./build"
+        "outDir": "./build",
+      "baseUrl": "./src",
+      "paths": {
+        "@src/*": ["*"]
+      }
     },
     "include": [
-        "./src/**/*"
+        "./src/**/*",
+      "./src/stories/**/*"
     ],
     "exclude": [
         "./node_modules/*"

@@ -8,7 +8,6 @@ const classNames = {
 type ToastProps = {
   show: boolean;
 };
-const Toast: React.FunctionComponent<ToastProps> = ({ children, show }) => (
+export const Toast: React.FunctionComponent<ToastProps> = ({ children, show }) => (
   <div className={classnames(classNames.toast, { [classNames.show]: show })}>{children}</div>
 );
-export default Toast;

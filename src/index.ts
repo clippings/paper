@@ -13,3 +13,4 @@ export { Icon, ICONS, ICONS_COLORS, ICONS_SIZES, ICONS_DIRECTIONS } from './Comp
 export { Accordion } from './Components/Accordion/Accordion';
 export { SearchInput, SUBMIT_TYPES } from './Components/SearchInput';
 export { Select } from './Components/Select';
+export { Toast } from './Components/Toast';

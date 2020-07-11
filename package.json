@@ -13,6 +13,13 @@
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addon-notes": "^5.3.19",
+    "@storybook/addon-viewport": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
     "@testing-library/jest-dom": "^5.11.0",
     "@testing-library/react": "^10.4.5",
     "@types/classnames": "^2.2.10",
@@ -42,7 +49,10 @@
     "node-sass": "^4.14.1",
     "postcss-loader": "^3.0.0",
     "prettier": "^2.0.5",
+    "react-docgen-typescript-loader": "^3.7.2",
     "sass-loader": "^9.0.2",
+    "storybook-addon-figma": "^0.1.0",
+    "storybook-addon-jsx": "^7.3.1",
     "terser-webpack-plugin": "^3.0.6",
     "typescript": "^3.9.6",
     "webpack": "^4.43.0",
@@ -68,8 +78,8 @@
     "fix-prettier": "prettier --write --list-different 'src/**/*.{ts,tsx}' 'webpack.config.js'",
     "lint-css": "prettier --list-different 'src/**/*.{scss,css}'",
     "fix-css": "prettier  --write --list-different 'src/**/*.{scss,css}'",
-    "storybook": "start-storybook",
-    "build-storybook": "build-storybook -c .storybook -o web/storybook --quiet"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "jest": {
     "roots": [
