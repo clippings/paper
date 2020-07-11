@@ -6,5 +6,103 @@
   "repository": "git@github.com:clippings/paper.git",
   "author": "Evstati Zarkov <evstati.zarkov@gmail.com>",
   "license": "MIT",
-  "private": null
+  "private": false,
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@testing-library/jest-dom": "^5.11.0",
+    "@testing-library/react": "^11.0.4",
+    "@types/classnames": "^2.2.10",
+    "@types/lodash": "^4.14.157",
+    "@types/react": "^16.9.42",
+    "@types/react-datepicker": "^3.0.2",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.7",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.1.0",
+    "jest-progress-bar-reporter": "^1.0.18",
+    "mini-css-extract-plugin": "^0.11.2",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^4.0.2",
+    "prettier": "^2.0.5",
+    "sass-loader": "^10.0.2",
+    "terser-webpack-plugin": "^4.2.2",
+    "typescript": "^4.0.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.19",
+    "react": "^16.13.1",
+    "react-datepicker": "^3.1.3",
+    "react-dom": "^16.13.1"
+  },
+  "scripts": {
+    "watch": "webpack --mode=development --watch --progress",
+    "build": "webpack --mode=production",
+    "build-ci": "webpack --mode=production --devtool=none",
+    "check-types": "tsc --noEmit",
+    "test": "jest",
+    "test-ci": "jest --silent --coverage --coverageReporters=text-summary --coverageReporters=clover",
+    "eslint-check": "eslint --print-config .eslintrc | eslint-config-prettier-check",
+    "lint": "eslint 'src/**/*.{ts,tsx}' 'webpack.*.js'",
+    "fix": "yarn lint --fix",
+    "fix-prettier": "prettier --write --list-different 'src/**/*.{ts,tsx}' 'webpack.config.js'",
+    "lint-css": "prettier --list-different 'src/**/*.{scss,css}'",
+    "fix-css": "prettier  --write --list-different 'src/**/*.{scss,css}'",
+    "storybook": "start-storybook",
+    "build-storybook": "build-storybook -c .storybook -o web/storybook --quiet"
+  },
+  "jest": {
+    "roots": [
+      "./src/"
+    ],
+    "setupFilesAfterEnv": [
+      "./src/config/jest.setup.js"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "testPathIgnorePatterns": [
+      "__fixtures__"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "collectCoverage": false,
+    "coverageReporters": [
+      "text-summary",
+      "html"
+    ],
+    "coverageDirectory": "<rootDir>/build/coverage",
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss|less|sass)$": "identity-obj-proxy"
+    },
+    "reporters": [
+      "jest-progress-bar-reporter"
+    ]
+  }
 }
