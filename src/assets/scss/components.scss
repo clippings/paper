@@ -1,0 +1,154 @@
+@import 'variables';
+@import 'placeholders';
+@import 'mixins';
+
+.p-badge-unspecified {
+  @include badge($graphite-56);
+}
+
+.p-badge-success {
+  @include badge($success-48);
+}
+
+.p-badge-warning {
+  @include badge($yellow-64);
+}
+
+.p-badge-small {
+  min-height: 12px;
+  min-width: 12px;
+}
+
+.p-badge-medium {
+  min-height: $i500-05-line-height;
+  min-width: $i500-05-line-height;
+}
+
+.p-status-label {
+  @extend %i500-05;
+  color: $graphite-8;
+  display: inline-grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 4px;
+  align-items: center;
+}
+
+.p-list-item-container {
+  height: 76px;
+  width: 100%;
+  padding-left: 16px;
+  background-color: $white;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  outline: none;
+
+  &:hover {
+    background-color: $graphite-10;
+  }
+}
+
+.p-list-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+}
+
+.p-heading-default {
+  @extend %i500-03;
+  color: $graphite-8;
+  letter-spacing: -0.04em;
+}
+
+.p-image-cover-single {
+  @extend %p-image-cover;
+  flex-direction: column;
+}
+
+.p-image-cover-multiple {
+  @extend %p-image-cover;
+  flex-direction: row;
+  align-items: center;
+}
+
+.p-image-cover-image-single {
+  mix-blend-mode: multiply;
+  height: 312px;
+  width: 312px;
+  margin: 94px 24px 30px 24px;
+}
+
+.p-image-cover-image-multiple {
+  mix-blend-mode: multiply;
+  height: 180px;
+  width: 180px;
+  margin: 160px 0 160px 61px;
+}
+
+.p-image-cover-quantity-container {
+  @extend %i500-03;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  background-color: $white;
+  border-radius: 48px;
+  color: $graphite-56;
+  letter-spacing: -0.04em;
+}
+
+.p-image-cover-text-container {
+  @extend %i500-04;
+  display: flex;
+  color: $graphite-8;
+  flex-direction: column;
+  padding-left: 24px;
+  padding-bottom: 24px;
+}
+
+.p-toast {
+  background-color: $graphite-8;
+  backdrop-filter: blur(8px);
+  color: $white;
+  button {
+    border: 0;
+    background: none;
+    outline: 0;
+    color: $white;
+    text-decoration: underline;
+  }
+
+  border-radius: 40px;
+  bottom: -80px;
+  transition: bottom 0.1s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.64, 1);
+  min-width: 300px;
+  white-space: nowrap;
+  padding: 16px 40px 16px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  z-index: 1;
+  position: fixed;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.p-toast__show {
+  bottom: 68px;
+  transition: bottom 0.16s;
+  transition-timing-function: cubic-bezier(0.4, 0.16, 0.32, 1);
+}
+
+.p-text-small {
+  @extend %text-200;
+}
+
+.white {
+  color: $white;
+}

@@ -1,0 +1,34 @@
+%i500-05 {
+  font-style: $i500-05-font-style;
+  font-weight: $i500-05-font-weight;
+  font-size: $i500-05-font-size;
+  line-height: $i500-05-line-height;
+}
+
+%i500-03 {
+  font-style: $i500-03-font-style;
+  font-weight: $i500-03-font-weight;
+  font-size: $i500-03-font-size;
+  line-height: $i500-03-line-height;
+}
+
+%i500-04 {
+  font-style: $i500-04-font-style;
+  font-weight: $i500-04-font-weight;
+  font-size: $i500-04-font-size;
+  line-height: $i500-04-line-height;
+}
+
+%p-image-cover {
+  background-color: $graphite-96;
+  display: flex;
+  width: 360px;
+  height: 500px;
+}
+
+%text-200 {
+  font-style: $text-200-font-style;
+  font-weight: $text-200-font-weight;
+  font-size: $text-200-font-size;
+  line-height: $text-200-line-height;
+}
