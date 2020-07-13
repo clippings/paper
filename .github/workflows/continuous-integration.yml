@@ -21,7 +21,9 @@ jobs:
       - name: Run tests
         run: yarn test-ci
       - name: Run typescript check
+        if: always()
         run: yarn check-types
       - name: Run lint
+        if: always()
         run: yarn lint-ci
 
