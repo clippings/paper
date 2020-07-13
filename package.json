@@ -78,6 +78,7 @@
     "fix-prettier": "prettier --write --list-different 'src/**/*.{ts,tsx}' 'webpack.config.js'",
     "lint-css": "prettier --list-different 'src/**/*.{scss,css}'",
     "fix-css": "prettier  --write --list-different 'src/**/*.{scss,css}'",
+    "lint-ci": "yarn lint && yarn lint-css && yarn eslint-check",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
