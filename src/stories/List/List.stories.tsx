@@ -2,7 +2,7 @@ import React from 'react';
 import figmaDecorator from 'storybook-addon-figma';
 import { storiesOf } from '@storybook/react';
 import { jsxDecorator } from 'storybook-addon-jsx';
-import { List, ListItem, StatusLabel, Heading, Badge, BADGE_TYPES, HEADING_TYPES } from'../../';
+import { List, ListItem, StatusLabel, Heading, Badge, BADGE_TYPES, HEADING_TYPES } from '../../';
 
 const buildPrettyList = () => (
   <List>
@@ -26,7 +26,7 @@ const figmaFile = figmaDecorator({
     'https://www.figma.com/file/X0J5b9pCAoDLT3zLlSxZD7/Build-%E2%80%94-Add-to-Ready-Quote-from-Board?node-id=38%3A467',
 });
 
-storiesOf('Paper/Components/List', module)
+storiesOf('List', module)
   .add('Pretty list', buildPrettyList)
   .addDecorator(jsxDecorator)
   .addDecorator(figmaFile);

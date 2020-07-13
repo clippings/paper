@@ -20,6 +20,6 @@ const useToast = () => {
   );
 };
 
-storiesOf('Paper/Components', module)
+storiesOf('Toast', module)
   .add('Toast', useToast, { notes: { markdown: componentInfo } })
   .addDecorator(jsxDecorator);

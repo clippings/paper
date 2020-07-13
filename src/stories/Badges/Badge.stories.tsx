@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 import { jsxDecorator } from 'storybook-addon-jsx';
 import { Badge, BADGE_TYPES, Text, BADGE_SIZES, TEXT_TYPES } from '../../';
 
-const buildBadge = (type: string) => () => <Badge type={type} />;
-const buildBadgeWithText = (type, text) => () => (
+const buildBadge = (type: BADGE_TYPES) => () => <Badge type={type} />;
+const buildBadgeWithText = (type: BADGE_TYPES, text: string) => () => (
   <Badge type={type} size={BADGE_SIZES.MEDIUM}>
     <Text type={TEXT_TYPES.SMALL} className="white">
       {text}
@@ -12,7 +12,7 @@ const buildBadgeWithText = (type, text) => () => (
   </Badge>
 );
 
-storiesOf('Paper/Components/Badges', module)
+storiesOf('Badges', module)
   .add('Unspecified badge', buildBadge(BADGE_TYPES.UNSPECIFIED))
   .add('Warning badge', buildBadge(BADGE_TYPES.WARNING))
   .add('Success badge', buildBadge(BADGE_TYPES.SUCCESS))

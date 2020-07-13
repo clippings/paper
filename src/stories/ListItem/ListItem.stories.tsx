@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { jsxDecorator } from 'storybook-addon-jsx';
-import { ListItem } from'../../';
 import figmaDecorator from 'storybook-addon-figma';
+import { ListItem } from '../../';
 
 const figmaFile = figmaDecorator({
   url:
@@ -11,7 +11,7 @@ const figmaFile = figmaDecorator({
 
 const buildListItem = () => <ListItem>Content</ListItem>;
 
-storiesOf('Paper/Components/List', module)
+storiesOf('List', module)
   .add('List item', buildListItem)
   .addDecorator(jsxDecorator)
   .addDecorator(figmaFile);

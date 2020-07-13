@@ -2,7 +2,7 @@ import React from 'react';
 import figmaDecorator from 'storybook-addon-figma';
 import { storiesOf } from '@storybook/react';
 import { jsxDecorator } from 'storybook-addon-jsx';
-import { Badge, BADGE_TYPES, StatusLabel } from'../../';
+import { Badge, BADGE_TYPES, StatusLabel } from '../../';
 
 const buildStatusLabel = () => (
   <StatusLabel>

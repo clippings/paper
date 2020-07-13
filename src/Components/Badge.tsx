@@ -1,15 +1,15 @@
 import React from 'react';
 import { createComponentClassName } from '../utils/classNames';
 
-export const BADGE_TYPES = {
-  UNSPECIFIED: 'unspecified',
-  SUCCESS: 'success',
-  WARNING: 'warning',
-};
-export const BADGE_SIZES = {
-  SMALL: 'small',
-  MEDIUM: 'medium',
-};
+export enum BADGE_TYPES {
+  UNSPECIFIED = 'unspecified',
+  SUCCESS = 'success',
+  WARNING = 'warning',
+}
+export enum BADGE_SIZES {
+  SMALL = 'small',
+  MEDIUM = 'medium',
+}
 
 const classNames = {
   [BADGE_TYPES.UNSPECIFIED]: createComponentClassName('badge', 'unspecified'),
@@ -19,9 +19,9 @@ const classNames = {
   [BADGE_SIZES.MEDIUM]: createComponentClassName('badge', 'medium'),
 };
 type BadgeProps = {
-  type: 'unspecified' | 'success' | 'warning';
+  type?: BADGE_TYPES;
   className?: string;
-  size: 'small' | 'medium';
+  size?: BADGE_SIZES;
 };
 export const Badge: React.FunctionComponent<BadgeProps> = ({
   className = '',

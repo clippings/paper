@@ -3,9 +3,9 @@ import figmaDecorator from 'storybook-addon-figma';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { jsxDecorator } from 'storybook-addon-jsx';
-import { Select } from'../../';
+import { Select } from '../../';
 
-const docs = require('./description.md');
+import docs from './description.md';
 
 const options = [
   {

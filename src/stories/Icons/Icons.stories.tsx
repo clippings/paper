@@ -1,7 +1,7 @@
-import { Icon, ICONS, ICONS_DIRECTIONS, ICONS_COLORS, ICONS_SIZES } from'../../';
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { jsxDecorator } from 'storybook-addon-jsx';
+import { Icon, ICONS, ICONS_DIRECTIONS, ICONS_COLORS, ICONS_SIZES } from '../../';
 
 const btnStyle = {
   minWidth: '190px',
@@ -90,4 +90,4 @@ const useIcon = () => {
   );
 };
 
-storiesOf('Paper/Components', module).add('Icons', useIcon).addDecorator(jsxDecorator);
+storiesOf('Icon', module).add('Icons', useIcon).addDecorator(jsxDecorator);
