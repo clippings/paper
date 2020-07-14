@@ -12,7 +12,8 @@
         "outDir": "./build",
       "baseUrl": "./src",
       "paths": {
-        "@src/*": ["*"]
+        "@src/*": ["*"],
+        "@src": ["./index.ts"]
       }
     },
     "include": [

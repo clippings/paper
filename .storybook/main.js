@@ -44,6 +44,9 @@ module.exports = {
     config.resolve.modules = [
       '../node_modules',
     ];
+    config.resolve.alias = {
+      '@src': path.resolve(__dirname, '../src'),
+    };
     return config;
   },
 };

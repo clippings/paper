@@ -6,7 +6,9 @@
     "jest": true
 
   },
-
+  "rules": {
+    "@typescript-eslint/no-empty-function": "off"
+  },
   "overrides": [
     {
       "files": ["**/*.tsx"],
