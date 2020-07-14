@@ -84,7 +84,7 @@
   },
   "jest": {
     "roots": [
-      "./src/"
+      "./src"
     ],
     "setupFilesAfterEnv": [
       "./src/config/jest.setup.js"
@@ -110,7 +110,9 @@
       "!**/vendor/**"
     ],
     "moduleNameMapper": {
-      "\\.(css|scss|less|sass)$": "identity-obj-proxy"
+      "\\.(css|scss|less|sass)$": "identity-obj-proxy",
+      "^@src/(.*)$": "<rootDir>/src/$1",
+      "^@src": "<rootDir>/src/index.ts"
     },
     "reporters": [
       "jest-progress-bar-reporter"

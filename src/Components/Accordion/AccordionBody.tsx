@@ -1,5 +1,5 @@
 import React from 'react';
-import { createClassNameModifier } from '../../utils/classNames';
+import { createClassNameModifier } from '@src/utils/classNames';
 const classNames = {
   body: createClassNameModifier('accordion', 'body'),
 };

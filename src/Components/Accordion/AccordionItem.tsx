@@ -1,44 +1,45 @@
-import React from 'react';
+import React, { createContext, MutableRefObject, useContext, useEffect, useRef } from 'react';
 import classnames from 'classnames';
 import AccordionTitle from './AccordionTitle';
 import AccordionBody from './AccordionBody';
-import { createClassNameModifier } from '../../utils/classNames';
+import { AccordionContext } from './Accordion';
+import { createClassNameModifier } from '@src/utils/classNames';
 const classNames = {
   item: createClassNameModifier('accordion', 'item'),
 };
 type AccordionItemProps = {
-  onItemClick?: (...args: any[]) => any;
   onOpen?: (...args: any[]) => any;
   eventKey?: number | any | string;
-  active?: boolean;
-  index?: number;
+  id: number | string;
 };
 
-export type AccordionItemType = React.FunctionComponent<AccordionItemProps>;
-const AccordionItem: AccordionItemType = ({
-  children,
-  onItemClick,
-  onOpen,
-  active,
-  index,
-  eventKey,
-}) => {
+export const AccordionItemContext = createContext({
+  handleOpen: (): any => null,
+});
+export type AccordionItemType = React.FunctionComponent<AccordionItemProps> & {
+  Title: typeof AccordionTitle;
+  Body: typeof AccordionBody;
+};
+const AccordionItem: AccordionItemType = ({ children, onOpen, eventKey, id }) => {
+  const { isActive, onClick } = useContext(AccordionContext);
+
   const handleOpen = () => {
-    onItemClick && onItemClick(index);
+    onClick(id);
     onOpen && onOpen(eventKey);
   };
-  const title = React.Children.toArray(children).filter(child => child.type === AccordionTitle)[0];
-  const body = React.Children.toArray(children).filter(child => child.type === AccordionBody)[0];
   return (
-    <div className={classnames(classNames.item, { collapsed: !active })}>
-      <AccordionTitle {...title.props} onClick={handleOpen} />
-      <AccordionBody {...body.props} />
+    <div className={classnames(classNames.item, { collapsed: !isActive(id) })}>
+      <AccordionItemContext.Provider
+        value={{
+          handleOpen,
+        }}
+      >
+        {children}
+      </AccordionItemContext.Provider>
     </div>
   );
 };
 AccordionItem.defaultProps = {
-  active: false,
-  index: 0,
   eventKey: null,
 };
 AccordionItem.Title = AccordionTitle;

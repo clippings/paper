@@ -28,7 +28,7 @@ const items = [
 const buildAccordion = () => (
   <Accordion>
     {items.map(item => (
-      <Accordion.Item key={item.id} onOpen={() => {}} eventKey={item}>
+      <Accordion.Item key={item.id} onOpen={() => {}} eventKey={item} id={item.id}>
         <Accordion.Item.Title>{item.title + item.id}</Accordion.Item.Title>
         <Accordion.Item.Body>{item.body + item.id}</Accordion.Item.Body>
       </Accordion.Item>

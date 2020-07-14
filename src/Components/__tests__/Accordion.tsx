@@ -4,11 +4,11 @@ import { Accordion } from '../Accordion/Accordion';
 const onOpen = jest.fn();
 const accordion = (
   <Accordion>
-    <Accordion.Item key="test" onOpen={onOpen} eventKey="test">
+    <Accordion.Item key="test" onOpen={onOpen} eventKey="test" id={1}>
       <Accordion.Item.Title>Test</Accordion.Item.Title>
       <Accordion.Item.Body>Test content</Accordion.Item.Body>
     </Accordion.Item>
-    <Accordion.Item key="test-2" onOpen={onOpen} eventKey="test-2">
+    <Accordion.Item key="test-2" onOpen={onOpen} eventKey="test-2" id={2}>
       <Accordion.Item.Title>Test 2</Accordion.Item.Title>
       <Accordion.Item.Body>Test content 2</Accordion.Item.Body>
     </Accordion.Item>
