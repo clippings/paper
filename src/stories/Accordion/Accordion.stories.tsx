@@ -36,4 +36,4 @@ const buildAccordion = () => (
   </Accordion>
 );
 
-storiesOf('Accordion', module).add('Unspecified badge', buildAccordion).addDecorator(jsxDecorator);
+storiesOf('Accordion', module).add('Default accordion', buildAccordion).addDecorator(jsxDecorator);
