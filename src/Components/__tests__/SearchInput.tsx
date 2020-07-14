@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import { SearchInput, SUBMIT_TYPES } from '../SearchInput';
+import { SearchInput, SUBMIT_TYPES } from '@src';
 jest.useFakeTimers();
 jest.mock('lodash', () => ({
   debounce: jest.fn().mockImplementation((callback, delay) => {
@@ -34,11 +34,14 @@ describe('Search input', () => {
     onChange.mockClear();
     const { container } = render(searchInput);
     const input = container.querySelector('input');
-    fireEvent.keyUp(input, {
-      target: {
-        value: 'Test',
-      },
-    });
+    if (input !== null) {
+      fireEvent.keyUp(input, {
+        target: {
+          value: 'Test',
+        },
+      });
+    }
+
     jest.runOnlyPendingTimers();
     expect(onChange).toBeCalled();
     expect(onChange).toBeCalledWith('Test');
@@ -50,16 +53,18 @@ describe('Search input', () => {
     );
     const { container } = render(debouncedInput);
     const input = container.querySelector('input');
-    fireEvent.keyUp(input, {
-      target: {
-        value: 'Test',
-      },
-    });
-    fireEvent.keyUp(input, {
-      target: {
-        value: 'Test Test',
-      },
-    });
+    if (input !== null) {
+      fireEvent.keyUp(input, {
+        target: {
+          value: 'Test',
+        },
+      });
+      fireEvent.keyUp(input, {
+        target: {
+          value: 'Test Test',
+        },
+      });
+    }
     jest.runOnlyPendingTimers();
     expect(onChange).toBeCalledTimes(1);
     expect(onChange).toBeCalledWith('Test Test');
@@ -71,15 +76,17 @@ describe('Search input', () => {
     );
     const { container } = render(searchOnEnterInput);
     const input = container.querySelector('input');
-    fireEvent.keyUp(input, {
-      target: {
-        value: 'Test',
-      },
-    });
-    fireEvent.keyUp(input, {
-      key: 'Enter',
-      code: 'Enter',
-    });
+    if (input !== null) {
+      fireEvent.keyUp(input, {
+        target: {
+          value: 'Test',
+        },
+      });
+      fireEvent.keyUp(input, {
+        key: 'Enter',
+        code: 'Enter',
+      });
+    }
     jest.runOnlyPendingTimers();
     expect(onChange).toBeCalledTimes(1);
     expect(onChange).toBeCalledWith('Test');
