@@ -17,7 +17,6 @@ exports[`Select component matches snapshot 1`] = `
         fill="#141414"
         height="16"
         preserveAspectRatio="xMidYMid meet"
-        style="transform: rotate(0deg);"
         viewBox="0 0 14 14"
         width="16"
       >
