@@ -17,7 +17,7 @@ export const Select: React.FunctionComponent<SelectInterface> = ({
     selectedOptions.length > 0 ? selectedOptions[0] : null
   );
 
-  const ref: any = useRef();
+  const ref: React.MutableRefObject<any> = useRef();
   const { isOpen, handleToggle, handleClose } = useDropdown(ref);
 
   const onValueChange = option => {

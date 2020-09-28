@@ -18,9 +18,9 @@ export const AutocompleteInput: React.FunctionComponent<AutocompleteInputInterfa
   className = '',
   debounceRate
 }) => {
-  const [value, setValue] = useState(defaultValue);
-  const [hitsVisibility, setHitsVisibility] = useState(false);
-  const ref: any = useRef();
+  const [value, setValue] = useState<string>(defaultValue);
+  const [hitsVisibility, setHitsVisibility] = useState<boolean>(false);
+  const ref: React.MutableRefObject<any> = useRef();
 
   useEffect(() => {
     setValue(defaultValue);
@@ -38,7 +38,7 @@ export const AutocompleteInput: React.FunctionComponent<AutocompleteInputInterfa
     onSearch(searched);
   };
 
-  const onClick = itemValue => {
+  const onClick = (itemValue: { label: string }) => {
     setValue(itemValue.label);
     onChange(itemValue.label);
   };
@@ -53,9 +53,9 @@ export const AutocompleteInput: React.FunctionComponent<AutocompleteInputInterfa
     setHitsVisibility(false);
   };
 
-  const onFocus = () => setHitsVisibility(true);
+  const onFocus = (): void => setHitsVisibility(true);
 
-  const onBlur = () => {
+  const onBlur = (): void => {
     setTimeout(() => {
       setHitsVisibility(false);
     }, 200);
