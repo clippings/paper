@@ -19,7 +19,6 @@ exports[`Autocomplete component matches snapshot 1`] = `
         fill="#8f8f8f"
         height="16"
         preserveAspectRatio="xMidYMid meet"
-        style="transform: rotate(0deg);"
         viewBox="0 0 14 14"
         width="16"
       >
