@@ -61,6 +61,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
+    alias: {
+      '@paper': path.resolve(__dirname, '/src'),
+    },
   },
   module: {
     rules: [
