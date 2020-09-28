@@ -34,10 +34,18 @@ export const Select: React.FunctionComponent<SelectInterface> = ({
       ref={ref}
     >
       <div className={classNames.select.labelWrap} role="presentation" onClick={handleToggle}>
-        <span className={selectedOption === null ? classNames.select.labelDefault : classNames.select.label}>
+        <span
+          className={
+            selectedOption === null ? classNames.select.labelDefault : classNames.select.label
+          }
+        >
           {selectedOption !== null ? selectedOption.label : placeholder}
         </span>
-        <Icon icon={ICON.CHEVRON_DOWN} color={ICONS_COLOR.DARK} className={classNames.select.icon} />
+        <Icon
+          icon={ICON.CHEVRON_DOWN}
+          color={ICONS_COLOR.DARK}
+          className={classNames.select.icon}
+        />
       </div>
       <ul className={classNames.select.dropdown}>
         {options.map(option => {

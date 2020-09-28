@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import componentInfo from './componentInfo.md';
 import { Toast } from '@paper';
-import {jsxDecorator} from "storybook-addon-jsx";
+import { jsxDecorator } from 'storybook-addon-jsx';
 
 const useToast = () => {
   const [show, setShow] = useState(false);

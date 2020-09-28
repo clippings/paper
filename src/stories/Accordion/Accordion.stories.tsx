@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Accordion } from '@paper';
-import {jsxDecorator} from "storybook-addon-jsx";
+import { jsxDecorator } from 'storybook-addon-jsx';
 
 const items = [
   {
@@ -37,6 +37,4 @@ const buildAccordion = () => (
   </Accordion>
 );
 
-storiesOf('Accordion', module)
-  .addDecorator(jsxDecorator)
-  .add('Default accordion', buildAccordion);
+storiesOf('Accordion', module).addDecorator(jsxDecorator).add('Default accordion', buildAccordion);

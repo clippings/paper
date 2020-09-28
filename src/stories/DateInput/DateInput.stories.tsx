@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { DateInput } from '@paper';
 
 import componentInfo from './componentInfo.md';
-import {jsxDecorator} from "storybook-addon-jsx";
+import { jsxDecorator } from 'storybook-addon-jsx';
 
 const baseProps = {
   title: 'Deadline',
@@ -36,4 +36,3 @@ storiesOf('Inputs', module)
     }),
     { notes: { markdown: componentInfo } }
   );
-

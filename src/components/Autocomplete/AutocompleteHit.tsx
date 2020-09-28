@@ -1,9 +1,14 @@
 import React, { useRef, useEffect } from 'react';
 import classname from 'classnames';
 import classNames from '../../core/config/ClassNames';
-import {AutocompleteHitInterface} from "@paper/components/Autocomplete/interfaces/AutocompleteHitInterface";
+import { AutocompleteHitInterface } from '@paper/components/Autocomplete/interfaces/AutocompleteHitInterface';
 
-export const AutocompleteHit: React.FunctionComponent<AutocompleteHitInterface> = ({ active, children = null, onClick, scrollTo }) => {
+export const AutocompleteHit: React.FunctionComponent<AutocompleteHitInterface> = ({
+  active,
+  children = null,
+  onClick,
+  scrollTo,
+}) => {
   const ref: React.MutableRefObject<any> = useRef();
 
   useEffect(() => {

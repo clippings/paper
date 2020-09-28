@@ -4,7 +4,7 @@ import { Icon, ICON, ICONS_COLOR } from '@paper';
 import '../../assets/scss/autocomplete.scss';
 import { AutocompleteHit } from './AutocompleteHit';
 import classNames from '../../core/config/ClassNames';
-import { KEY } from "@paper/core/enums/KeysEnum";
+import { KEY } from '@paper/core/enums/KeysEnum';
 import { AutocompleteInputInterface } from './interfaces/AutocompleteInputInterface';
 
 export const AutocompleteInput: React.FunctionComponent<AutocompleteInputInterface> = ({
@@ -16,7 +16,7 @@ export const AutocompleteInput: React.FunctionComponent<AutocompleteInputInterfa
   children = null,
   min = 0,
   className = '',
-  debounceRate
+  debounceRate,
 }) => {
   const [value, setValue] = useState<string>(defaultValue);
   const [hitsVisibility, setHitsVisibility] = useState<boolean>(false);

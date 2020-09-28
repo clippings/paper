@@ -1,7 +1,11 @@
-import { FILL_MAP } from './FillMapEnum';
+const fillMap = {
+  GRAPHITE_8: '#141414',
+  GRAPHITE_56: '#8f8f8f',
+  WHITE: '#ffffff',
+};
 
 export enum ICONS_COLOR {
-  DARK = FILL_MAP.GRAPHITE_8,
-  GREY = FILL_MAP.GRAPHITE_56,
-  WHITE = FILL_MAP.WHITE,
+  DARK = '#141414',
+  GREY = '#8f8f8f',
+  WHITE = '#ffffff',
 }

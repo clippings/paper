@@ -5,7 +5,7 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 import { Select } from '@paper';
 
 import docs from './description.md';
-import {jsxDecorator} from "storybook-addon-jsx";
+import { jsxDecorator } from 'storybook-addon-jsx';
 
 const options = [
   {

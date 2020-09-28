@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { IMAGE_COVER_TYPE, ImageCover } from '@paper';
-import {jsxDecorator} from "storybook-addon-jsx";
+import { jsxDecorator } from 'storybook-addon-jsx';
 
 export const imageUrl =
   'https://res.cloudinary.com/clippings/image/upload/t_big/dpr_auto,f_auto,w_auto/v1565239179/products/edge-table-jennifer-newman-jennifer-newman-clippings-11280725.png';

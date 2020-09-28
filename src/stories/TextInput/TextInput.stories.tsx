@@ -2,15 +2,16 @@ import React from 'react';
 import figmaDecorator from 'storybook-addon-figma';
 import { storiesOf } from '@storybook/react';
 import { TextInput } from '@paper';
-import {jsxDecorator} from "storybook-addon-jsx";
-
-const componentInfo = require('./description.md');
+import { jsxDecorator } from 'storybook-addon-jsx';
+import docs from './description.md';
 
 const baseProps = {
   title: 'Label',
   placeholderText: 'Placeholder',
   disabled: false,
-  onChange: () => { alert('Detect on change')}
+  onChange: () => {
+    alert('Detect on change');
+  },
 };
 const buildTextInput = props => () => <TextInput {...props} />;
 
@@ -20,7 +21,7 @@ const figmaFile = figmaDecorator({
 
 storiesOf('Inputs', module)
   .addDecorator(figmaFile)
-  .add('Default TextInput', buildTextInput(baseProps), { notes: { markdown: componentInfo } })
+  .add('Default TextInput', buildTextInput(baseProps), { notes: { markdown: docs } });
 
 storiesOf('Inputs', module)
   .addDecorator(jsxDecorator)
@@ -31,6 +32,5 @@ storiesOf('Inputs', module)
       ...baseProps,
       error: 'Something went wrong',
     }),
-    { notes: { markdown: componentInfo } }
+    { notes: { markdown: docs } }
   );
-

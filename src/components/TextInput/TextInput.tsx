@@ -3,7 +3,14 @@ import classnames from 'classnames';
 import classNames from '../../core/config/ClassNames';
 import { TextInputInterface } from './interfaces/TextInputInterface';
 
-export const TextInput: React.FunctionComponent<TextInputInterface> = ({ placeholderText, title = null, onChange, error = null, className = '', ...rest }) => {
+export const TextInput: React.FunctionComponent<TextInputInterface> = ({
+  placeholderText,
+  title = null,
+  onChange,
+  error = null,
+  className = '',
+  ...rest
+}) => {
   const handleChange = e => onChange(e.target.value);
 
   return (

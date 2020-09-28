@@ -6,7 +6,7 @@ export interface AutocompleteInputInterface {
   min?: number;
   hits?: Array<{
     label: string;
-  }>
+  }>;
   children?: Function;
   className?: string;
   debounceRate?: number;
