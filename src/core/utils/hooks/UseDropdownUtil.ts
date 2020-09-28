@@ -1,8 +1,8 @@
 import { useState, useRef } from 'react';
 
-export default function useDropdown(ref: any, initialState: boolean = false) {
+export default function useDropdown(ref: React.MutableRefObject<any>, initialState: boolean = false) {
   const [isOpen, setOpen] = useState(initialState);
-  const functionRef: any = useRef();
+  const functionref: React.MutableRefObject<any> = useRef();
 
   const closeDropdown = event => {
     if (ref.current !== null && !ref.current.contains(event.target)) {
