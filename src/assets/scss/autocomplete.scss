@@ -1,0 +1,71 @@
+@import 'variables';
+
+.p-f-autocomplete {
+  position: relative;
+
+  .p-f-autocomplete__input-wrapper__input {
+    background: $graphite-10;
+    border-radius: $form-input-border-radius;
+    min-width: 300px;
+    height: $form-input-base-height;
+    border: none;
+    box-sizing: border-box;
+    padding: 18px 40px 18px 40px;
+    font-size: $base-font-size - 2px;
+    font-weight: 500;
+    color: $graphite-120;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .p-f-autocomplete__input-wrapper__icon {
+    position: absolute;
+    left: 18px;
+    top: 17px;
+  }
+
+  .p-f-autocomplete__input-wrapper__icon-close {
+    position: absolute;
+    right: 18px;
+    top: 17px;
+    cursor: pointer;
+  }
+
+  .p-f-autocomplete__hits {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    right: 0px;
+    background: $white;
+    border-radius: $form-input-border-radius + 2px;
+    box-shadow: 0 -5px 20px 0 rgba(0, 0, 0, 0.05);
+    padding-left: 0px;
+    transition: opacity 300ms linear;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    max-width: 300px;
+    max-height: 200px;
+    overflow-y: scroll;
+    z-index: 10;
+
+    .p-f-autocomplete__hits__hit {
+      list-style: none;
+      padding: 10px 20px 10px 20px;
+      line-height: $base-font-size + 2px;
+      cursor: pointer;
+      transition: background-color 300ms linear, opacity 300ms linear;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+
+      &:hover,
+      &.p-f-autocomplete__hits__hit-active {
+        opacity: 0.8;
+        outline: none;
+        background: $graphite-10;
+      }
+    }
+  }
+}

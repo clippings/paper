@@ -1,0 +1,86 @@
+@import 'variables';
+@import 'placeholders';
+
+.p-f-select {
+  position: relative;
+  display: flex;
+
+  svg {
+    transition: transform 240ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.4, 1.2);
+  }
+
+  .p-f-select__label-wrap {
+    @extend %text-250;
+    background: $graphite-10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $form-input-base-height;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    margin-left: 4px;
+    min-width: 200px;
+    border-radius: $form-input-border-radius;
+    width: 100%;
+    cursor: pointer;
+
+    .p-f-select__label {
+      text-overflow: ellipsis;
+      max-width: calc(100% - 20px);
+      white-space: nowrap;
+      overflow: hidden;
+      color: $graphite-120;
+    }
+
+    .p-f-select__label-default {
+      text-overflow: ellipsis;
+      max-width: calc(100% - 20px);
+      white-space: nowrap;
+      overflow: hidden;
+      color: $graphite-60;
+    }
+  }
+
+  .p-f-select__dropdown {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    margin: 0;
+    right: 0;
+    background: $white;
+    border-radius: $form-input-border-radius + 2px;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05);
+    padding-left: 0;
+    display: none;
+    opacity: 0;
+    transition: opacity 300ms linear;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    li {
+      @extend %text-250;
+      list-style: none;
+      padding: 10px 20px 10px 20px;
+      cursor: pointer;
+      transition: background-color 300ms linear, opacity 300ms linear;
+
+      &:hover {
+        opacity: 0.8;
+        outline: none;
+        background: $graphite-10;
+      }
+    }
+  }
+
+  &.open {
+    .p-f-select__icon {
+      transform: rotate(180deg);
+    }
+    .p-f-select__dropdown {
+      display: block;
+      opacity: 1;
+      width: calc(100% + 8px);
+    }
+  }
+}
