@@ -1,0 +1,78 @@
+@import 'variables';
+%form-text {
+  display: inline-flex;
+  align-items: center;
+  line-height: 16px;
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+.p-f-error {
+  @extend %form-text;
+  color: #d9534f;
+}
+
+.p-f-label-title {
+  @extend %form-text;
+}
+
+.p-f-input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  background: $graphite-10;
+  border-radius: 2px;
+  border-bottom: solid 2px;
+  border-color: $graphite-10;
+  overflow: hidden;
+  outline: none;
+
+  &:hover {
+    border-color: #cccccc;
+  }
+
+  &:active,
+  &:focus,
+  &:focus-within {
+    border-color: #111111;
+  }
+
+  input {
+    box-shadow: none;
+    border: none;
+    outline: none;
+    background: $graphite-10;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 14px 0 12px 0;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    color: #111111;
+  }
+}
+
+.p-f-label {
+  display: flex;
+  flex-direction: column;
+  &.p-error {
+    .p-f-input-container {
+      border-color: #d9534f;
+    }
+  }
+}
+.p-f-label__datepicker {
+  .react-datepicker-wrapper {
+    flex-grow: 1;
+    display: flex;
+    .react-datepicker__input-container {
+      display: flex;
+    }
+  }
+
+  .react-datepicker-popper {
+    z-index: 3;
+  }
+}

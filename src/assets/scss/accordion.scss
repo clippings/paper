@@ -1,0 +1,55 @@
+@import 'variables';
+
+.p-accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .p-accordion__item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & + .p-accordion__item {
+      margin-top: 4px;
+    }
+
+    .p-accordion__title {
+      background: $graphite-10;
+      border-radius: 4px;
+      padding: 16px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      justify-content: space-between;
+      min-height: 56px;
+
+      .p-accordion__icon {
+        transform: rotate(180deg);
+      }
+
+      svg {
+        transition: transform 300ms linear;
+      }
+    }
+
+    .p-accordion__body {
+      transition: opacity 500ms ease-in, height 500ms ease-in;
+      opacity: 1;
+      height: auto;
+      overflow: hidden;
+    }
+
+    &.collapsed {
+      .p-accordion__body {
+        opacity: 0;
+        height: 0;
+      }
+
+      .p-accordion__icon {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+%display-100 {
+  font-style: $display-100-font-style;
+  font-weight: $display-100-font-weight;
+  font-size: $display-100-font-size;
+  line-height: $display-100-line-height;
+}
+
+%display-110 {
+  font-style: $display-110-font-style;
+  font-weight: $display-110-font-weight;
+  font-size: $display-110-font-size;
+  line-height: $display-110-line-height;
+}
+
+%i500-04 {
+  font-style: $text-250-font-style;
+  font-weight: $text-250-font-weight;
+  font-size: $text-250-font-size;
+  line-height: $text-250-line-height;
+}
+
+%p-image-cover {
+  background-color: $graphite-96;
+  display: flex;
+  width: 360px;
+  height: 500px;
+}
+
+%text-200 {
+  font-style: $text-200-font-style;
+  font-weight: $text-200-font-weight;
+  font-size: $text-200-font-size;
+  line-height: $text-200-line-height;
+}
+
+%text-250e {
+  font-style: $text-250e-font-style;
+  font-weight: $text-250e-font-weight;
+  font-size: $text-250e-font-size;
+  line-height: $text-250e-line-height;
+}
+
+%text-250 {
+  font-style: $text-250-font-style;
+  font-weight: $text-250-font-weight;
+  font-size: $text-250-font-size;
+  line-height: $text-250-line-height;
+}

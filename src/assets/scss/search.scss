@@ -1,0 +1,28 @@
+@import 'variables';
+
+.p-f-search {
+  position: relative;
+
+  .p-f-search__input {
+    background: $graphite-10;
+    border-radius: $form-input-border-radius;
+    min-width: 300px;
+    height: $form-input-base-height;
+    border: none;
+    box-sizing: border-box;
+    padding: 18px 18px 18px 40px;
+    font-size: $base-font-size - 2px;
+    font-weight: 500;
+    color: $graphite-120;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  svg {
+    position: absolute;
+    left: 18px;
+    top: 20px;
+  }
+}
