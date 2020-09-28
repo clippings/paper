@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import figmaDecorator from 'storybook-addon-figma';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, number } from '@storybook/addon-knobs';
+import { withKnobs, text } from '@storybook/addon-knobs';
 import { jsxDecorator } from 'storybook-addon-jsx';
 import { AutocompleteInput } from '@paper';
 import docs from './description.md';
@@ -56,26 +56,17 @@ const hits = [
 
 const AutocompleteInputStory = () => {
   const placeholder = text('Placeholder', 'Search ...');
-  const debounceRate = number('Debounce rate', 300);
   const [data, setData] = useState(hits);
 
   const onSearch = value => {
     setData(hits.filter(v => v.label.includes(value)));
   };
 
-  return (
-    <AutocompleteInput
-      placeholder={placeholder}
-      hits={data}
-      debounceRate={debounceRate}
-      onSearch={onSearch}
-    />
-  );
+  return <AutocompleteInput placeholder={placeholder} hits={data} onSearch={onSearch} />;
 };
 
 const CustomAutocompleteInputStory = () => {
   const placeholder = text('Placeholder', 'Search ...');
-  const debounceRate = number('Debounce rate', 300);
   const [data, setData] = useState(hits);
 
   const onSearch = value => {
@@ -86,7 +77,6 @@ const CustomAutocompleteInputStory = () => {
     <AutocompleteInput
       placeholder={placeholder}
       hits={data}
-      debounceRate={debounceRate}
       onSearch={onSearch}
       onChange={value => console.log(value)}
     >

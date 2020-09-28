@@ -16,7 +16,6 @@ export const AutocompleteInput: React.FunctionComponent<AutocompleteInputInterfa
   children = null,
   min = 0,
   className = '',
-  debounceRate,
 }) => {
   const [value, setValue] = useState<string>(defaultValue);
   const [hitsVisibility, setHitsVisibility] = useState<boolean>(false);
