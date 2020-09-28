@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion component matches snapshot 1`] = `
+<div>
+  <div
+    class="p-accordion"
+  >
+    <div
+      class="p-accordion__item collapsed"
+    >
+      <div
+        class="p-accordion__title"
+        role="presentation"
+      >
+        <div
+          class="p-accordion__title__wrap"
+        >
+          Test
+        </div>
+        <svg
+          fill="#141414"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          style="transform: rotate(90deg);"
+          viewBox="0 0 14 14"
+          width="16"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M11.0607 7L5.53032 12.5303L4.46966 11.4697L8.93933 7L4.46966 2.53033L5.53032 1.46967L11.0607 7Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div
+        class="p-accordion__body"
+      >
+        Test content
+      </div>
+    </div>
+    <div
+      class="p-accordion__item collapsed"
+    >
+      <div
+        class="p-accordion__title"
+        role="presentation"
+      >
+        <div
+          class="p-accordion__title__wrap"
+        >
+          Test 2
+        </div>
+        <svg
+          fill="#141414"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          style="transform: rotate(90deg);"
+          viewBox="0 0 14 14"
+          width="16"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M11.0607 7L5.53032 12.5303L4.46966 11.4697L8.93933 7L4.46966 2.53033L5.53032 1.46967L11.0607 7Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div
+        class="p-accordion__body"
+      >
+        Test content 2
+      </div>
+    </div>
+  </div>
+</div>
+`;

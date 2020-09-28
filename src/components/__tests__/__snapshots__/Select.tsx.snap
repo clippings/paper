@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select component matches snapshot 1`] = `
+<div>
+  <div
+    class="p-f-select"
+  >
+    <div
+      class="p-f-select__label-wrap"
+      role="presentation"
+    >
+      <span
+        class="p-f-select__label-default"
+      />
+      <svg
+        class="p-f-select__icon"
+        fill="#141414"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="transform: rotate(0deg);"
+        viewBox="0 0 14 14"
+        width="16"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M7 11.3L1.46968 5.76967L2.53033 4.70901L7 9.17868L11.4697 4.70901L12.5303 5.76967L7 11.3Z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
+    <ul
+      class="p-f-select__dropdown"
+    >
+      <li
+        class="p-f-select__dropdown__item"
+        role="presentation"
+      >
+        Test
+      </li>
+    </ul>
+  </div>
+</div>
+`;
