@@ -9,4 +9,3 @@ export interface SelectInterface {
   placeholder?: string;
   onChange: Function;
 }
-

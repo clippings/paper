@@ -14,7 +14,7 @@ import {
   HEADING_TYPE,
 } from '@paper';
 import figmaDecorator from 'storybook-addon-figma';
-import {jsxDecorator} from "storybook-addon-jsx";
+import { jsxDecorator } from 'storybook-addon-jsx';
 
 const buildPopoverMenu = () => (
   <PopoverMenu>

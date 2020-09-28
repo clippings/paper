@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { Icon, ICON, ICONS_DIRECTION, ICONS_COLOR, ICONS_SIZE } from '@paper';
-import {jsxDecorator} from "storybook-addon-jsx";
+import { jsxDecorator } from 'storybook-addon-jsx';
 
 const btnStyle = {
   minWidth: '190px',
@@ -97,6 +97,4 @@ const useIcon = () => {
   );
 };
 
-storiesOf('Icon', module)
-  .addDecorator(jsxDecorator)
-  .add('Icons', useIcon);
+storiesOf('Icon', module).addDecorator(jsxDecorator).add('Icons', useIcon);

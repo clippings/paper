@@ -6,7 +6,11 @@ import { BadgeInterface } from './interfaces/BagdeInterface';
 
 export const Badge: React.FunctionComponent<BadgeInterface> = ({
   className = '',
-  type= BADGE_TYPE.UNSPECIFIED,
+  type = BADGE_TYPE.UNSPECIFIED,
   size = BADGE_SIZE.SMALL,
   children,
-}) => <span className={`${classNames.badge[type]} ${classNames.badge[size]} ${className}`}>{children}</span>;
+}) => (
+  <span className={`${classNames.badge[type]} ${classNames.badge[size]} ${className}`}>
+    {children}
+  </span>
+);

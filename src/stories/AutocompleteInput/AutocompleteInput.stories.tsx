@@ -3,9 +3,8 @@ import figmaDecorator from 'storybook-addon-figma';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, number } from '@storybook/addon-knobs';
 import { jsxDecorator } from 'storybook-addon-jsx';
-import {AutocompleteInput} from "@paper";
-
-const docs = require('./description.md');
+import { AutocompleteInput } from '@paper';
+import docs from './description.md';
 
 const hits = [
   {
@@ -114,4 +113,3 @@ storiesOf('Inputs/Autocomplete', module)
   .add('Custom autocomplete basic usage', CustomAutocompleteInputStory, {
     notes: { markdown: docs },
   });
-

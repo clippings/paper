@@ -1,6 +1,6 @@
 import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
-import {TextInput} from "@paper";
+import { TextInput } from '@paper';
 
 const onChange = jest.fn();
 

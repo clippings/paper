@@ -2,8 +2,9 @@ import {
   createClassName,
   createClassNameModifier,
   createComponentClassName,
-  createFormElementClassName, createFormElementClassNameModifier
-} from "../utils/ClassNameModifierUtil";
+  createFormElementClassName,
+  createFormElementClassNameModifier,
+} from '../utils/ClassNameModifierUtil';
 import { BADGE_TYPE } from '../../components/Badge/enums/BadgeTypeEnum';
 import { BADGE_SIZE } from '../../components/Badge/enums/BadgeSizeEnum';
 import { HEADING_TYPE } from '../../components/Heading/enums/HeadingEnum';
@@ -108,7 +109,7 @@ const classNames = {
   autocompleteHit: {
     hit: createFormElementClassNameModifier('autocomplete', 'hits__hit'),
     active: createFormElementClassNameModifier('autocomplete', 'hits__hit-active'),
-  }
+  },
 };
 
 export default classNames;

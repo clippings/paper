@@ -14,7 +14,7 @@ export const DateInput: React.FunctionComponent<DateInputInterface> = ({
   onChange,
   placeholderText,
   selected,
-  disabled= false,
+  disabled = false,
   title = null,
   error = null,
 }) => {
@@ -31,9 +31,14 @@ export const DateInput: React.FunctionComponent<DateInputInterface> = ({
 
   return (
     <div
-      className={classnames(classNames.dateInput.label, classNames.dateInput.datepicker, className, {
-        [classNames.dateInput.error]: error,
-      })}
+      className={classnames(
+        classNames.dateInput.label,
+        classNames.dateInput.datepicker,
+        className,
+        {
+          [classNames.dateInput.error]: error,
+        }
+      )}
     >
       {title && <span className={classNames.dateInput.labelTitle}>{title}</span>}
       <span className={classNames.dateInput.inputContainer}>

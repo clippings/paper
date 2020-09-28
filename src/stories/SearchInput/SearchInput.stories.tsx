@@ -5,7 +5,7 @@ import { withKnobs, text, number, select } from '@storybook/addon-knobs';
 import { SearchInput, SUBMIT_TYPE } from '@paper';
 
 import docs from './description.md';
-import {jsxDecorator} from "storybook-addon-jsx";
+import { jsxDecorator } from 'storybook-addon-jsx';
 
 const searchInput = () => {
   const placeholder = text('Placeholder', 'Search ...');
@@ -35,4 +35,3 @@ storiesOf('Inputs', module)
   .addDecorator(withKnobs)
   .addDecorator(figmaFile)
   .add('Search input', searchInput, { notes: { markdown: docs } });
-

@@ -3,7 +3,11 @@ import classNames from '../../core/config/ClassNames';
 import { ListItemInterface } from './interfaces/ListItemInterface';
 import { KEY } from '../../core/enums/KeysEnum';
 
-export const ListItem: React.FunctionComponent<ListItemInterface> = ({ children, handleClick, ...rest }) => {
+export const ListItem: React.FunctionComponent<ListItemInterface> = ({
+  children,
+  handleClick,
+  ...rest
+}) => {
   const onKeyPress = event => {
     if (event.key === KEY.ENTER) {
       handleClick && handleClick(event);

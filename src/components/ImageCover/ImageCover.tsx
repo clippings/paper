@@ -12,12 +12,16 @@ export const ImageCover: React.FunctionComponent<ImageCoverInterface> = ({
 }) => (
   <figure
     className={`${
-      type === IMAGE_COVER_TYPE.SINGLE ? classNames.imageCover.containerSingle : classNames.imageCover.containerMultiple
+      type === IMAGE_COVER_TYPE.SINGLE
+        ? classNames.imageCover.containerSingle
+        : classNames.imageCover.containerMultiple
     } ${className}`}
   >
     <img
       className={
-        type === IMAGE_COVER_TYPE.SINGLE ? classNames.imageCover.imageSingle : classNames.imageCover.imageMultiple
+        type === IMAGE_COVER_TYPE.SINGLE
+          ? classNames.imageCover.imageSingle
+          : classNames.imageCover.imageMultiple
       }
       src={image}
       alt={imageTitle}

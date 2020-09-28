@@ -1,6 +1,9 @@
 import React, { useState, useRef } from 'react';
 
-export default function useDropdown(ref: React.MutableRefObject<any>, initialState: boolean = false) {
+export default function useDropdown(
+  ref: React.MutableRefObject<any>,
+  initialState: boolean = false
+): { isOpen: boolean; handleOpen: () => void; handleClose: () => void; handleToggle: () => void } {
   const [isOpen, setOpen] = useState(initialState);
   const functionRef: React.MutableRefObject<any> = useRef();
 
