@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import classnames from 'classnames';
-import { Icon, ICON, ICONS_COLOR, ICONS_DIRECTION } from '@paper';
+import { Icon, ICON, ICONS_COLOR } from '@paper';
 import AccordionItemContext from './contexts/AccordionItemContext';
 import styleClasses from '../../core/config/ClassNames';
 import { AccordionTittleInterface } from './intefaces/AccordionTittleInterface';
@@ -20,7 +20,7 @@ const AccordionTitle: React.FunctionComponent<AccordionTittleInterface> = ({
       {...rest}
     >
       <div className={styleClasses.accordion.titleWrap}>{children}</div>
-      <Icon icon={ICON.CHEVRON} direction={ICONS_DIRECTION.DOWN} color={ICONS_COLOR.DARK} />
+      <Icon icon={ICON.CHEVRON} color={ICONS_COLOR.DARK} />
     </div>
   );
 };

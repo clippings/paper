@@ -19,7 +19,6 @@ export { ImageCover } from './components/ImageCover/ImageCover';
 export { IMAGE_COVER_TYPE } from './components/ImageCover/enums/ImageCoverTypeEnum';
 export { Icon } from './components/Icon/Icon';
 export { ICON } from './components/Icon/enums/IconEnum';
-export { ICONS_DIRECTION } from './components/Icon/enums/IconsDirectionEnum';
 export { ICONS_SIZE } from './components/Icon/enums/IconsSizeEnum';
 export { ICONS_COLOR } from './components/Icon/enums/IconsColorEnum';
 export { Accordion } from './components/Accordion/Accordion';

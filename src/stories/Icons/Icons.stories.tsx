@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Icon, ICON, ICONS_DIRECTION, ICONS_COLOR, ICONS_SIZE } from '@paper';
+import { Icon, ICON, ICONS_COLOR, ICONS_SIZE } from '@paper';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
 const btnStyle = {
@@ -44,28 +44,11 @@ const useIcon = () => {
 
     return setSize(ICONS_SIZE.SMALL);
   };
-  const [direction, setDirection] = useState(ICONS_DIRECTION.RIGHT);
-
-  const toggleDirection = () => {
-    if (direction === ICONS_DIRECTION.RIGHT) {
-      return setDirection(ICONS_DIRECTION.DOWN);
-    }
-    if (direction === ICONS_DIRECTION.DOWN) {
-      return setDirection(ICONS_DIRECTION.LEFT);
-    }
-    if (direction === ICONS_DIRECTION.LEFT) {
-      return setDirection(ICONS_DIRECTION.UP);
-    }
-    return setDirection(ICONS_DIRECTION.RIGHT);
-  };
 
   return (
     <div>
       <button onClick={toggleSize} type="button" style={btnStyle}>
         Change size current: {sizeMap[size]}
-      </button>
-      <button onClick={toggleDirection} type="button" style={btnStyle}>
-        Change direction current: {direction}
       </button>
 
       {Object.keys(ICONS_COLOR).map(colorKey => (
@@ -83,12 +66,7 @@ const useIcon = () => {
           <div style={{ width: '120px' }}> Color {colorKey} :</div>
           {Object.keys(ICON).map(key => (
             <div title={key} style={{ padding: '5px' }} key={key + colorKey}>
-              <Icon
-                icon={ICON[key]}
-                color={ICONS_COLOR[colorKey]}
-                size={size}
-                direction={direction}
-              />
+              <Icon icon={ICON[key]} color={ICONS_COLOR[colorKey]} size={size} />
             </div>
           ))}
         </div>
