@@ -1,1 +1,2 @@
-# paper
+# Paper
+Clippings Design System
