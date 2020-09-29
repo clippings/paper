@@ -110,13 +110,9 @@
       "!**/vendor/**"
     ],
     "moduleNameMapper": {
-<<<<<<< HEAD
-      "\\.(css|scss|less|sass)$": "identity-obj-proxy"
-=======
       "\\.(css|scss|less|sass)$": "identity-obj-proxy",
       "^@paper/(.*)$": "<rootDir>/src/$1",
       "^@paper": "<rootDir>/src/index.ts"
->>>>>>> 7fb6c81... [app] Add paper path and ignore some folders.
     },
     "reporters": [
       "jest-progress-bar-reporter"
