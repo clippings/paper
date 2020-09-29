@@ -1,6 +1,5 @@
-import React from 'react';
+import { ComponentInterface } from '@paper/core/interfaces/ComponentInterface';
 
-export interface PopoverInterface {
+export interface PopoverInterface extends ComponentInterface {
   className?: string;
-  children: React.ReactNode;
 }
