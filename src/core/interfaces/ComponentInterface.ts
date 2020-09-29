@@ -1,5 +1,5 @@
 import React from 'react';
 
 export interface ComponentInterface {
-  children: React.ReactNode;
+  children: React.ReactNode | null;
 }
