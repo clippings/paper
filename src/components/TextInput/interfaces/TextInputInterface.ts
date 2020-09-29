@@ -1,6 +1,4 @@
-import { ComponentInterface } from '@paper/core/interfaces/ComponentInterface';
-
-export interface TextInputInterface extends ComponentInterface {
+export interface TextInputInterface {
   placeholderText: string;
   title: string | number;
   error: string | number;
