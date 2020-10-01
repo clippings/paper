@@ -29,7 +29,7 @@ export const AutocompleteInput: React.FunctionComponent<AutocompleteInputInterfa
     ref.current.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
   };
 
-  const onSearchLimited = (searched: string) => {
+  const onSearchLimited = (searched: string): void => {
     if (searched.length < min) {
       return;
     }
