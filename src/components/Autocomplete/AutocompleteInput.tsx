@@ -37,7 +37,7 @@ export const AutocompleteInput: React.FunctionComponent<AutocompleteInputInterfa
     onSearch(searched);
   };
 
-  const onClick = (itemValue: { label: string }) => {
+  const onClick = (itemValue: { label: string }): void => {
     setValue(itemValue.label);
     onChange(itemValue.label);
   };
