@@ -62,7 +62,7 @@ export const AutocompleteInput: React.FunctionComponent<AutocompleteInputInterfa
 
   const findElementIndex = (hits, search): number  => hits.findIndex(hit => hit.label === search);
 
-  const onInputKeyUp = event => {
+  const onInputKeyUp = (event):void => {
     const index = findElementIndex(hits, value);
     setHitsVisibility(true);
 
