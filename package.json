@@ -4,7 +4,7 @@
   "description": "Clippings Design System",
   "main": "build/index.js",
   "repository": "git@github.com:clippings/paper.git",
-  "author": "Stoyan Kalpakchiev <t3cho.k@gmail.com>, Evstati Zarkov <evstati.zarkov@gmail.com>",
+  "author": "Clippings Devs <devs@clippings.com>",
   "license": "MIT",
   "private": false,
   "devDependencies": {
