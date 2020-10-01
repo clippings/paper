@@ -2,6 +2,6 @@ export type TextInputPropsType = {
   placeholderText: string;
   title: string | number;
   error: string | number;
-  onChange: Function;
+  onChange: (value: string) => void;
   className?: string;
 };

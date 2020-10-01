@@ -5,7 +5,14 @@ import iconsMap from './constants/IconsMap';
 import { IconPropsType } from './types/IconPropsType';
 
 export const Icon: React.FunctionComponent<IconPropsType> = ({ color, size, icon, ...rest }) => {
-  const buildIconProps: any = ({
+  const buildIconProps: ({
+    color: ICONS_COLOR,
+    size: ICONS_SIZE,
+  }) => {
+    fill: ICONS_COLOR;
+    width: ICONS_SIZE;
+    height: ICONS_SIZE;
+  } = ({
     color = ICONS_COLOR.GREY,
     size = ICONS_SIZE.MEDIUM,
   }): {
