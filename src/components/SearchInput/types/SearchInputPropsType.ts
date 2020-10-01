@@ -1,7 +1,7 @@
 export type SearchInputPropsType = {
   debounceRate?: number;
   submitOn?: SUBMIT_TYPE;
-  onChange: (...args: any) => any;
+  onChange: (value: string) => any;
   placeholder: string;
   defaultValue?: string;
 };
