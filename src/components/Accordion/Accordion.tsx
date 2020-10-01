@@ -9,7 +9,7 @@ import { AccordionInterface } from './intefaces/AccordionInterface';
 export const Accordion: React.FunctionComponent<AccordionInterface> & {
   Item: typeof AccordionItem;
 } = ({ children, defaultOpened, disabled }) => {
-  const [active, setActive] = useState<number | string | null | undefined>(defaultOpened);
+  const [active, setActive] = useState<number | string | null>(defaultOpened);
 
   const onItemClick = (id: SetStateAction<string | number | undefined>) => {
     setActive(active === id ? null : id);
