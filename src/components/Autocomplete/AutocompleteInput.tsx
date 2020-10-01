@@ -42,7 +42,7 @@ export const AutocompleteInput: React.FunctionComponent<AutocompleteInputInterfa
     onChange(itemValue.label);
   };
 
-  const onInputChange = event => {
+  const onInputChange = (event): void => {
     setValue(event.currentTarget.value);
   };
 
