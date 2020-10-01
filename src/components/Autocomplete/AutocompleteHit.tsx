@@ -9,7 +9,7 @@ export const AutocompleteHit: React.FunctionComponent<AutocompleteHitInterface> 
   onClick,
   scrollTo,
 }) => {
-  const ref: React.MutableRefObject<any> = useRef();
+  const ref = useRef<HTMLDivElement>();
 
   useEffect(() => {
     if (active && ref.current !== null) {
