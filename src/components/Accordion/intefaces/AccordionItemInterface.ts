@@ -1,7 +1,7 @@
 import { ComponentInterface } from '@paper/core/interfaces/ComponentInterface';
 
 export interface AccordionItemInterface extends ComponentInterface {
-  onOpen?: Function;
+  onOpen?: () => void;
   eventKey?: number | any | string;
   id: number | string;
 }
