@@ -1,7 +1,7 @@
 import { createContext } from 'react';
 
 const AccordionItemContext = createContext({
-  handleOpen: (): any => null,
+  handleOpen: (): void => null,
 });
 
 export default AccordionItemContext;
