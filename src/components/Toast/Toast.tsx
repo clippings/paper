@@ -1,9 +1,9 @@
 import React from 'react';
 import classnames from 'classnames';
 import classNames from '../../core/config/ClassNames';
-import { ToastInterface } from './interfaces/ToastType';
+import { ToastPropsType } from './types/ToastPropsType';
 
-export const Toast: React.FunctionComponent<ToastInterface> = ({ children, show }) => (
+export const Toast: React.FunctionComponent<ToastPropsType> = ({ children, show }) => (
   <div className={classnames(classNames.toast.container, { [classNames.toast.show]: show })}>
     {children}
   </div>

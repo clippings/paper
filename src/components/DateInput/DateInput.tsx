@@ -4,9 +4,9 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { Icon, ICON } from '@paper';
 import classNames from '../../core/config/ClassNames';
-import { DateInputInterface } from './interfaces/DateInputInterface';
+import { DateInputPropsTypes } from './types/DateInputPropsTypes';
 
-export const DateInput: React.FunctionComponent<DateInputInterface> = ({
+export const DateInput: React.FunctionComponent<DateInputPropsTypes> = ({
   className = '',
   dateFormat = 'dd/MM/yyyy',
   maxDate,

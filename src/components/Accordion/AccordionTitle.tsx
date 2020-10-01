@@ -3,10 +3,10 @@ import classnames from 'classnames';
 import { Icon, ICON, ICONS_COLOR } from '@paper';
 import AccordionItemContext from './contexts/AccordionItemContext';
 import styleClasses from '../../core/config/ClassNames';
-import { AccordionTittleInterface } from './intefaces/AccordionTittleInterface';
+import { AccordionTittlePropsType } from './types/AccordionTittlePropsType';
 
-const AccordionTitle: React.FunctionComponent<AccordionTittleInterface> = ({
-  children,
+const AccordionTitle: React.FunctionComponent<AccordionTittlePropsType> = ({
+  children = null,
   classNames = '',
   ...rest
 }) => {

@@ -27,7 +27,7 @@ const items = [
 ];
 
 const buildAccordion = () => (
-  <Accordion>
+  <Accordion defaultOpened={null} disabled={false}>
     {items.map(item => (
       <Accordion.Item key={item.id} onOpen={() => {}} eventKey={item} id={item.id}>
         <Accordion.Item.Title>{item.title + item.id}</Accordion.Item.Title>

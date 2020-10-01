@@ -5,12 +5,12 @@ import AccordionBody from './AccordionBody';
 import AccordionContext from './contexts/AccordionContext';
 import AccordionItemContext from './contexts/AccordionItemContext';
 import classNames from '../../core/config/ClassNames';
-import { AccordionItemInterface } from './intefaces/AccordionItemInterface';
+import { AccordionItemPropsType } from './types/AccordionItemPropsType';
 
-const AccordionItem: React.FunctionComponent<AccordionItemInterface> & {
+const AccordionItem: React.FunctionComponent<AccordionItemPropsType> & {
   Title: typeof AccordionTitle;
   Body: typeof AccordionBody;
-} = ({ children, onOpen, eventKey = null, id }) => {
+} = ({ children = null, onOpen, eventKey = null, id }) => {
   const { isActive, onClick } = useContext(AccordionContext);
 
   const handleOpen = (): void => {

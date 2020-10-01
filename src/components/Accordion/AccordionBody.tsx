@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from '../../core/config/ClassNames';
-import { ComponentInterface } from '../../core/interfaces/ComponentInterface';
+import { ComponentType } from '../../core/interfaces/ComponentType';
 
-const AccordionBody: React.FunctionComponent<ComponentInterface> = ({ children }) => (
+const AccordionBody: React.FunctionComponent<ComponentType> = ({ children }) => (
   <div className={classNames.accordion.body}>{children}</div>
 );
 

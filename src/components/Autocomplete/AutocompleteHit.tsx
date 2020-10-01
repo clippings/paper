@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import classname from 'classnames';
 import classNames from '../../core/config/ClassNames';
-import { AutocompleteHitInterface } from '@paper/components/Autocomplete/interfaces/AutocompleteHitInterface';
+import { AutocompleteHitPropsType } from './types/AutocompleteHitPropsType';
 
-export const AutocompleteHit: React.FunctionComponent<AutocompleteHitInterface> = ({
+export const AutocompleteHit: React.FunctionComponent<AutocompleteHitPropsType> = ({
   active,
   children = null,
   onClick,

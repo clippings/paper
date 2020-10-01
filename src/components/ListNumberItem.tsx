@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from '../core/config/ClassNames';
-import { ComponentInterface } from '../core/interfaces/ComponentInterface';
+import { ComponentType } from '../core/interfaces/ComponentType';
 
-export const ListNumberItem: React.FunctionComponent<ComponentInterface> = ({ children }) =>
-  children ? <li className={classNames.listNumberItem.container}>{children}</li> : null;
+export const ListNumberItem: React.FunctionComponent<ComponentType> = ({ children = null }) => (
+  <li className={classNames.listNumberItem.container}>{children}</li>
+);

@@ -5,9 +5,9 @@ import '../../assets/scss/autocomplete.scss';
 import { AutocompleteHit } from './AutocompleteHit';
 import classNames from '../../core/config/ClassNames';
 import { KEY } from '@paper/core/enums/KeysEnum';
-import { AutocompleteInputInterface } from './interfaces/AutocompleteInputInterface';
+import { AutocompleteInputPropsType } from './types/AutocompleteInputPropsType';
 
-export const AutocompleteInput: React.FunctionComponent<AutocompleteInputInterface> = ({
+export const AutocompleteInput: React.FunctionComponent<AutocompleteInputPropsType> = ({
   onChange = () => {},
   defaultValue = '',
   placeholder,

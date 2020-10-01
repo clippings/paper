@@ -1,11 +1,11 @@
 import React from 'react';
 import { IMAGE_COVER_TYPE } from './enums/ImageCoverTypeEnum';
-import { ImageCoverInterface } from './interfaces/ImageCoverInterface';
+import { ImageCoverPropsType } from './types/ImageCoverPropsType';
 import classNames from '../../core/config/ClassNames';
 
-export const ImageCover: React.FunctionComponent<ImageCoverInterface> = ({
+export const ImageCover: React.FunctionComponent<ImageCoverPropsType> = ({
   image,
-  children,
+  children = null,
   type,
   imageTitle = '',
   className = '',

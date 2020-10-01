@@ -1,10 +1,10 @@
 import React from 'react';
 import classNames from '../../core/config/ClassNames';
-import { ListItemInterface } from './interfaces/ListItemInterface';
+import { ListItemPropsType } from './types/ListItemPropsType';
 import { KEY } from '../../core/enums/KeysEnum';
 
-export const ListItem: React.FunctionComponent<ListItemInterface> = ({
-  children,
+export const ListItem: React.FunctionComponent<ListItemPropsType> = ({
+  children = null,
   handleClick,
   ...rest
 }) => {

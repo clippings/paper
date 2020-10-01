@@ -3,9 +3,9 @@ import classnames from 'classnames';
 import '../../assets/scss/select.scss';
 import { Icon, ICON, ICONS_COLOR, useDropdown } from '@paper';
 import classNames from '../../core/config/ClassNames';
-import { SelectInterface } from './intefaces/SelectInterface';
+import { SelectPropsType } from './types/SelectPropsType';
 
-export const Select: React.FunctionComponent<SelectInterface> = ({
+export const Select: React.FunctionComponent<SelectPropsType> = ({
   options,
   selected = null,
   placeholder = '',

@@ -1,21 +1,21 @@
 import React from 'react';
 import figmaDecorator from 'storybook-addon-figma';
 import { storiesOf } from '@storybook/react';
-import { ListNumber, ListNumberItem, Text } from '@paper';
+import { ListNumber, ListNumberItem, Text, TEXT_TYPE } from '@paper';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
 const buildPrettyList = () => (
   <ListNumber>
     <ListNumberItem>
-      <Text>1st list item</Text>
+      <Text type={TEXT_TYPE.SMALL}>1st list item</Text>
       <br />
-      <Text type="small">Lorem ipsum</Text>
+      <Text type={TEXT_TYPE.SMALL}>Lorem ipsum</Text>
     </ListNumberItem>
     <ListNumberItem>
-      <Text className="">2nd list item</Text>
+      <Text type={TEXT_TYPE.SMALL}>2nd list item</Text>
     </ListNumberItem>
     <ListNumberItem>
-      <Text className="">3rd list item</Text>
+      <Text type={TEXT_TYPE.SMALL}>3rd list item</Text>
     </ListNumberItem>
   </ListNumber>
 );

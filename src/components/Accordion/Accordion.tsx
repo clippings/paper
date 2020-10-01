@@ -4,11 +4,11 @@ import '@paper/assets/scss/accordion.scss';
 import AccordionItem from './AccordionItem';
 import AccordionContext from './contexts/AccordionContext';
 import classNames from '../../core/config/ClassNames';
-import { AccordionInterface } from './intefaces/AccordionInterface';
+import { AccordionPropsType } from './types/AccordionPropsType';
 
-export const Accordion: React.FunctionComponent<AccordionInterface> & {
+export const Accordion: React.FunctionComponent<AccordionPropsType> & {
   Item: typeof AccordionItem;
-} = ({ children, defaultOpened = null, disabled }) => {
+} = ({ defaultOpened = null, disabled = false, children }) => {
   const [active, setActive] = useState<number | string | null>(defaultOpened);
 
   const onItemClick = (id: number | string | null) => {

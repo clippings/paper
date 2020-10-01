@@ -2,9 +2,9 @@ import React from 'react';
 import { ICONS_SIZE } from './enums/IconsSizeEnum';
 import { ICONS_COLOR } from './enums/IconsColorEnum';
 import iconsMap from './constants/IconsMap';
-import { IconInterface } from './interfaces/IconInterface';
+import { IconPropsType } from './types/IconPropsType';
 
-export const Icon: React.FunctionComponent<IconInterface> = ({ color, size, icon, ...rest }) => {
+export const Icon: React.FunctionComponent<IconPropsType> = ({ color, size, icon, ...rest }) => {
   const buildIconProps: any = ({
     color = ICONS_COLOR.GREY,
     size = ICONS_SIZE.MEDIUM,

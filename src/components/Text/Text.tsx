@@ -1,9 +1,9 @@
 import React from 'react';
 import '../../assets/scss/components.scss';
 import classNames from '../../core/config/ClassNames';
-import { TextInterface } from './interfaces/TextInterface';
+import { TextPropsType } from './types/TextPropsType';
 
-export const Text: React.FunctionComponent<TextInterface> = ({
+export const Text: React.FunctionComponent<TextPropsType> = ({
   children,
   type,
   className = '',

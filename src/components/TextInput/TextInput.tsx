@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 import classnames from 'classnames';
 import classNames from '../../core/config/ClassNames';
-import { TextInputInterface } from './interfaces/TextInputInterface';
+import { TextInputPropsType } from './types/TextInputPropsType';
 
-export const TextInput: React.FunctionComponent<TextInputInterface> = ({
+export const TextInput: React.FunctionComponent<TextInputPropsType> = ({
   placeholderText,
   title = null,
   onChange,
@@ -11,7 +11,7 @@ export const TextInput: React.FunctionComponent<TextInputInterface> = ({
   className = '',
   ...rest
 }) => {
-  const handleChange = e => onChange(e.target.value);
+  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => onChange(e.target.value);
 
   return (
     <div
