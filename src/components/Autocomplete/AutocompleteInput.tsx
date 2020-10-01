@@ -19,14 +19,14 @@ export const AutocompleteInput: React.FunctionComponent<AutocompleteInputInterfa
 }) => {
   const [value, setValue] = useState<string>(defaultValue);
   const [hitsVisibility, setHitsVisibility] = useState<boolean>(false);
-  const ref: React.MutableRefObject<any> = useRef();
+  const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     setValue(defaultValue);
   }, [defaultValue]);
 
   const scrollToElement = (element: HTMLElement): void => {
-    ref.current.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
+    ref?.current?.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
   };
 
   const onSearchLimited = (searched: string): void => {
@@ -60,9 +60,9 @@ export const AutocompleteInput: React.FunctionComponent<AutocompleteInputInterfa
     }, 200);
   };
 
-  const findElementIndex = (hits, search): number  => hits.findIndex(hit => hit.label === search);
+  const findElementIndex = (hits, search): number => hits.findIndex(hit => hit.label === search);
 
-  const onInputKeyUp = (event):void => {
+  const onInputKeyUp = (event): void => {
     const index = findElementIndex(hits, value);
     setHitsVisibility(true);
 

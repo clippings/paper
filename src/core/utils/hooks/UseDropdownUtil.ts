@@ -1,14 +1,14 @@
 import React, { useState, useRef } from 'react';
 
 export default function useDropdown(
-  ref: React.MutableRefObject<any>,
+  ref: React.MutableRefObject<Element | null>,
   initialState: boolean = false
 ): { isOpen: boolean; handleOpen: () => void; handleClose: () => void; handleToggle: () => void } {
   const [isOpen, setOpen] = useState(initialState);
-  const functionRef: React.MutableRefObject<any> = useRef();
+  const functionRef = useRef<any>();
 
   const closeDropdown = event => {
-    if (ref.current !== null && !ref.current.contains(event.target)) {
+    if (ref?.current !== null && !ref?.current?.contains(event.target)) {
       event.preventDefault();
       event.stopImmediatePropagation();
       document.removeEventListener('click', closeDropdown, true);
