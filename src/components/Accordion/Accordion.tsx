@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import '@paper/assets/scss/accordion.scss';
 import AccordionItem from './AccordionItem';
 import AccordionContext from './contexts/AccordionContext';
-import classNames from '../../core/config/ClassNames';
+import classNames from '@core/config/ClassNames';
 import { AccordionPropsType } from './types/AccordionPropsType';
 
 export const Accordion: React.FunctionComponent<AccordionPropsType> & {

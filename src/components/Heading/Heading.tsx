@@ -1,6 +1,6 @@
 import React from 'react';
 import { HeadingPropsType } from './types/HeadingPropsType';
-import classNames from '../../core/config/ClassNames';
+import classNames from '@core/config/ClassNames';
 
 export const Heading: React.FunctionComponent<HeadingPropsType> = ({
   children = null,

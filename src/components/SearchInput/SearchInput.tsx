@@ -3,9 +3,9 @@ import { debounce } from 'lodash';
 import { Icon, ICON } from '@paper';
 import '../../assets/scss/search.scss';
 import { SearchInputPropsType } from './types/SearchInputPropsType';
-import { KEY } from '../../core/enums/KeysEnum';
+import { KEY } from '@core/enums/KeysEnum';
 import { SUBMIT_TYPE } from './enums/SubmitTypeEnum';
-import classNames from '../../core/config/ClassNames';
+import classNames from '@core/config/ClassNames';
 
 export const SearchInput: React.FunctionComponent<SearchInputPropsType> = ({
   debounceRate = 0,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BADGE_TYPE } from './enums/BadgeTypeEnum';
 import { BADGE_SIZE } from './enums/BadgeSizeEnum';
-import classNames from '../../core/config/ClassNames';
+import classNames from '@core/config/ClassNames';
 import { BadgeInterface } from './types/BagdePropsType';
 
 export const Badge: React.FunctionComponent<BadgeInterface> = ({

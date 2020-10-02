@@ -4,7 +4,7 @@ import AccordionTitle from './AccordionTitle';
 import AccordionBody from './AccordionBody';
 import AccordionContext from './contexts/AccordionContext';
 import AccordionItemContext from './contexts/AccordionItemContext';
-import classNames from '../../core/config/ClassNames';
+import classNames from '@core/config/ClassNames';
 import { AccordionItemPropsType } from './types/AccordionItemPropsType';
 
 const AccordionItem: React.FunctionComponent<AccordionItemPropsType> & {

@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from 'react';
 import classnames from 'classnames';
-import classNames from '../../core/config/ClassNames';
+import classNames from '@core/config/ClassNames';
 import { TextInputPropsType } from './types/TextInputPropsType';
 
 export const TextInput: React.FunctionComponent<TextInputPropsType> = ({

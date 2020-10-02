@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { Icon, ICON } from '@paper';
-import classNames from '../../core/config/ClassNames';
+import classNames from '@core/config/ClassNames';
 import { DateInputPropsTypes } from './types/DateInputPropsTypes';
 
 export const DateInput: React.FunctionComponent<DateInputPropsTypes> = ({

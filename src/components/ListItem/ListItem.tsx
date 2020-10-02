@@ -1,7 +1,7 @@
 import React from 'react';
-import classNames from '../../core/config/ClassNames';
+import classNames from '@core/config/ClassNames';
 import { ListItemPropsType } from './types/ListItemPropsType';
-import { KEY } from '../../core/enums/KeysEnum';
+import { KEY } from '@core/enums/KeysEnum';
 
 export const ListItem: React.FunctionComponent<ListItemPropsType> = ({
   children = null,

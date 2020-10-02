@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import classnames from 'classnames';
 import { Icon, ICON, ICONS_COLOR } from '@paper';
 import AccordionItemContext from './contexts/AccordionItemContext';
-import styleClasses from '../../core/config/ClassNames';
+import styleClasses from '@core/config/ClassNames';
 import { AccordionTittlePropsType } from './types/AccordionTittlePropsType';
 
 const AccordionTitle: React.FunctionComponent<AccordionTittlePropsType> = ({

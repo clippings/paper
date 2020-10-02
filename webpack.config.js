@@ -63,6 +63,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
       '@paper': path.resolve(__dirname, '/src'),
+      '@core': path.resolve(__dirname, '/src/core'),
     },
   },
   module: {

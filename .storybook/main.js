@@ -46,6 +46,7 @@ module.exports = {
     ];
     config.resolve.alias = {
       '@paper': path.resolve(__dirname, '../src'),
+      '@core': path.resolve(__dirname, '../src/core'),
     };
     return config;
   },

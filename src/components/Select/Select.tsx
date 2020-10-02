@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import classnames from 'classnames';
 import '../../assets/scss/select.scss';
 import { Icon, ICON, ICONS_COLOR, useDropdown } from '@paper';
-import classNames from '../../core/config/ClassNames';
+import classNames from '@core/config/ClassNames';
 import { SelectPropsType } from './types/SelectPropsType';
 
 export const Select: React.FunctionComponent<SelectPropsType> = ({

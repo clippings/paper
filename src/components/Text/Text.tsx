@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../assets/scss/components.scss';
-import classNames from '../../core/config/ClassNames';
+import classNames from '@core/config/ClassNames';
 import { TextPropsType } from './types/TextPropsType';
 
 export const Text: React.FunctionComponent<TextPropsType> = ({

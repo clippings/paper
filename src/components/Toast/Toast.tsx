@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import classNames from '../../core/config/ClassNames';
+import classNames from '@core/config/ClassNames';
 import { ToastPropsType } from './types/ToastPropsType';
 
 export const Toast: React.FunctionComponent<ToastPropsType> = ({ children, show }) => (

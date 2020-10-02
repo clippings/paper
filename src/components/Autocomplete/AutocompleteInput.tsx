@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { Icon, ICON, ICONS_COLOR } from '@paper';
 import '../../assets/scss/autocomplete.scss';
 import { AutocompleteHit } from './AutocompleteHit';
-import classNames from '../../core/config/ClassNames';
+import classNames from '@core/config/ClassNames';
 import { KEY } from '@paper/core/enums/KeysEnum';
 import { AutocompleteInputPropsType } from './types/AutocompleteInputPropsType';
 
