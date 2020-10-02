@@ -5,7 +5,10 @@
     "jest": true
 
   },
-
+  "rules": {
+    "@typescript-eslint/no-empty-function": "off",
+    "react/display-name": "off"
+  },
   "overrides": [
     {
       "files": ["**/*.tsx"],

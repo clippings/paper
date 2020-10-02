@@ -1,0 +1,9 @@
+export { HEADING_TYPE } from './components/Heading/enums/HeadingEnum';
+export { TEXT_TYPE } from './components/Text/enums/TextTypeEnum';
+export { BADGE_TYPE } from './components/Badge/enums/BadgeTypeEnum';
+export { BADGE_SIZE } from './components/Badge/enums/BadgeSizeEnum';
+export { IMAGE_COVER_TYPE } from './components/ImageCover/enums/ImageCoverTypeEnum';
+export { ICON } from './components/Icon/enums/IconEnum';
+export { ICONS_SIZE } from './components/Icon/enums/IconsSizeEnum';
+export { ICONS_COLOR } from './components/Icon/enums/IconsColorEnum';
+export { SUBMIT_TYPE } from './components/SearchInput/enums/SubmitTypeEnum';

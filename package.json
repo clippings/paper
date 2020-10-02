@@ -4,7 +4,7 @@
   "description": "Clippings Design System",
   "main": "build/index.js",
   "repository": "git@github.com:clippings/paper.git",
-  "author": "Evstati Zarkov <evstati.zarkov@gmail.com>",
+  "author": "Clippings Devs <devs@clippings.com>",
   "license": "MIT",
   "private": false,
   "devDependencies": {
@@ -15,6 +15,14 @@
     "@babel/preset-typescript": "^7.10.4",
     "@testing-library/jest-dom": "^5.11.0",
     "@testing-library/react": "^11.0.4",
+    "@testing-library/user-event": "^12.1.6",
+    "@storybook/addon-actions": "^6.0.22",
+    "@storybook/addon-knobs": "^6.0.22",
+    "@storybook/addon-links": "^6.0.22",
+    "@storybook/addon-notes": "^5.3.21",
+    "@storybook/addon-viewport": "^6.0.22",
+    "@storybook/addons": "^6.0.22",
+    "@storybook/react": "^6.0.22",
     "@types/classnames": "^2.2.10",
     "@types/lodash": "^4.14.157",
     "@types/react": "^16.9.42",
@@ -44,6 +52,8 @@
     "prettier": "^2.0.5",
     "sass-loader": "^10.0.2",
     "terser-webpack-plugin": "^4.2.2",
+    "storybook-addon-figma": "^0.1.0",
+    "storybook-addon-jsx": "^7.3.4",
     "typescript": "^4.0.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
@@ -100,7 +110,12 @@
       "!**/vendor/**"
     ],
     "moduleNameMapper": {
-      "\\.(css|scss|less|sass)$": "identity-obj-proxy"
+      "\\.(css|scss|less|sass)$": "identity-obj-proxy",
+      "^@paper/components": "<rootDir>/src/index.components.ts",
+      "^@paper/utils": "<rootDir>/src/index.utils.ts",
+      "^@paper/enums": "<rootDir>/src/index.enums.ts",
+      "^@paper/assets/(.*)$": "<rootDir>/src/assets/$1",
+      "^@core/(.*)$": "<rootDir>/src/core/$1"
     },
     "reporters": [
       "jest-progress-bar-reporter"

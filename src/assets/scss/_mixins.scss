@@ -1,0 +1,11 @@
+@mixin badge($badge-color) {
+  border-radius: 8px;
+  background-color: $badge-color;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:not(:empty) > :first-child {
+    padding: 0 4px;
+  }
+}
