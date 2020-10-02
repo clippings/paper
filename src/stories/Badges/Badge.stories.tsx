@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Badge, BADGE_SIZE, BADGE_TYPE, Text, TEXT_TYPE } from '@paper';
+import { BADGE_SIZE, BADGE_TYPE, TEXT_TYPE } from '@paper/enums';
+import { Badge, Text } from '@paper/components';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
 const buildBadge = (type: BADGE_TYPE) => () => <Badge type={type} />;

@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react';
 import classnames from 'classnames';
-import '../../assets/scss/select.scss';
-import { Icon, ICON, ICONS_COLOR, useDropdown } from '@paper';
+import '@paper/assets/scss/select.scss';
+import { ICON, ICONS_COLOR } from '@paper/enums';
+import { Icon } from '@paper/components';
+import { useDropdown } from '@paper/utils';
 import classNames from '@core/config/ClassNames';
 import { SelectPropsType } from './types/SelectPropsType';
 

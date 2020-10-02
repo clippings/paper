@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import figmaDecorator from 'storybook-addon-figma';
 import { storiesOf } from '@storybook/react';
-import { DateInput } from '@paper';
+import { DateInput } from '@paper/components';
 
 import componentInfo from './componentInfo.md';
 import { jsxDecorator } from 'storybook-addon-jsx';

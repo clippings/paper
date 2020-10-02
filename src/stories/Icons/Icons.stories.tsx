@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Icon, ICON, ICONS_COLOR, ICONS_SIZE } from '@paper';
+import { ICON, ICONS_COLOR, ICONS_SIZE } from '@paper/enums';
+import { Icon } from '@paper/components';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
 const btnStyle = {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import figmaDecorator from 'storybook-addon-figma';
-import { ListItem } from '@paper';
+import { ListItem } from '@paper/components';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
 const figmaFile = figmaDecorator({

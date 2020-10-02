@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import classnames from 'classnames';
-import { Icon, ICON, ICONS_COLOR } from '@paper';
+import { ICON, ICONS_COLOR } from '@paper/enums';
+import { Icon } from '@paper/components';
 import AccordionItemContext from './contexts/AccordionItemContext';
 import styleClasses from '@core/config/ClassNames';
 import { AccordionTittlePropsType } from './types/AccordionTittlePropsType';

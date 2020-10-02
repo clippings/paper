@@ -2,7 +2,7 @@ import React from 'react';
 import figmaDecorator from 'storybook-addon-figma';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
-import { Select } from '@paper';
+import { Select } from '@paper/components';
 
 import docs from './description.md';
 import { jsxDecorator } from 'storybook-addon-jsx';

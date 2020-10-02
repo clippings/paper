@@ -1,18 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import {
-  Icon,
-  PopoverBlock,
-  ICONS_SIZE,
-  ICON,
-  Text,
-  ICONS_COLOR,
-  TEXT_TYPE,
-  PopoverMenu,
-  Heading,
-  HEADING_TYPE,
-} from '@paper';
+import { Icon, PopoverBlock, Text, PopoverMenu, Heading } from '@paper/components';
+import { ICONS_SIZE, ICON, ICONS_COLOR, TEXT_TYPE, HEADING_TYPE } from '@paper/enums';
 import figmaDecorator from 'storybook-addon-figma';
 import { jsxDecorator } from 'storybook-addon-jsx';
 

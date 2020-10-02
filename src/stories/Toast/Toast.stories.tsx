@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import componentInfo from './componentInfo.md';
-import { Toast } from '@paper';
+import { Toast } from '@paper/components';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
 const useToast = () => {

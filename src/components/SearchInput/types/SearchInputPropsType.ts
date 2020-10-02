@@ -1,4 +1,4 @@
-import { SUBMIT_TYPE } from '@paper';
+import { SUBMIT_TYPE } from '@paper/enums';
 
 export type SearchInputPropsType = {
   debounceRate?: number;

@@ -111,8 +111,10 @@
     ],
     "moduleNameMapper": {
       "\\.(css|scss|less|sass)$": "identity-obj-proxy",
-      "^@paper/(.*)$": "<rootDir>/src/$1",
-      "^@paper": "<rootDir>/src/index.ts",
+      "^@paper/components": "<rootDir>/src/index.components.ts",
+      "^@paper/utils": "<rootDir>/src/index.utils.ts",
+      "^@paper/enums": "<rootDir>/src/index.enums.ts",
+      "^@paper/assets/(.*)$": "<rootDir>/src/assets/$1",
       "^@core/(.*)$": "<rootDir>/src/core/$1"
     },
     "reporters": [

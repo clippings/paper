@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import { SearchInput, SUBMIT_TYPE } from '@paper';
+import { SUBMIT_TYPE } from '@paper/enums';
+import { SearchInput } from '@paper/components';
 jest.useFakeTimers();
 jest.mock('lodash', () => ({
   debounce: jest.fn().mockImplementation((callback, delay) => {

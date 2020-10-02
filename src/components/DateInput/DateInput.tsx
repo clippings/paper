@@ -2,7 +2,8 @@ import React from 'react';
 import classnames from 'classnames';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { Icon, ICON } from '@paper';
+import { ICON } from '@paper/enums';
+import { Icon } from '@paper/components';
 import classNames from '@core/config/ClassNames';
 import { DateInputPropsTypes } from './types/DateInputPropsTypes';
 

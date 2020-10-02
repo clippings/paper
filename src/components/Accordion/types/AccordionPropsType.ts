@@ -1,4 +1,4 @@
-import { ComponentType } from '@paper/core/interfaces/ComponentType';
+import { ComponentType } from '@core/interfaces/ComponentType';
 
 export type AccordionPropsType = {
   defaultOpened?: number | string | null;

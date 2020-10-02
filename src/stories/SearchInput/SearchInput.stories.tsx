@@ -2,7 +2,8 @@ import React from 'react';
 import figmaDecorator from 'storybook-addon-figma';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, number, select } from '@storybook/addon-knobs';
-import { SearchInput, SUBMIT_TYPE } from '@paper';
+import { SearchInput } from '@paper/components';
+import { SUBMIT_TYPE } from '@paper/enums';
 
 import docs from './description.md';
 import { jsxDecorator } from 'storybook-addon-jsx';

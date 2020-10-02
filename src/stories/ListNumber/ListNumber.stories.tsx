@@ -1,7 +1,8 @@
 import React from 'react';
 import figmaDecorator from 'storybook-addon-figma';
 import { storiesOf } from '@storybook/react';
-import { ListNumber, ListNumberItem, Text, TEXT_TYPE } from '@paper';
+import { ListNumber, ListNumberItem, Text } from '@paper/components';
+import { TEXT_TYPE } from '@paper/enums';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
 const buildPrettyList = () => (

@@ -1,10 +1,11 @@
 import React from 'react';
 import { debounce } from 'lodash';
-import { Icon, ICON } from '@paper';
-import '../../assets/scss/search.scss';
+import { ICON } from '@paper/enums';
+import { Icon } from '@paper/components';
+import '@paper/assets/scss/search.scss';
 import { SearchInputPropsType } from './types/SearchInputPropsType';
 import { KEY } from '@core/enums/KeysEnum';
-import { SUBMIT_TYPE } from './enums/SubmitTypeEnum';
+import { SUBMIT_TYPE } from '@paper/enums';
 import classNames from '@core/config/ClassNames';
 
 export const SearchInput: React.FunctionComponent<SearchInputPropsType> = ({

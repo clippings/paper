@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentType } from '@paper/core/interfaces/ComponentType';
+import { ComponentType } from '@core/interfaces/ComponentType';
 
 export type AutocompleteHitPropsType = {
   active: boolean;

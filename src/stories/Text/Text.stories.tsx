@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Text, TEXT_TYPE } from '@paper';
+import { TEXT_TYPE } from '@paper/enums';
+import { Text } from '@paper/components';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
 const buildSmallText = () => <Text type={TEXT_TYPE.SMALL}>A text</Text>;

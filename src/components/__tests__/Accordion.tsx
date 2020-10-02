@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import { Accordion } from '@paper';
+import { Accordion } from '@paper/components';
 
 const onOpen = jest.fn();
 

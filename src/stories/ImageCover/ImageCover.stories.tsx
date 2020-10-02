@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { IMAGE_COVER_TYPE, ImageCover } from '@paper';
+import { IMAGE_COVER_TYPE } from '@paper/enums';
+import { ImageCover } from '@paper/components';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
 export const imageUrl =

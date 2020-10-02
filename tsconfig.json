@@ -18,11 +18,17 @@
     "outDir": "./build",
     "baseUrl": "./src",
     "paths": {
-      "@paper/*": [
-        "*"
+      "@paper/enums": [
+        "./index.enums.ts"
       ],
-      "@paper": [
-        "./index.ts"
+      "@paper/components": [
+        "./index.components.ts"
+      ],
+      "@paper/assets": [
+        "./assets/*"
+      ],
+      "@paper/utils": [
+        "./index.utils.ts"
       ],
       "@core/*": [
         "./core/*"

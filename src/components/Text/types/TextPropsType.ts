@@ -1,5 +1,5 @@
 import React from 'react';
-import { TEXT_TYPE } from '@paper';
+import { TEXT_TYPE } from '@paper/enums';
 
 export type TextPropsType = {
   children: React.ReactNode;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Accordion } from '@paper';
+import { Accordion } from '@paper/components';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
 const items = [
