@@ -7,6 +7,10 @@
     "type": "git",
     "url": "git+ssh://git@github.com/clippings/paper.git"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "author": "Clippings Devs <devs@clippings.com>",
   "license": "MIT",
   "private": false,
