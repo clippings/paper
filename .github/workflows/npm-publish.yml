@@ -6,14 +6,13 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
       - uses: actions/checkout@v2
       - name: Read package.json
-      - uses: tyankatsu0105/read-package-version-actions@v1
+        uses: tyankatsu0105/read-package-version-actions@v1
         id: package-version
       - name: Setup node
         if: ${{ github.event.release.tag_name }} == ${{ steps.package-version.outputs.version }}
-      - uses: actions/setup-node@v1
+        uses: actions/setup-node@v1
         with:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
