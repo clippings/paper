@@ -1,13 +1,19 @@
 name: Npmjs Publish
 on:
   push:
-    branches:
-      -main
+    tags:
+      - 'v*'
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
       - uses: actions/checkout@v2
+      - name: Check package version
+          uses: technote-space/package-version-check-action@v1
+          with:
+            COMMIT_DISABLED: 1
+      - name: Setup node
       - uses: actions/setup-node@v1
         with:
           node-version: '14.x'
