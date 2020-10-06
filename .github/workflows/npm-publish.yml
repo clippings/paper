@@ -1,20 +1,19 @@
 name: Npmjs Publish
 on:
-  push:
-    tags:
-      - 'v*'
+  release:
+    types: [published]
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
       - uses: actions/checkout@v2
-      - name: Check package version
-      - uses: technote-space/package-version-check-action@v1
-        with:
-          COMMIT_DISABLED: 1
+      - name: Read package.json
+        uses: tyankatsu0105/read-package-version-actions@v1
+        id: package-version
       - name: Setup node
-      - uses: actions/setup-node@v1
+        if: ${{ github.event.release.tag_name }} == ${{ steps.package-version.outputs.version }}
+        uses: actions/setup-node@v1
         with:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
