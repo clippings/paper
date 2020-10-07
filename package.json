@@ -1,9 +1,16 @@
 {
-  "name": "paper",
+  "name": "@clippings/paper",
   "version": "0.0.1",
   "description": "Clippings Design System",
   "main": "build/index.js",
-  "repository": "git@github.com:clippings/paper.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/clippings/paper.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "author": "Clippings Devs <devs@clippings.com>",
   "license": "MIT",
   "private": false,
@@ -120,5 +127,9 @@
     "reporters": [
       "jest-progress-bar-reporter"
     ]
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/clippings/paper/issues"
+  },
+  "homepage": "https://github.com/clippings/paper#readme"
 }

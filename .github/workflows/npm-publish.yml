@@ -1,0 +1,27 @@
+name: Npmjs Publish
+on:
+  release:
+    types: [published]
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Read package.json
+        uses: tyankatsu0105/read-package-version-actions@v1
+        id: package-version
+      - name: Setup node
+        if: ${{ github.event.release.tag_name }} == ${{ steps.package-version.outputs.version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@clippings'
+      - name: Building
+        if: ${{ github.event.release.tag_name }} == ${{ steps.package-version.outputs.version }}
+        run: yarn
+      - name: Publishing
+        if: ${{ github.event.release.tag_name }} == ${{ steps.package-version.outputs.version }}
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
