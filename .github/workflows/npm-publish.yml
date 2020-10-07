@@ -17,7 +17,11 @@ jobs:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@clippings'
-      - run: yarn
-      - run: yarn publish
+      - name: Building
+        if: ${{ github.event.release.tag_name }} == ${{ steps.package-version.outputs.version }}
+        run: yarn
+      - name: Publishing
+        if: ${{ github.event.release.tag_name }} == ${{ steps.package-version.outputs.version }}
+        run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
