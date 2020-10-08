@@ -38,6 +38,7 @@ const classNames = {
     [HEADING_TYPE.DEFAULT]: createComponentClassName('heading', 'default'),
     [HEADING_TYPE.SMALL]: createComponentClassName('heading', 'small'),
     [HEADING_TYPE.LARGE]: createComponentClassName('heading', 'large'),
+    container: createClassName('heading')
   },
   imageCover: {
     containerSingle: createClassName('image-cover-single'),
