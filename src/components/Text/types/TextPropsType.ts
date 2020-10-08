@@ -3,6 +3,6 @@ import { TEXT_TYPE } from '@paper/enums';
 
 export type TextPropsType = {
   children: React.ReactNode;
-  type: TEXT_TYPE;
+  type?: TEXT_TYPE;
   className?: string;
 };
