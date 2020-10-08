@@ -7,3 +7,4 @@ export { ICON } from './components/Icon/enums/IconEnum';
 export { ICONS_SIZE } from './components/Icon/enums/IconsSizeEnum';
 export { ICONS_COLOR } from './components/Icon/enums/IconsColorEnum';
 export { SUBMIT_TYPE } from './components/SearchInput/enums/SubmitTypeEnum';
+export { LIST_SPACING } from './components/List/enums/ListSpacingEnum';
