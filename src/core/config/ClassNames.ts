@@ -9,6 +9,7 @@ import { BADGE_TYPE } from '../../components/Badge/enums/BadgeTypeEnum';
 import { BADGE_SIZE } from '../../components/Badge/enums/BadgeSizeEnum';
 import { HEADING_TYPE } from '../../components/Heading/enums/HeadingEnum';
 import { TEXT_TYPE } from '../../components/Text/enums/TextTypeEnum';
+import { LIST_SPACING } from "../../components/List/enums/ListSpacingEnum";
 
 const classNames = {
   accordion: {
@@ -50,6 +51,7 @@ const classNames = {
   },
   list: {
     container: createClassName('list'),
+    [LIST_SPACING.NONE]: createClassNameModifier('list', 'no-spacing')
   },
   listItem: {
     container: createComponentClassName('list-item', 'container'),
