@@ -33,7 +33,7 @@ export const ListItem: React.FunctionComponent<ListItemPropsType> = ({
         className,
         classNames.listItem.container,
         { [classNames.listItem.clickable]: onClick },
-        classNames[size]
+        classNames.listItem[size]
       )}
       {...clickableProps}
       {...rest}

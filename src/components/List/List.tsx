@@ -9,7 +9,7 @@ export const List: React.FunctionComponent<ListPropsType> = ({
   spacing = LIST_SPACING.NONE,
   className = '',
 }) => (
-  <div className={classnames(className, classNames.list.container, classNames[spacing])}>
+  <div className={classnames(className, classNames.list.container, classNames.list[spacing])}>
     {children}
   </div>
 );
