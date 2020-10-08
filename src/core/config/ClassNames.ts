@@ -2,6 +2,7 @@ import {
   createClassName,
   createClassNameModifier,
   createComponentClassName,
+  createComponentClassNameModifier,
   createFormElementClassName,
   createFormElementClassNameModifier,
 } from '../utils/ClassNameModifierUtil';
@@ -9,7 +10,8 @@ import { BADGE_TYPE } from '../../components/Badge/enums/BadgeTypeEnum';
 import { BADGE_SIZE } from '../../components/Badge/enums/BadgeSizeEnum';
 import { HEADING_TYPE } from '../../components/Heading/enums/HeadingEnum';
 import { TEXT_TYPE } from '../../components/Text/enums/TextTypeEnum';
-import { LIST_SPACING } from "../../components/List/enums/ListSpacingEnum";
+import { LIST_SPACING } from '../../components/List/enums/ListSpacingEnum';
+import { LIST_ITEM_SIZE } from '../../components/ListItem/enums/ListItemSizeEnum';
 
 const classNames = {
   accordion: {
@@ -39,7 +41,7 @@ const classNames = {
     [HEADING_TYPE.DEFAULT]: createComponentClassName('heading', 'default'),
     [HEADING_TYPE.SMALL]: createComponentClassName('heading', 'small'),
     [HEADING_TYPE.LARGE]: createComponentClassName('heading', 'large'),
-    container: createClassName('heading')
+    container: createClassName('heading'),
   },
   imageCover: {
     containerSingle: createClassName('image-cover-single'),
@@ -51,11 +53,13 @@ const classNames = {
   },
   list: {
     container: createClassName('list'),
-    [LIST_SPACING.NONE]: createClassNameModifier('list', 'no-spacing')
+    [LIST_SPACING.NONE]: createClassNameModifier('list', 'no-spacing'),
   },
   listItem: {
     container: createComponentClassName('list-item', 'container'),
     content: createComponentClassName('list-item', 'content'),
+    clickable: createComponentClassNameModifier('list-item', 'container', 'clickable'),
+    [LIST_ITEM_SIZE.SMALL]: createComponentClassNameModifier('list-item', 'container', 'small'),
   },
   listNumber: {
     container: createClassName('list-number'),
