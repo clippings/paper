@@ -77,9 +77,10 @@ const classNames = {
     show: createClassName('toast__show'),
   },
   text: {
-    [TEXT_TYPE.SMALL]: createComponentClassName('text', 'small'),
-    [TEXT_TYPE.MEDIUM]: createComponentClassName('text', 'medium'),
-    [TEXT_TYPE.DEFAULT]: createComponentClassName('text', 'default'),
+    [TEXT_TYPE.SMALL]: createClassNameModifier('text', 'small'),
+    [TEXT_TYPE.MEDIUM]: createClassNameModifier('text', 'medium'),
+    [TEXT_TYPE.DEFAULT]: createClassNameModifier('text', 'default'),
+    container: createClassName('text'),
   },
   statusLabel: {
     container: createClassName('status-label'),
