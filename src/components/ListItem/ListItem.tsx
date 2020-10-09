@@ -1,29 +1,44 @@
 import React from 'react';
+import classnames from 'classnames';
 import classNames from '@core/config/ClassNames';
 import { ListItemPropsType } from './types/ListItemPropsType';
 import { KEY } from '@core/enums/KeysEnum';
+import { LIST_ITEM_SIZE } from '@paper/enums';
 
 export const ListItem: React.FunctionComponent<ListItemPropsType> = ({
   children = null,
-  handleClick,
+  onClick = null,
+  size = LIST_ITEM_SIZE.DEFAULT,
+  className = '',
   ...rest
 }) => {
   const onKeyPress = event => {
     if (event.key === KEY.ENTER) {
-      handleClick && handleClick(event);
+      onClick && onClick(event);
     }
   };
 
-  return children ? (
+  const clickableProps = onClick
+    ? {
+        onClick,
+        onKeyPress,
+        role: 'button',
+        tabIndex: -1,
+      }
+    : {};
+
+  return (
     <div
-      onKeyPress={onKeyPress}
-      tabIndex={-1}
-      className={classNames.listItem.container}
-      onClick={handleClick}
-      role="button"
+      className={classnames(
+        className,
+        classNames.listItem.container,
+        { [classNames.listItem.clickable]: onClick },
+        classNames.listItem[size]
+      )}
+      {...clickableProps}
       {...rest}
     >
       {children}
     </div>
-  ) : null;
+  );
 };

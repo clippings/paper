@@ -1,6 +1,9 @@
 import React from 'react';
+import { LIST_ITEM_SIZE } from '@paper/enums';
 
 export type ListItemPropsType = {
   children: React.ReactNode;
-  handleClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  size?: LIST_ITEM_SIZE;
+  className?: string;
+  onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 };

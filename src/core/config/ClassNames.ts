@@ -2,6 +2,7 @@ import {
   createClassName,
   createClassNameModifier,
   createComponentClassName,
+  createComponentClassNameModifier,
   createFormElementClassName,
   createFormElementClassNameModifier,
 } from '../utils/ClassNameModifierUtil';
@@ -9,6 +10,8 @@ import { BADGE_TYPE } from '../../components/Badge/enums/BadgeTypeEnum';
 import { BADGE_SIZE } from '../../components/Badge/enums/BadgeSizeEnum';
 import { HEADING_TYPE } from '../../components/Heading/enums/HeadingEnum';
 import { TEXT_TYPE } from '../../components/Text/enums/TextTypeEnum';
+import { LIST_SPACING } from '../../components/List/enums/ListSpacingEnum';
+import { LIST_ITEM_SIZE } from '../../components/ListItem/enums/ListItemSizeEnum';
 
 const classNames = {
   accordion: {
@@ -38,6 +41,7 @@ const classNames = {
     [HEADING_TYPE.DEFAULT]: createComponentClassName('heading', 'default'),
     [HEADING_TYPE.SMALL]: createComponentClassName('heading', 'small'),
     [HEADING_TYPE.LARGE]: createComponentClassName('heading', 'large'),
+    container: createClassName('heading'),
   },
   imageCover: {
     containerSingle: createClassName('image-cover-single'),
@@ -49,10 +53,13 @@ const classNames = {
   },
   list: {
     container: createClassName('list'),
+    [LIST_SPACING.SMALL]: createClassNameModifier('list', 'small-spacing'),
   },
   listItem: {
     container: createComponentClassName('list-item', 'container'),
     content: createComponentClassName('list-item', 'content'),
+    clickable: createComponentClassNameModifier('list-item', 'container', 'clickable'),
+    [LIST_ITEM_SIZE.SMALL]: createComponentClassNameModifier('list-item', 'container', 'small'),
   },
   listNumber: {
     container: createClassName('list-number'),
@@ -70,9 +77,10 @@ const classNames = {
     show: createClassName('toast__show'),
   },
   text: {
-    [TEXT_TYPE.SMALL]: createComponentClassName('text', 'small'),
-    [TEXT_TYPE.MEDIUM]: createComponentClassName('text', 'medium'),
-    [TEXT_TYPE.DEFAULT]: createComponentClassName('text', 'default'),
+    [TEXT_TYPE.SMALL]: createClassNameModifier('text', 'small'),
+    [TEXT_TYPE.MEDIUM]: createClassNameModifier('text', 'medium'),
+    [TEXT_TYPE.DEFAULT]: createClassNameModifier('text', 'default'),
+    container: createClassName('text'),
   },
   statusLabel: {
     container: createClassName('status-label'),
