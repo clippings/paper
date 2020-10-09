@@ -1,4 +1,4 @@
 export enum LIST_SPACING {
-  NONE = 'none',
+  DEFAULT = 'default',
   SMALL = 'small',
 }

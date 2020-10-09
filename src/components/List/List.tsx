@@ -6,7 +6,7 @@ import { ListPropsType } from './types/ListPropsType';
 
 export const List: React.FunctionComponent<ListPropsType> = ({
   children = null,
-  spacing = LIST_SPACING.NONE,
+  spacing = LIST_SPACING.DEFAULT,
   className = '',
 }) => (
   <div className={classnames(className, classNames.list.container, classNames.list[spacing])}>

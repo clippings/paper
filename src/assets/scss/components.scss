@@ -32,15 +32,20 @@
   grid-gap: 4px;
   align-items: center;
 }
-.p-list:not(.no-spacing) {
-  .p-list-item-container {
-    margin: 4px 0;
-  }
-  .p-list-item-container:first-child {
-    margin-top: 0;
-  }
-  .p-list-item-container:last-child {
-    margin-bottom: 0;
+.p-list {
+  &.p-list__small-spacing {
+    .p-list-item-container {
+      margin: 4px 0;
+    }
+    .p-list-item-container {
+      margin: 4px 0;
+    }
+    .p-list-item-container:first-child {
+      margin-top: 0;
+    }
+    .p-list-item-container:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 .p-list-item-container {

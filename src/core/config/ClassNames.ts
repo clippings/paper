@@ -53,7 +53,7 @@ const classNames = {
   },
   list: {
     container: createClassName('list'),
-    [LIST_SPACING.NONE]: createClassNameModifier('list', 'no-spacing'),
+    [LIST_SPACING.SMALL]: createClassNameModifier('list', 'small-spacing'),
   },
   listItem: {
     container: createComponentClassName('list-item', 'container'),
