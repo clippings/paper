@@ -1,5 +1,5 @@
 const path = require('path');
-
+const pkg = require('./package.json');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
@@ -61,6 +61,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'index.js',
+    library: pkg.name,
+    libraryTarget: 'umd',
+    umdNamedDefine: true,
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
@@ -70,6 +73,14 @@ module.exports = {
       '@paper/enums': path.resolve(__dirname, './src'),
       '@paper/assets': path.resolve(__dirname, './src/assets'),
       '@core': path.resolve(__dirname, './src/core'),
+    },
+  },
+  externals: {
+    react: {
+      root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react',
     },
   },
   module: {
