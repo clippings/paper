@@ -19,7 +19,7 @@ jobs:
           scope: '@clippings'
       - name: Building
         if: ${{ github.event.release.tag_name }} == ${{ steps.package-version.outputs.version }}
-        run: yarn
+        run: yarn && yarn build-ci
       - name: Publishing
         if: ${{ github.event.release.tag_name }} == ${{ steps.package-version.outputs.version }}
         run: yarn publish
