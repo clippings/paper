@@ -14,7 +14,9 @@ const cssLoader = [
   {
     loader: 'postcss-loader',
     options: {
-      plugins: () => [require('cssnano')()],
+      postcssOptions: {
+        plugins: ['cssnano'],
+      },
     },
   },
 ];
@@ -62,11 +64,11 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
-      '@paper/components': path.resolve(__dirname, '/src'),
-      '@paper/utils': path.resolve(__dirname, '/src'),
-      '@paper/enums': path.resolve(__dirname, '/src'),
-      '@paper/assets': path.resolve(__dirname, '/src/assets'),
-      '@core': path.resolve(__dirname, '/src/core'),
+      '@paper/components': path.resolve(__dirname, './src'),
+      '@paper/utils': path.resolve(__dirname, './src'),
+      '@paper/enums': path.resolve(__dirname, './src'),
+      '@paper/assets': path.resolve(__dirname, './src/assets'),
+      '@core': path.resolve(__dirname, './src/core'),
     },
   },
   module: {
