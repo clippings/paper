@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "declaration": true,
     "sourceMap": true,
     // allow sourcemap support
     "strictNullChecks": true,
@@ -36,8 +37,7 @@
     }
   },
   "include": [
-    "./src/**/*",
-    "./src/stories/**/*"
+    "./src/index.ts"
   ],
   "exclude": [
     "./node_modules/*"

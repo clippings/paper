@@ -1,8 +1,9 @@
 {
   "name": "@clippings/paper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Clippings Design System",
   "main": "build/index.js",
+  "types": "src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/clippings/paper.git"
@@ -124,6 +125,11 @@
       "^@paper/assets/(.*)$": "<rootDir>/src/assets/$1",
       "^@core/(.*)$": "<rootDir>/src/core/$1"
     },
+    "files": [
+      "tsOutputs/**/*.js",
+      "tsOutputs/**/*.d.ts",
+      "tsOutputs/index.d.ts"
+    ],
     "reporters": [
       "jest-progress-bar-reporter"
     ]
