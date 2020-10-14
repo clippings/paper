@@ -71,109 +71,112 @@ export declare const TextInput: React.FunctionComponent<TextInputPropsType>;
 export declare const Toast: React.FunctionComponent<ToastPropsType>;
 
 export declare enum HEADING_TYPE {
-  DEFAULT = "default",
-  SMALL = "small",
-  LARGE = "large"
+  DEFAULT = 'default',
+  SMALL = 'small',
+  LARGE = 'large',
 }
 
 export declare enum BADGE_SIZE {
-  SMALL = "small",
-  MEDIUM = "medium"
+  SMALL = 'small',
+  MEDIUM = 'medium',
 }
 
 export declare enum BADGE_TYPE {
-  UNSPECIFIED = "unspecified",
-  SUCCESS = "success",
-  WARNING = "warning"
+  UNSPECIFIED = 'unspecified',
+  SUCCESS = 'success',
+  WARNING = 'warning',
 }
 
 export declare enum ICON {
-  ARROW = "ARROW",
-  ARROW_DOWN = "ARROW_DOWN",
-  ARROW_LEFT = "ARROW_LEFT",
-  ARROW_UP = "ARROW_UP",
-  BELL = "BELL",
-  BOARD = "BOARD",
-  CALENDAR = "CALENDAR",
-  CHEVRON = "CHEVRON",
-  CHEVRON_DOWN = "CHEVRON_DOWN",
-  CHEVRON_LEFT = "CHEVRON_LEFT",
-  CHEVRON_UP = "CHEVRON_UP",
-  CHEVRON_DOUBLE = "CHEVRON_DOUBLE",
-  CLOSE = "CLOSE",
-  DOWNLOAD = "DOWNLOAD",
-  DUPLICATE = "DUPLICATE",
-  EDIT = "EDIT",
-  EXPORT = "EXPORT",
-  FOLDER = "FOLDER",
-  HAPPY = "HAPPY",
-  HIDE = "HIDE",
-  IMPORT = "IMPORT",
-  INVITE = "INVITE",
-  LINK = "LINK",
-  LIST = "LIST",
-  MATERIALS = "MATERIALS",
-  MENU = "MENU",
-  MESSAGE = "MESSAGE",
-  MORE = "MORE",
-  MOVE_TO = "MOVE_TO",
-  PICKER = "PICKER",
-  PLUS = "PLUS",
-  RESTORE = "RESTORE",
-  SEARCH = "SEARCH",
-  SHOW = "SHOW",
-  SIZE = "SIZE",
-  SORT = "SORT",
-  TEXT = "TEXT",
-  TICK = "TICK",
-  TRASH = "TRASH",
-  UPLOAD = "UPLOAD",
-  ZOOM_IN = "ZOOM_IN",
-  ZOOM_OUT = "ZOOM_OUT",
-  QUESTION_MARK = "QUESTION_MARK",
-  EXCLAMATION_MARK = "EXCLAMATION_MARK"
+  ARROW = 'ARROW',
+  ARROW_DOWN = 'ARROW_DOWN',
+  ARROW_LEFT = 'ARROW_LEFT',
+  ARROW_UP = 'ARROW_UP',
+  BELL = 'BELL',
+  BOARD = 'BOARD',
+  CALENDAR = 'CALENDAR',
+  CHEVRON = 'CHEVRON',
+  CHEVRON_DOWN = 'CHEVRON_DOWN',
+  CHEVRON_LEFT = 'CHEVRON_LEFT',
+  CHEVRON_UP = 'CHEVRON_UP',
+  CHEVRON_DOUBLE = 'CHEVRON_DOUBLE',
+  CLOSE = 'CLOSE',
+  DOWNLOAD = 'DOWNLOAD',
+  DUPLICATE = 'DUPLICATE',
+  EDIT = 'EDIT',
+  EXPORT = 'EXPORT',
+  FOLDER = 'FOLDER',
+  HAPPY = 'HAPPY',
+  HIDE = 'HIDE',
+  IMPORT = 'IMPORT',
+  INVITE = 'INVITE',
+  LINK = 'LINK',
+  LIST = 'LIST',
+  MATERIALS = 'MATERIALS',
+  MENU = 'MENU',
+  MESSAGE = 'MESSAGE',
+  MORE = 'MORE',
+  MOVE_TO = 'MOVE_TO',
+  PICKER = 'PICKER',
+  PLUS = 'PLUS',
+  RESTORE = 'RESTORE',
+  SEARCH = 'SEARCH',
+  SHOW = 'SHOW',
+  SIZE = 'SIZE',
+  SORT = 'SORT',
+  TEXT = 'TEXT',
+  TICK = 'TICK',
+  TRASH = 'TRASH',
+  UPLOAD = 'UPLOAD',
+  ZOOM_IN = 'ZOOM_IN',
+  ZOOM_OUT = 'ZOOM_OUT',
+  QUESTION_MARK = 'QUESTION_MARK',
+  EXCLAMATION_MARK = 'EXCLAMATION_MARK',
 }
 
 export declare enum ICONS_COLOR {
-  DARK = "#141414",
-  GREY = "#8f8f8f",
-  WHITE = "#ffffff"
+  DARK = '#141414',
+  GREY = '#8f8f8f',
+  WHITE = '#ffffff',
 }
 
 export enum ICONS_SIZE {
   SMALL = 14,
   MEDIUM = 16,
   LARGE = 20,
-  LARGER = 28
+  LARGER = 28,
 }
 
 export declare enum IMAGE_COVER_TYPE {
-  MULTIPLE = "multiple",
-  SINGLE = "single"
+  MULTIPLE = 'multiple',
+  SINGLE = 'single',
 }
 
 export declare enum LIST_SPACING {
-  DEFAULT = "default",
-  SMALL = "small"
+  DEFAULT = 'default',
+  SMALL = 'small',
 }
 
 export declare enum LIST_ITEM_SIZE {
-  DEFAULT = "default",
-  SMALL = "small"
+  DEFAULT = 'default',
+  SMALL = 'small',
 }
 
 export declare enum SUBMIT_TYPE {
-  ENTER = "enter",
-  KEYUP = "keyup"
+  ENTER = 'enter',
+  KEYUP = 'keyup',
 }
 
 export declare enum TEXT_TYPE {
-  SMALL = "small",
-  MEDIUM = "medium",
-  DEFAULT = "default"
+  SMALL = 'small',
+  MEDIUM = 'medium',
+  DEFAULT = 'default',
 }
 
-export declare function useDropdown(ref: React.MutableRefObject<Element | null>, initialState?: boolean): {
+export declare function useDropdown(
+  ref: React.MutableRefObject<Element | null>,
+  initialState?: boolean
+): {
   isOpen: boolean;
   handleOpen: () => void;
   handleClose: () => void;
