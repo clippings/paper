@@ -57,6 +57,7 @@ const cssExtractPlugin = new MiniCssExtractPlugin({
 
 module.exports = {
   devtool: false,
+  target: 'node',
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'build'),
