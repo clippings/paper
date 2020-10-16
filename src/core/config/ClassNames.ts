@@ -21,6 +21,7 @@ const classNames = {
     title: createClassNameModifier('accordion', 'title'),
     titleWrap: createClassNameModifier('accordion', 'title__wrap'),
     titleActive: createClassNameModifier('accordion', 'title__active'),
+    icon: createClassNameModifier('accordion', 'icon'),
   },
   badge: {
     [BADGE_TYPE.UNSPECIFIED]: createComponentClassName('badge', 'unspecified'),

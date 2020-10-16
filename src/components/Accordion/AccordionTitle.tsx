@@ -21,7 +21,11 @@ const AccordionTitle: React.FunctionComponent<AccordionTittlePropsType> = ({
       {...rest}
     >
       <div className={styleClasses.accordion.titleWrap}>{children}</div>
-      <Icon icon={ICON.CHEVRON} color={ICONS_COLOR.DARK} />
+      <Icon
+        icon={ICON.CHEVRON_DOWN}
+        color={ICONS_COLOR.DARK}
+        className={styleClasses.accordion.icon}
+      />
     </div>
   );
 };
