@@ -1,15 +1,11 @@
 import React from 'react';
-import '../../assets/scss/components.scss';
+import classnames from 'classnames';
 import classNames from '@core/config/ClassNames';
 import { TextPropsType } from './types/TextPropsType';
-import { TEXT_TYPE } from '@paper/enums';
+import '../../assets/scss/components.scss';
 
-export const Text: React.FunctionComponent<TextPropsType> = ({
-  children,
-  type = TEXT_TYPE.DEFAULT,
-  className = '',
-}) => (
-  <span className={`${classNames.text.container} ${classNames.text[type]} ${className}`}>
+export const Text: React.FunctionComponent<TextPropsType> = ({ children, type, className }) => (
+  <span className={classnames(classNames.text.container, className, type && classNames.text[type])}>
     {children}
   </span>
 );
