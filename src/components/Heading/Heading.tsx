@@ -1,16 +1,20 @@
 import React from 'react';
-import { HeadingPropsType } from './types/HeadingPropsType';
+import classnames from 'classnames';
 import classNames from '@core/config/ClassNames';
-import { HEADING_TYPE } from '@paper/enums';
+import { HeadingPropsType } from './types/HeadingPropsType';
 
 export const Heading: React.FunctionComponent<HeadingPropsType> = ({
   children = null,
-  type = HEADING_TYPE.DEFAULT,
-  className = '',
+  type,
+  className,
   ...rest
 }) => (
   <span
-    className={`${classNames.heading[type]} ${className} ${classNames.heading.container}`}
+    className={classnames(
+      classNames.heading.container,
+      className,
+      type && classNames.heading[type]
+    )}
     {...rest}
   >
     {children}

@@ -38,9 +38,8 @@ const classNames = {
     datepicker: createFormElementClassNameModifier('label', 'datepicker'),
   },
   heading: {
-    [HEADING_TYPE.DEFAULT]: createComponentClassName('heading', 'default'),
-    [HEADING_TYPE.SMALL]: createComponentClassName('heading', 'small'),
-    [HEADING_TYPE.LARGE]: createComponentClassName('heading', 'large'),
+    [HEADING_TYPE.SMALL]: createClassNameModifier('heading', 'small'),
+    [HEADING_TYPE.LARGE]: createClassNameModifier('heading', 'large'),
     container: createClassName('heading'),
   },
   imageCover: {
@@ -79,7 +78,6 @@ const classNames = {
   text: {
     [TEXT_TYPE.SMALL]: createClassNameModifier('text', 'small'),
     [TEXT_TYPE.MEDIUM]: createClassNameModifier('text', 'medium'),
-    [TEXT_TYPE.DEFAULT]: createClassNameModifier('text', 'default'),
     container: createClassName('text'),
   },
   statusLabel: {
