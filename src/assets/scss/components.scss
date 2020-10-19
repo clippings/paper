@@ -156,14 +156,13 @@
 
 .p-text {
   @extend %text-250;
-}
+  &.p-text__small {
+    @extend %text-200;
+  }
 
-.p-text__small {
-  @extend %text-200;
-}
-
-.p-text__medium {
-  @extend %text-250e;
+  &.p-text__medium {
+    @extend %text-250e;
+  }
 }
 
 .white {
