@@ -71,7 +71,6 @@ export declare const TextInput: React.FunctionComponent<TextInputPropsType>;
 export declare const Toast: React.FunctionComponent<ToastPropsType>;
 
 export declare enum HEADING_TYPE {
-  DEFAULT = 'default',
   SMALL = 'small',
   LARGE = 'large',
 }
@@ -170,7 +169,6 @@ export declare enum SUBMIT_TYPE {
 export declare enum TEXT_TYPE {
   SMALL = 'small',
   MEDIUM = 'medium',
-  DEFAULT = 'default',
 }
 
 export declare function useDropdown(
