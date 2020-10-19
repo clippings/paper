@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import classnames from 'classnames';
 import AccordionTitle from './AccordionTitle';
 import AccordionBody from './AccordionBody';
@@ -12,14 +12,17 @@ const AccordionItem: React.FunctionComponent<AccordionItemPropsType> & {
   Body: typeof AccordionBody;
 } = ({ children = null, onOpen, eventKey = null, id }) => {
   const { isActive, onClick } = useContext(AccordionContext);
+  const itemRef = useRef<HTMLDivElement | null>(null);
 
   const handleOpen = (): void => {
     onClick(id);
-    onOpen && onOpen(eventKey);
+    onOpen && onOpen(eventKey, itemRef);
   };
-
   return (
-    <div className={classnames(classNames.accordion.item, { collapsed: !isActive(id) })}>
+    <div
+      ref={itemRef}
+      className={classnames(classNames.accordion.item, { collapsed: !isActive(id) })}
+    >
       <AccordionItemContext.Provider
         value={{
           handleOpen,
