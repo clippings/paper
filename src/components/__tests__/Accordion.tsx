@@ -31,6 +31,6 @@ describe('Accordion component', () => {
     fireEvent.click(title);
 
     expect(onOpen).toBeCalled();
-    expect(onOpen).toBeCalledWith('test');
+    expect(onOpen).toBeCalledWith('test', { current: expect.any(Element) });
   });
 });
