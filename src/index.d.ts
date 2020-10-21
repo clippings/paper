@@ -18,6 +18,7 @@ import { SelectPropsType } from './components/Select/types/SelectPropsType';
 import { TextPropsType } from './components/Text/types/TextPropsType';
 import { TextInputPropsType } from './components/TextInput/types/TextInputPropsType';
 import { ToastPropsType } from './components/Toast/types/ToastPropsType';
+import { FormGroupPropType } from './components/FormGroup/types/FormGroupPropType';
 
 export declare const AccordionBody: React.FunctionComponent<ComponentType>;
 
@@ -69,6 +70,8 @@ export declare const Text: React.FunctionComponent<TextPropsType>;
 export declare const TextInput: React.FunctionComponent<TextInputPropsType>;
 
 export declare const Toast: React.FunctionComponent<ToastPropsType>;
+
+export declare const FormGoup: React.FunctionComponent<FormGroupPropType>;
 
 export declare enum HEADING_TYPE {
   SMALL = 'small',
