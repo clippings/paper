@@ -1,7 +1,7 @@
 export { DateInput } from './components/DateInput/DateInput';
 export { StatusLabel } from './components/StatusLabel';
 export { List } from './components/List/List';
-export { ListNumber } from './components/ListNumber';
+export { ListNumber } from './components/ListNumber/ListNumber';
 export { ListNumberItem } from './components/ListNumberItem';
 export { ListItem } from './components/ListItem/ListItem';
 export { Heading } from './components/Heading/Heading';

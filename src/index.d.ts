@@ -12,6 +12,7 @@ import { IconPropsType } from './components/Icon/types/IconPropsType';
 import { ImageCoverPropsType } from './components/ImageCover/types/ImageCoverPropsType';
 import { ListPropsType } from './components/List/types/ListPropsType';
 import { ListItemPropsType } from './components/ListItem/types/ListItemPropsType';
+import { ListNumberPropType } from './components/ListNumber/types/ListNumberPropType';
 import { PopoverPropsType } from './components/Popover/types/PopoverPropsType';
 import { SearchInputPropsType } from './components/SearchInput/types/SearchInputPropsType';
 import { SelectPropsType } from './components/Select/types/SelectPropsType';
@@ -53,7 +54,7 @@ export declare const List: React.FunctionComponent<ListPropsType>;
 
 export declare const ListItem: React.FunctionComponent<ListItemPropsType>;
 
-export declare const ListNumber: React.FunctionComponent<ComponentType>;
+export declare const ListNumber: React.FunctionComponent<ListNumberPropType>;
 
 export declare const ListNumberItem: React.FunctionComponent<ComponentType>;
 
