@@ -9,6 +9,7 @@ import docs from './description.md';
 const ref = React.createRef();
 
 const baseProps = {
+  id: 'text-input',
   title: 'Label',
   placeholderText: 'Placeholder',
   disabled: false,

@@ -95,8 +95,7 @@ const classNames = {
     icon: createFormElementClassNameModifier('select', 'icon'),
   },
   textInput: {
-    labelTitle: createFormElementClassName('label-title'),
-    inputContainer: createFormElementClassName('input-container'),
+    container: createFormElementClassName('input-container'),
   },
   formGroup: {
     container: createFormElementClassName('label'),
@@ -104,6 +103,9 @@ const classNames = {
   },
   formError: {
     container: createFormElementClassName('error'),
+  },
+  label: {
+    container: createFormElementClassName('label-title'),
   },
   popover: {
     block: createClassName('popover-block'),

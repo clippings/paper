@@ -3,10 +3,19 @@ import classNames from '@core/config/ClassNames';
 import { TextInputPropsType } from './types/TextInputPropsType';
 import { FormGroup } from '../FormGroup/FormGroup';
 import { FormError } from '../FormError/FormError';
+import { Label } from '../Label/Label';
 
 export const TextInput: React.FunctionComponent<TextInputPropsType> = forwardRef(
   (
-    { placeholderText, title = null, onChange = null, error = null, className = '', ...rest },
+    {
+      id = undefined,
+      placeholderText,
+      title = null,
+      onChange = null,
+      error = null,
+      className = '',
+      ...rest
+    },
     ref: RefObject<HTMLInputElement>
   ) => {
     const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -15,9 +24,10 @@ export const TextInput: React.FunctionComponent<TextInputPropsType> = forwardRef
 
     return (
       <FormGroup className={className} hasError={error !== null}>
-        {title && <span className={classNames.textInput.labelTitle}>{title}</span>}
-        <span className={classNames.textInput.inputContainer}>
+        {title && <Label htmlFor={id}>{title}</Label>}
+        <span className={classNames.textInput.container}>
           <input
+            id={id}
             ref={ref}
             type="text"
             placeholder={placeholderText}
