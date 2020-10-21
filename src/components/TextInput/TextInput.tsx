@@ -2,6 +2,7 @@ import React, { ChangeEvent, forwardRef, RefObject } from 'react';
 import classNames from '@core/config/ClassNames';
 import { TextInputPropsType } from './types/TextInputPropsType';
 import { FormGroup } from '../FormGroup/FormGroup';
+import { FormError } from '../FormError/FormError';
 
 export const TextInput: React.FunctionComponent<TextInputPropsType> = forwardRef(
   (
@@ -24,7 +25,7 @@ export const TextInput: React.FunctionComponent<TextInputPropsType> = forwardRef
             {...rest}
           />
         </span>
-        <span className={classNames.textInput.error}>{error}</span>
+        <FormError>{error}</FormError>
       </FormGroup>
     );
   }

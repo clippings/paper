@@ -19,3 +19,4 @@ export { PopoverMenu } from './components/Popover/PopoverMenu';
 export { AutocompleteInput } from './components/Autocomplete/AutocompleteInput';
 export { AutocompleteHit } from './components/Autocomplete/AutocompleteHit';
 export { FormGroup } from './components/FormGroup/FormGroup';
+export { FormError } from './components/FormError/FormError';

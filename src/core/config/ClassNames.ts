@@ -97,11 +97,13 @@ const classNames = {
   textInput: {
     labelTitle: createFormElementClassName('label-title'),
     inputContainer: createFormElementClassName('input-container'),
-    error: createFormElementClassName('error'),
   },
   formGroup: {
     container: createFormElementClassName('label'),
     hasError: createClassName('error'),
+  },
+  formError: {
+    container: createFormElementClassName('error'),
   },
   popover: {
     block: createClassName('popover-block'),
