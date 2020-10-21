@@ -1,9 +1,10 @@
 @import 'variables';
+@import 'placeholders';
+
 %form-text {
+  @extend %text-200;
   display: inline-flex;
   align-items: center;
-  line-height: 16px;
-  font-size: 12px;
   margin: 4px 0;
 }
 
