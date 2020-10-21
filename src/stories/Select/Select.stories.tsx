@@ -18,13 +18,16 @@ const options = [
   },
 ];
 
+const ref = React.createRef();
+
 const selectInput = () => {
   const placeholder = text('Placeholder', 'Select a value');
   const onChange = value => {
-    alert(value);
+    console.log(`Value = ${value}`);
+    console.log(ref.current);
   };
 
-  return <Select placeholder={placeholder} onChange={onChange} options={options} />;
+  return <Select placeholder={placeholder} onChange={onChange} options={options} ref={ref} />;
 };
 
 const figmaFile = figmaDecorator({
