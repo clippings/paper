@@ -74,7 +74,7 @@ export declare const TextInput: React.FunctionComponent<TextInputPropsType>;
 
 export declare const Toast: React.FunctionComponent<ToastPropsType>;
 
-export declare const FormGoup: React.FunctionComponent<FormGroupPropType>;
+export declare const FormGroup: React.FunctionComponent<FormGroupPropType>;
 
 export declare const FormError: React.FunctionComponent<FormErrorPropType>;
 
