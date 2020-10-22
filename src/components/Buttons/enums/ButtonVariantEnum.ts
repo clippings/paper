@@ -1,5 +1,5 @@
 export enum BUTTON_VARIANT {
-  CIRCLE = 'primary',
+  PRIMARY = 'primary',
   DEFAULT = 'default',
   DANGER = 'danger',
   NEUTRAL = 'neutral',
