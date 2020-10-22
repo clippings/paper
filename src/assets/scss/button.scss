@@ -1,0 +1,251 @@
+@import 'variables';
+@import 'placeholders';
+
+// the code below is going to replace .button
+// buttons refactoring in progress
+
+$buttons-colors: (
+  'primary': (
+    'back': $brand-primary,
+    'color': $brand-inverse,
+    'border': $brand-primary,
+  ),
+  'default': (
+    'back': transparent,
+    'color': $brand-primary,
+    'border': $gray-lighter,
+    'hover': (
+      'back': $brand-primary,
+      'color': $brand-inverse,
+      'border': $brand-primary,
+    ),
+  ),
+  'danger': (
+    'back': $brand-danger,
+    'color': $brand-inverse,
+    'border': $brand-danger,
+  ),
+  'neutral': (
+    'back': $brand-neutral,
+    'color': $brand-inverse,
+    'border': $brand-neutral,
+  ),
+);
+$button-sizes: (
+  'default': (
+    'height': 40px,
+    'padding': 0 20px 1px 20px,
+    'padding-left': 20px,
+  ),
+  'small': (
+    'height': 32px,
+    'padding': 0 10px 0.5px 10px,
+    'padding-left': 10px,
+  ),
+  'big': (
+    'height': 48px,
+    'padding': 0 30px 1px 30px,
+    'padding-left': 30px,
+  ),
+);
+
+$btn-prefix: 'uni-button'; // TODO: rename prefix to "button" when all the buttons are replaced
+$btn-font-size: 14px;
+$icon-margin: 4px;
+
+@mixin uni-button-size($size-map) {
+  height: map-get($size-map, 'height');
+  max-height: map-get($size-map, 'height');
+  line-height: $btn-font-size;
+  padding: map-get($size-map, 'padding');
+  &.#{$btn-prefix}--icon-right {
+    padding-right: map-get($size-map, 'padding-left') + $icon-margin + $btn-font-size;
+    &:before {
+      position: absolute;
+      right: map-get($size-map, 'padding-left');
+    }
+  }
+}
+@mixin uni-button-variant($colors) {
+  background-color: map-get($colors, 'back');
+  color: map-get($colors, 'color');
+  border-color: #{map-get($colors, 'border')};
+  &:not([disabled]) {
+    &:visited {
+      border-color: #{map-get($colors, 'border')} !important;
+    }
+    &:hover,
+    &:active,
+    &.active {
+      @if (map-get($colors, 'hover')) {
+        opacity: 1;
+        $hover: map-get($colors, 'hover');
+        background-color: map-get($hover, 'back');
+        color: map-get($hover, 'color');
+        border-color: #{map-get($hover, 'border')};
+      }
+    }
+  }
+  &[disabled] {
+    opacity: 0.2;
+  }
+}
+
+a,
+label,
+span {
+  &.#{$btn-prefix} {
+    text-decoration: none;
+    line-height: map-get(map-get($button-sizes, 'default'), 'height') - 2px !important;
+    &.#{$btn-prefix}--big {
+      line-height: map-get(map-get($button-sizes, 'big'), 'height') - 2px !important;
+    }
+    &.#{$btn-prefix}--small {
+      line-height: map-get(map-get($button-sizes, 'small'), 'height') - 2px !important;
+    }
+  }
+}
+
+%filled {
+  text-align: center;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  @include uni-button-size(map-get($button-sizes, 'default'));
+  &.#{$btn-prefix}--small {
+    @include uni-button-size(map-get($button-sizes, 'small'));
+  }
+  &.#{$btn-prefix}--big {
+    @include uni-button-size(map-get($button-sizes, 'big'));
+  }
+  @each $type, $value in $buttons-colors {
+    &.#{$btn-prefix}--#{$type} {
+      @include uni-button-variant($value);
+    }
+  }
+  &.#{$btn-prefix}--circle {
+    padding: 0 0;
+  }
+}
+
+.#{$btn-prefix} {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+  background: none;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-size: $btn-font-size;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s;
+  * {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &:before {
+    margin-right: $icon-margin;
+    font-size: 1.14em;
+    display: inline-flex;
+    align-items: center;
+  }
+  &--icon-right {
+    padding-right: $icon-margin + $btn-font-size;
+  }
+
+  &.#{$btn-prefix}--icon-right {
+    padding-right: $icon-margin + $btn-font-size;
+    &:before {
+      position: absolute;
+      margin-right: 0;
+      right: 0;
+    }
+  }
+  &.#{$btn-prefix}--empty:before {
+    margin-right: 0;
+  }
+  &:hover {
+    // top: -2px; // TODO: uncomment after all the buttons are replaced
+    opacity: 0.9; // TODO: remove after all the buttons are replaced
+    text-decoration: none;
+  }
+  &:active,
+  &:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  &.#{$btn-prefix}--filled {
+    @extend %filled;
+  }
+  &.#{$btn-prefix}--circle {
+    height: map-get(map-get($button-sizes, 'default'), 'height');
+    width: map-get(map-get($button-sizes, 'default'), 'height');
+    padding: 0 0;
+    border-radius: 50%;
+    overflow: hidden;
+    &.#{$btn-prefix}--small {
+      height: map-get(map-get($button-sizes, 'small'), 'height');
+      width: map-get(map-get($button-sizes, 'small'), 'height');
+    }
+    &.#{$btn-prefix}--big {
+      height: map-get(map-get($button-sizes, 'big'), 'height');
+      width: map-get(map-get($button-sizes, 'big'), 'height');
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &.#{$btn-prefix}--full-width {
+    width: 100%;
+
+    &[disabled] {
+      opacity: 0.2;
+      cursor: default;
+    }
+  }
+  &.#{$btn-prefix}--borderless {
+    border: 0;
+  }
+  // social media
+  &.button-twitter,
+  &.button-pinterest {
+    @extend %filled;
+    color: #ffffff;
+  }
+
+  &.button-twitter {
+    background: $color-twitter;
+    border-color: $color-twitter;
+    &:before {
+      @extend %button-icon--twitter;
+    }
+  }
+
+  &.button-pinterest {
+    background: $color-pinterest;
+    border-color: $color-pinterest;
+    &:before {
+      @extend %button-icon--pinit;
+    }
+  }
+}
+.input-group-btn {
+  .#{$btn-prefix}--filled {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+.button-icon--close {
+  &:before {
+    @extend %button-icon--close;
+  }
+}
