@@ -9,3 +9,7 @@ export { ICONS_COLOR } from './components/Icon/enums/IconsColorEnum';
 export { SUBMIT_TYPE } from './components/SearchInput/enums/SubmitTypeEnum';
 export { LIST_SPACING } from './components/List/enums/ListSpacingEnum';
 export { LIST_ITEM_SIZE } from './components/ListItem/enums/ListItemSizeEnum';
+export { BUTTON_SHAPE } from './components/Buttons/enums/ButtonShapeEnum';
+export { BUTTON_SIZE } from './components/Buttons/enums/ButtonSizeEnum';
+export { BUTTON_TYPE } from './components/Buttons/enums/ButtonTypeEnum';
+export { BUTTON_VARIANT } from './components/Buttons/enums/ButtonVariantEnum';
