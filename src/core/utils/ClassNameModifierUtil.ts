@@ -64,7 +64,7 @@ export const generateButtonClassName = ({
   iconRight,
 }: {
   children?: React.ReactNode;
-  className?: string;
+  className?: any;
   size?: string;
   variant?: string;
   shape?: string;
@@ -78,7 +78,7 @@ export const generateButtonClassName = ({
     [`${buttonPrefix}--full-width`]: fullWidth,
     [`${buttonPrefix}--icon-right`]: iconRight,
     [`${buttonPrefix}--empty`]: !children,
-    [className as string]: className,
+    [className]: className,
   });
 
   return classes;
