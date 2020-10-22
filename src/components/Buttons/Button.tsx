@@ -1,7 +1,8 @@
 import React from 'react';
-import { generateButtonClassName } from '../../core/utils/ClassNameModifierUtil';
-import { BUTTON_TYPE } from './enums/ButtonTypeEnum';
+import { generateButtonClassName } from '@core/utils/ClassNameModifierUtil';
+import { BUTTON_TYPE } from '@paper/enums';
 import { ButtonPropsType } from './types/ButtonPropsType';
+import '@paper/assets/scss/button.scss';
 
 export const Button: React.FunctionComponent<ButtonPropsType> = ({
   children = null,

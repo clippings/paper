@@ -1,8 +1,5 @@
 import * as React from 'react';
-import { BUTTON_SIZE } from '../enums/ButtonSizeEnum';
-import { BUTTON_SHAPE } from '../enums/ButtonShapeEnum';
-import { BUTTON_VARIANT } from '../enums/ButtonVariantEnum';
-import { BUTTON_TYPE } from '../enums/ButtonTypeEnum';
+import { BUTTON_SIZE, BUTTON_SHAPE, BUTTON_VARIANT, BUTTON_TYPE } from '@paper/enums';
 
 export type ButtonPropsType = {
   children?: React.ReactNode;
