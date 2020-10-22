@@ -71,8 +71,8 @@ export const generateButtonClassName = ({
   fullWidth?: boolean;
   iconRight?: boolean;
 }): string => {
-  const classes = classNames(prefix, {
-    [`${buttonPrefix}--filled ${prefix}--${variant}`]: variant,
+  const classes = classNames(buttonPrefix, {
+    [`${buttonPrefix}--filled ${buttonPrefix}--${variant}`]: variant,
     [`${buttonPrefix}--${size}`]: size,
     [`${buttonPrefix}--${shape}`]: shape,
     [`${buttonPrefix}--full-width`]: fullWidth,
