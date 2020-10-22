@@ -1,0 +1,27 @@
+@import '../assets/scss/icons';
+
+.buttons-container {
+  button {
+    margin: 10px;
+  }
+}
+button {
+  &:before {
+    font-family: 'Icomoon';
+  }
+}
+.close-button--example {
+  &:before {
+    @extend .icon-close;
+  }
+}
+.button-happy--example {
+  &:before {
+    @extend .icon-happy;
+  }
+}
+.button-arrow--example {
+  &:before {
+    @extend .icon-arrow_right;
+  }
+}
