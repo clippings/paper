@@ -95,11 +95,17 @@ const classNames = {
     icon: createFormElementClassNameModifier('select', 'icon'),
   },
   textInput: {
-    label: createFormElementClassName('label'),
-    labelTitle: createFormElementClassName('label-title'),
-    inputContainer: createFormElementClassName('input-container'),
-    errorContainer: createFormElementClassName('error'),
-    error: createClassName('error'),
+    container: createFormElementClassName('input-container'),
+  },
+  formGroup: {
+    container: createFormElementClassName('label'),
+    hasError: createClassName('error'),
+  },
+  formError: {
+    container: createFormElementClassName('error'),
+  },
+  label: {
+    container: createFormElementClassName('label-title'),
   },
   popover: {
     block: createClassName('popover-block'),

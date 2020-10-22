@@ -27,6 +27,11 @@ exports[`Select component matches snapshot 1`] = `
         />
       </svg>
     </div>
+    <input
+      name=""
+      type="hidden"
+      value=""
+    />
     <ul
       class="p-f-select__dropdown"
     >

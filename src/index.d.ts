@@ -12,12 +12,16 @@ import { IconPropsType } from './components/Icon/types/IconPropsType';
 import { ImageCoverPropsType } from './components/ImageCover/types/ImageCoverPropsType';
 import { ListPropsType } from './components/List/types/ListPropsType';
 import { ListItemPropsType } from './components/ListItem/types/ListItemPropsType';
+import { ListNumberPropType } from './components/ListNumber/types/ListNumberPropType';
 import { PopoverPropsType } from './components/Popover/types/PopoverPropsType';
 import { SearchInputPropsType } from './components/SearchInput/types/SearchInputPropsType';
 import { SelectPropsType } from './components/Select/types/SelectPropsType';
 import { TextPropsType } from './components/Text/types/TextPropsType';
 import { TextInputPropsType } from './components/TextInput/types/TextInputPropsType';
 import { ToastPropsType } from './components/Toast/types/ToastPropsType';
+import { FormGroupPropType } from './components/FormGroup/types/FormGroupPropType';
+import { FormErrorPropType } from './components/FormError/types/FormErrorPropType';
+import { LabelPropType } from './components/Label/types/LabelPropType';
 
 export declare const AccordionBody: React.FunctionComponent<ComponentType>;
 
@@ -50,7 +54,7 @@ export declare const List: React.FunctionComponent<ListPropsType>;
 
 export declare const ListItem: React.FunctionComponent<ListItemPropsType>;
 
-export declare const ListNumber: React.FunctionComponent<ComponentType>;
+export declare const ListNumber: React.FunctionComponent<ListNumberPropType>;
 
 export declare const ListNumberItem: React.FunctionComponent<ComponentType>;
 
@@ -69,6 +73,12 @@ export declare const Text: React.FunctionComponent<TextPropsType>;
 export declare const TextInput: React.FunctionComponent<TextInputPropsType>;
 
 export declare const Toast: React.FunctionComponent<ToastPropsType>;
+
+export declare const FormGoup: React.FunctionComponent<FormGroupPropType>;
+
+export declare const FormError: React.FunctionComponent<FormErrorPropType>;
+
+export declare const Label: React.FunctionComponent<LabelPropType>;
 
 export declare enum HEADING_TYPE {
   SMALL = 'small',

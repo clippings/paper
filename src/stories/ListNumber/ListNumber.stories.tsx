@@ -6,7 +6,7 @@ import { TEXT_TYPE } from '@paper/enums';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
 const buildPrettyList = () => (
-  <ListNumber>
+  <ListNumber className="list-number-test-classname">
     <ListNumberItem>
       <Text type={TEXT_TYPE.SMALL}>1st list item</Text>
       <br />

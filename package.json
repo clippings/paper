@@ -1,6 +1,6 @@
 {
   "name": "@clippings/paper",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Clippings Design System",
   "main": "build/index.js",
   "types": "src/index.d.ts",
@@ -67,6 +67,7 @@
     "webpack-cli": "^4.0.0"
   },
   "dependencies": {
+    "@storybook/addon-console": "^1.2.2",
     "classnames": "^2.2.6",
     "lodash": "^4.17.19",
     "react": "^16.13.1",

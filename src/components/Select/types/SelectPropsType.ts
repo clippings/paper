@@ -7,5 +7,6 @@ export type SelectPropsType = {
   }[];
   selected?: any | number | string;
   placeholder?: string;
-  onChange: Function;
+  onChange?: (value: string) => void;
+  name?: string;
 };
