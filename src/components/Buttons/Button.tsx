@@ -11,7 +11,6 @@ export const Button: React.FunctionComponent<ButtonPropsType> = ({
   shape = '',
   variant = '',
   fullWidth = false,
-  iconRight = false,
   type = BUTTON_TYPE.SUBMIT,
   ...rest
 }) => {
@@ -22,7 +21,6 @@ export const Button: React.FunctionComponent<ButtonPropsType> = ({
     variant,
     shape,
     fullWidth,
-    iconRight,
   });
 
   return (
