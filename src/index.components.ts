@@ -25,3 +25,4 @@ export { Button } from './components/Buttons/Button';
 export { DefaultButton } from './components/Buttons/DefaultButton';
 export { PrimaryButton } from './components/Buttons/PrimaryButton';
 export { CircleButton } from './components/Buttons/CircleButton';
+export { Overlay } from './components/Overlay/Overlay';

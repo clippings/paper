@@ -23,6 +23,7 @@ import { FormGroupPropType } from './components/FormGroup/types/FormGroupPropTyp
 import { FormErrorPropType } from './components/FormError/types/FormErrorPropType';
 import { LabelPropType } from './components/Label/types/LabelPropType';
 import { ButtonPropsType } from './components/Buttons/types/ButtonPropsType';
+import { OverlayPropsType } from './components/Overlay/types/OverlayPropsType';
 
 export declare const AccordionBody: React.FunctionComponent<ComponentType>;
 
@@ -81,6 +82,7 @@ export declare const FormError: React.FunctionComponent<FormErrorPropType>;
 
 export declare const Label: React.FunctionComponent<LabelPropType>;
 
+<<<<<<< HEAD
 export declare const Button: React.FunctionComponent<ButtonPropsType>;
 
 export declare const PrimaryButton: React.FunctionComponent<ButtonPropsType>;
@@ -88,6 +90,9 @@ export declare const PrimaryButton: React.FunctionComponent<ButtonPropsType>;
 export declare const DefaultButton: React.FunctionComponent<ButtonPropsType>;
 
 export declare const CircleButton: React.FunctionComponent<ButtonPropsType>;
+=======
+export declare const Overlay: React.FunctionComponent<OverlayPropsType>;
+>>>>>>> d9b1881... Add an overlay component
 
 export declare enum HEADING_TYPE {
   SMALL = 'small',
