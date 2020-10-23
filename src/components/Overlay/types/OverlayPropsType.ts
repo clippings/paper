@@ -6,4 +6,5 @@ export type OverlayPropsType = {
   zIndex?: number;
   className?: string;
   positioning?: string;
+  open?: boolean | null;
 };

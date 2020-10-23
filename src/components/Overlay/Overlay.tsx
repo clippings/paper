@@ -10,11 +10,19 @@ export const Overlay: React.FunctionComponent<OverlayPropsType> = ({
   content = null,
   zIndex = 1050,
   positioning = OVERLAY_POSITIONING.CENTERED,
+  open = false,
 }) => (
-  <div className={classnames(classNames.overlay.container, classNames.overlay[positioning])}>
+  <div className={classnames(classNames.overlay.container)}>
     {children}
     <div
-      className={classnames(className, classNames.overlay.content, classNames.overlay[positioning])}
+      className={classnames(
+        className,
+        classNames.overlay.content,
+        classNames.overlay[positioning],
+        {
+          [classNames.overlay.open]: open,
+        }
+      )}
       style={{ zIndex }}
     >
       {content}

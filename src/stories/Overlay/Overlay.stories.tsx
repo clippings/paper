@@ -5,7 +5,15 @@ import { jsxDecorator } from 'storybook-addon-jsx';
 import { Overlay, Text } from '@paper/components';
 
 const buildOverlay = () => (
-  <Overlay content={<Text>Overlay text</Text>}>
+  <Overlay content={<Text>Overlay text</Text>} open={true}>
+    <Text>Random content to be obstructed</Text>
+    <Text>Random content to be obstructed</Text>
+    <Text>Random content to be obstructed</Text>
+    <Text>Random content to be obstructed</Text>
+    <Text>Random content to be obstructed</Text>
+    <Text>Random content to be obstructed</Text>
+    <Text>Random content to be obstructed</Text>
+    <br />
     <Text>Random content to be obstructed</Text>
     <Text>Random content to be obstructed</Text>
     <Text>Random content to be obstructed</Text>
