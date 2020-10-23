@@ -57,13 +57,6 @@ $icon-margin: 4px;
   max-height: map-get($size-map, 'height');
   line-height: $btn-font-size;
   padding: map-get($size-map, 'padding');
-  &.#{$btn-prefix}--icon-right {
-    padding-right: map-get($size-map, 'padding-left') + $icon-margin + $btn-font-size;
-    &:before {
-      position: absolute;
-      right: map-get($size-map, 'padding-left');
-    }
-  }
 }
 @mixin uni-button-variant($colors) {
   background-color: map-get($colors, 'back');
@@ -148,24 +141,6 @@ span {
       cursor: pointer;
     }
   }
-  &:before {
-    margin-right: $icon-margin;
-    font-size: 1.14em;
-    display: inline-flex;
-    align-items: center;
-  }
-  &--icon-right {
-    padding-right: $icon-margin + $btn-font-size;
-  }
-
-  &.#{$btn-prefix}--icon-right {
-    padding-right: $icon-margin + $btn-font-size;
-    &:before {
-      position: absolute;
-      margin-right: 0;
-      right: 0;
-    }
-  }
   &.#{$btn-prefix}--empty:before {
     margin-right: 0;
   }
@@ -235,5 +210,13 @@ span {
   .#{$btn-prefix}--filled {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+  }
+}
+
+.#{$btn-prefix}--default {
+  &:hover {
+    svg {
+      fill: #ffffff;
+    }
   }
 }
