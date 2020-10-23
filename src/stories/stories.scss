@@ -1,5 +1,9 @@
 .buttons-container {
-  button {
+  display: flex;
+  align-items: center;
+
+  button,
+  a {
     margin: 10px;
   }
 }
