@@ -1,5 +1,4 @@
 @import 'variables';
-@import 'placeholders';
 
 // the code below is going to replace .button
 // buttons refactoring in progress
@@ -225,27 +224,16 @@ span {
   &.button-twitter {
     background: $color-twitter;
     border-color: $color-twitter;
-    &:before {
-      @extend %button-icon--twitter;
-    }
   }
 
   &.button-pinterest {
     background: $color-pinterest;
     border-color: $color-pinterest;
-    &:before {
-      @extend %button-icon--pinit;
-    }
   }
 }
 .input-group-btn {
   .#{$btn-prefix}--filled {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-  }
-}
-.button-icon--close {
-  &:before {
-    @extend %button-icon--close;
   }
 }
