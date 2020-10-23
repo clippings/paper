@@ -128,6 +128,7 @@ const classNames = {
   overlay: {
     container: createComponentClassName('overlay', 'container'),
     content: createComponentClassName('overlay', 'content'),
+    open: createClassNameModifier('overlay', 'open'),
     [OVERLAY_POSITIONING.CENTERED]: createClassNameModifier('overlay', 'centered'),
   },
 };
