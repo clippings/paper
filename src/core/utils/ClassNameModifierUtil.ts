@@ -3,7 +3,7 @@ import React from 'react';
 
 const prefix: string = 'p-';
 const formPrefix: string = 'f-';
-const buttonPrefix = 'uni-button'; // TODO: replace with "button" after buttons-refactoring is complete
+const buttonPrefix = 'p-button';
 
 /**
  * @param {string} element
