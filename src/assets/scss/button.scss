@@ -48,17 +48,17 @@ $button-sizes: (
   ),
 );
 
-$btn-prefix: 'uni-button'; // TODO: rename prefix to "button" when all the buttons are replaced
+$btn-prefix: 'p-button';
 $btn-font-size: 14px;
 $icon-margin: 4px;
 
-@mixin uni-button-size($size-map) {
+@mixin p-button-size($size-map) {
   height: map-get($size-map, 'height');
   max-height: map-get($size-map, 'height');
   line-height: $btn-font-size;
   padding: map-get($size-map, 'padding');
 }
-@mixin uni-button-variant($colors) {
+@mixin p-button-variant($colors) {
   background-color: map-get($colors, 'back');
   color: map-get($colors, 'color');
   border-color: #{map-get($colors, 'border')};
@@ -103,16 +103,16 @@ span {
   border-radius: 4px;
   border-width: 1px;
   border-style: solid;
-  @include uni-button-size(map-get($button-sizes, 'default'));
+  @include p-button-size(map-get($button-sizes, 'default'));
   &.#{$btn-prefix}--small {
-    @include uni-button-size(map-get($button-sizes, 'small'));
+    @include p-button-size(map-get($button-sizes, 'small'));
   }
   &.#{$btn-prefix}--big {
-    @include uni-button-size(map-get($button-sizes, 'big'));
+    @include p-button-size(map-get($button-sizes, 'big'));
   }
   @each $type, $value in $buttons-colors {
     &.#{$btn-prefix}--#{$type} {
-      @include uni-button-variant($value);
+      @include p-button-variant($value);
     }
   }
   &.#{$btn-prefix}--circle {
@@ -145,8 +145,7 @@ span {
     margin-right: 0;
   }
   &:hover {
-    // top: -2px; // TODO: uncomment after all the buttons are replaced
-    opacity: 0.9; // TODO: remove after all the buttons are replaced
+    opacity: 0.9;
     text-decoration: none;
   }
   &:active,
@@ -193,7 +192,7 @@ span {
   &.button-twitter,
   &.button-pinterest {
     @extend %filled;
-    color: #ffffff;
+    color: $white;
   }
 
   &.button-twitter {
@@ -216,7 +215,7 @@ span {
 .#{$btn-prefix}--default {
   &:hover {
     svg {
-      fill: #ffffff;
+      fill: $white;
     }
   }
 }
