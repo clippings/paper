@@ -6,28 +6,28 @@
 $buttons-colors: (
   'primary': (
     'back': $brand-primary,
-    'color': $brand-inverse,
+    'color': $white,
     'border': $brand-primary,
   ),
   'default': (
     'back': transparent,
     'color': $brand-primary,
-    'border': $gray-lighter,
+    'border': $medium,
     'hover': (
       'back': $brand-primary,
-      'color': $brand-inverse,
+      'color': $white,
       'border': $brand-primary,
     ),
   ),
   'danger': (
-    'back': $brand-danger,
-    'color': $brand-inverse,
-    'border': $brand-danger,
+    'back': $attention,
+    'color': $white,
+    'border': $attention,
   ),
   'neutral': (
-    'back': $brand-neutral,
-    'color': $brand-inverse,
-    'border': $brand-neutral,
+    'back': $medium,
+    'color': $white,
+    'border': $medium,
   ),
 );
 $button-sizes: (
