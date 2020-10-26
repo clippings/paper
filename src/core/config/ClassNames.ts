@@ -40,6 +40,7 @@ const classNames = {
   },
   heading: {
     [HEADING_TYPE.SMALL]: createClassNameModifier('heading', 'small'),
+    [HEADING_TYPE.MEDIUM]: createClassNameModifier('heading', 'medium'),
     [HEADING_TYPE.LARGE]: createClassNameModifier('heading', 'large'),
     container: createClassName('heading'),
   },

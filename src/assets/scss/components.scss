@@ -72,6 +72,10 @@
   @extend %text-250e;
 }
 
+.p-heading__medium {
+  @extend %display-200;
+}
+
 .p-image-cover-single {
   @extend %p-image-cover;
   flex-direction: column;
