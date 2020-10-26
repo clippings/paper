@@ -40,43 +40,34 @@ $text-250e-font-weight: 600;
 $text-250e-font-size: 14px;
 $text-250e-line-height: 20px;
 
-//$gray-base:              #000 !default;
-$gray-darkest: #111;
-$gray-darker: lighten(#000, 13.5%); // #222222
-$gray-dark: lighten(#000, 20%); // #333333
-$gray: lighten(#000, 40%); // #666666
-$gray-light: lighten(#000, 60%); // #999999
-$gray-lighter: lighten(#000, 80%); // #CCCCCC
-$gray-lightest: #eee;
-$gray-background: #f7f7f7;
-$gray-text: #9896a4;
-$gray-border: #dedede;
+// Primitive colors
+$graphite-120: #141414;
+$graphite-90: #525252;
+$graphite-60: #8F8F8F;
+$graphite-30: #CCCCCC;
+$graphite-10: #F5F5F5;
+$white: #FFFFFF;
 
-// social media colors
+$red-60: #D74B46;
+$yellow-50: #F1B056;
+$green-30: #4AAB4A;
+$blue-50: #66C4E0;
+$beige-10: #F3EDE9;
+
+// Abstract colors
+$brand-primary: $graphite-120;
+$darkest: $graphite-120;
+$darker: $graphite-90;
+$medium: $graphite-60;
+$light: $graphite-30;
+$lightest: $graphite-10;
+
+$attention: $red-60;
+$caution: $yellow-50;
+$success: $green-30;
+$information: $blue-50;
+$brand-background: $beige-10;
+
+// Social media colors
 $color-twitter: #03aaf5;
 $color-pinterest: #d02621;
-
-// brand colors
-$brand-primary: #111;
-$brand-secondary: #fff;
-$brand-inverse: #fff;
-$brand-active: #f7786b;
-$brand-primary-default: darken(#428bca, 6.5%);
-
-$statusColors: (
-  'neutral': $gray-light,
-  'undefined': transparent,
-  'success': darken(#5cb85c, 15%),
-  'info': #5bc0de,
-  'ready': $brand-primary-default,
-  'warning': #f0ad4e,
-  'danger': #d9534f,
-);
-
-$brand-success: map-get($statusColors, 'success');
-$brand-info: map-get($statusColors, 'info');
-$brand-ready: map-get($statusColors, 'ready');
-$brand-warning: map-get($statusColors, 'warning');
-$brand-danger: map-get($statusColors, 'danger');
-$brand-neutral: map-get($statusColors, 'neutral');
-$brand-undefined: map-get($statusColors, 'undefined');
