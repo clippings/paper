@@ -12,7 +12,6 @@ import { HEADING_TYPE } from '../../components/Heading/enums/HeadingEnum';
 import { TEXT_TYPE } from '../../components/Text/enums/TextTypeEnum';
 import { LIST_SPACING } from '../../components/List/enums/ListSpacingEnum';
 import { LIST_ITEM_SIZE } from '../../components/ListItem/enums/ListItemSizeEnum';
-import { OVERLAY_POSITIONING } from '../../components/Overlay/enums/OverlayPositioningEnum';
 
 const classNames = {
   accordion: {
@@ -129,7 +128,6 @@ const classNames = {
     container: createComponentClassName('overlay', 'container'),
     content: createComponentClassName('overlay', 'content'),
     open: createClassNameModifier('overlay', 'open'),
-    [OVERLAY_POSITIONING.CENTERED]: createClassNameModifier('overlay', 'centered'),
   },
 };
 
