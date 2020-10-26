@@ -22,6 +22,7 @@ import { ToastPropsType } from './components/Toast/types/ToastPropsType';
 import { FormGroupPropType } from './components/FormGroup/types/FormGroupPropType';
 import { FormErrorPropType } from './components/FormError/types/FormErrorPropType';
 import { LabelPropType } from './components/Label/types/LabelPropType';
+import { ButtonPropsType } from './components/Buttons/types/ButtonPropsType';
 
 export declare const AccordionBody: React.FunctionComponent<ComponentType>;
 
@@ -79,6 +80,14 @@ export declare const FormGroup: React.FunctionComponent<FormGroupPropType>;
 export declare const FormError: React.FunctionComponent<FormErrorPropType>;
 
 export declare const Label: React.FunctionComponent<LabelPropType>;
+
+export declare const Button: React.FunctionComponent<ButtonPropsType>;
+
+export declare const PrimaryButton: React.FunctionComponent<ButtonPropsType>;
+
+export declare const DefaultButton: React.FunctionComponent<ButtonPropsType>;
+
+export declare const CircleButton: React.FunctionComponent<ButtonPropsType>;
 
 export declare enum HEADING_TYPE {
   SMALL = 'small',

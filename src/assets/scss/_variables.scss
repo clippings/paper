@@ -39,3 +39,35 @@ $text-250e-font-style: normal;
 $text-250e-font-weight: 600;
 $text-250e-font-size: 14px;
 $text-250e-line-height: 20px;
+
+// Primitive colors
+$graphite-120: #141414;
+$graphite-90: #525252;
+$graphite-60: #8f8f8f;
+$graphite-30: #cccccc;
+$graphite-10: #f5f5f5;
+$white: #ffffff;
+
+$red-60: #d74b46;
+$yellow-50: #f1b056;
+$green-30: #4aab4a;
+$blue-50: #66c4e0;
+$beige-10: #f3ede9;
+
+// Abstract colors
+$brand-primary: $graphite-120;
+$darkest: $graphite-120;
+$darker: $graphite-90;
+$medium: $graphite-60;
+$light: $graphite-30;
+$lightest: $graphite-10;
+
+$attention: $red-60;
+$caution: $yellow-50;
+$success: $green-30;
+$information: $blue-50;
+$brand-background: $beige-10;
+
+// Social media colors
+$color-twitter: #03aaf5;
+$color-pinterest: #d02621;

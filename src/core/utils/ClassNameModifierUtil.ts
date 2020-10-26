@@ -1,5 +1,9 @@
+import classNames from 'classnames';
+import React from 'react';
+
 const prefix: string = 'p-';
 const formPrefix: string = 'f-';
+const buttonPrefix = 'p-button';
 
 /**
  * @param {string} element
@@ -49,3 +53,30 @@ export const createFormElementClassName = (element: string): string =>
  */
 export const createFormElementClassNameModifier = (element: string, modifier: string): string =>
   `${createClassName(formPrefix + element)}__${modifier}`;
+
+export const generateButtonClassName = ({
+  children,
+  className,
+  size,
+  variant,
+  shape,
+  fullWidth,
+}: {
+  children?: React.ReactNode;
+  className?: any;
+  size?: string;
+  variant?: string;
+  shape?: string;
+  fullWidth?: boolean;
+}): string => {
+  const classes = classNames(buttonPrefix, {
+    [`${buttonPrefix}--filled ${buttonPrefix}--${variant}`]: variant,
+    [`${buttonPrefix}--${size}`]: size,
+    [`${buttonPrefix}--${shape}`]: shape,
+    [`${buttonPrefix}--full-width`]: fullWidth,
+    [`${buttonPrefix}--empty`]: !children,
+    [className]: className,
+  });
+
+  return classes;
+};
