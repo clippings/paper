@@ -83,6 +83,18 @@ module.exports = {
       commonjs: 'react',
       amd: 'react',
     },
+    'styled-components': {
+      root: 'styled',
+      commonjs: 'styled-components',
+      commonjs2: 'styled-components',
+      amd: 'styled-components',
+    },
+    'styled-theming': {
+      root: 'theme',
+      commonjs: 'styled-theming',
+      commonjs2: 'styled-theming',
+      amd: 'styled-theming',
+    },
   },
   module: {
     rules: [
