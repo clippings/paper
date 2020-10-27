@@ -1,6 +1,6 @@
 {
   "name": "@clippings/paper",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Clippings Design System",
   "main": "build/index.js",
   "types": "src/index.d.ts",
