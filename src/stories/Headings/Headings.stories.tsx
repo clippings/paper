@@ -6,10 +6,12 @@ import { jsxDecorator } from 'storybook-addon-jsx';
 
 const buildDefaultHeading = () => <Heading>A heading</Heading>;
 const buildLargeHeading = () => <Heading type={HEADING_TYPE.LARGE}>A large heading</Heading>;
+const buildMediumHeading = () => <Heading type={HEADING_TYPE.MEDIUM}>A medium heading</Heading>;
 const buildSmallHeading = () => <Heading type={HEADING_TYPE.SMALL}>A small heading</Heading>;
 
 storiesOf('Headings', module)
   .addDecorator(jsxDecorator)
   .add('Heading Default', buildDefaultHeading)
   .add('Heading Large', buildLargeHeading)
+  .add('Heading Medium', buildMediumHeading)
   .add('Heading Small', buildSmallHeading);

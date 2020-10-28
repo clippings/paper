@@ -12,6 +12,13 @@
   line-height: $display-110-line-height;
 }
 
+%display-200 {
+  font-style: $display-200-font-style;
+  font-weight: $display-200-font-weight;
+  font-size: $display-200-font-size;
+  line-height: $display-200-line-height;
+}
+
 %i500-04 {
   font-style: $text-250-font-style;
   font-weight: $text-250-font-weight;
