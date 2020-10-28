@@ -82,7 +82,6 @@ export declare const FormError: React.FunctionComponent<FormErrorPropType>;
 
 export declare const Label: React.FunctionComponent<LabelPropType>;
 
-<<<<<<< HEAD
 export declare const Button: React.FunctionComponent<ButtonPropsType>;
 
 export declare const PrimaryButton: React.FunctionComponent<ButtonPropsType>;
@@ -90,9 +89,7 @@ export declare const PrimaryButton: React.FunctionComponent<ButtonPropsType>;
 export declare const DefaultButton: React.FunctionComponent<ButtonPropsType>;
 
 export declare const CircleButton: React.FunctionComponent<ButtonPropsType>;
-=======
 export declare const Overlay: React.FunctionComponent<OverlayPropsType>;
->>>>>>> d9b1881... Add an overlay component
 
 export declare enum HEADING_TYPE {
   SMALL = 'small',
