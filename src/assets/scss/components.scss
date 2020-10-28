@@ -267,3 +267,24 @@
     left: -1 * $circle-size - 8px;
   }
 }
+
+.p-overlay-container {
+  position: relative;
+
+  .p-overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    display: none;
+
+    &.p-overlay__open {
+      display: flex;
+    }
+  }
+}

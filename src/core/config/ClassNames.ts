@@ -124,6 +124,11 @@ const classNames = {
     hit: createFormElementClassNameModifier('autocomplete', 'hits__hit'),
     active: createFormElementClassNameModifier('autocomplete', 'hits__hit-active'),
   },
+  overlay: {
+    container: createComponentClassName('overlay', 'container'),
+    content: createComponentClassName('overlay', 'content'),
+    open: createClassNameModifier('overlay', 'open'),
+  },
 };
 
 export default classNames;
