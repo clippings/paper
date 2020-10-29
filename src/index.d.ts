@@ -93,6 +93,7 @@ export declare const Overlay: React.FunctionComponent<OverlayPropsType>;
 
 export declare enum HEADING_TYPE {
   SMALL = 'small',
+  MEDIUM = 'medium',
   LARGE = 'large',
 }
 
