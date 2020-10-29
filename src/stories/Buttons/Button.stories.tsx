@@ -2,44 +2,57 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 import { jsxDecorator } from 'storybook-addon-jsx';
 import figmaDecorator from 'storybook-addon-figma';
-import { Button, CircleButton, DefaultButton, Icon, PrimaryButton } from '@paper/components';
+import { Button, CircleButton, Icon } from '@paper/components';
 import { BUTTON_SIZE, BUTTON_VARIANT, ICON, ICONS_COLOR, ICONS_SIZE } from '@paper/enums';
-import { DefaultButtonStyle, PrimaryButtonStyle } from '../../components/Buttons/config/styles';
 
 import '../stories.scss';
 
 import componentInfo from './componentInfo.md';
-import buttonLikeNotes from './buttonLikeLink.md';
 import iconsNotes from './iconsInfo.md';
+import { ThemeProvider } from 'styled-components';
 
 const buttonsFigma = figmaDecorator({
   url: 'https://www.figma.com/file/9yrktrewqLhb62TIO49Htg/Web-UI-Kit?node-id=521%3A0',
 });
 
 const primBtn = () => (
-  <div className="buttons-container">
-    <PrimaryButton>I am primary</PrimaryButton>
-    <Button variant={BUTTON_VARIANT.PRIMARY}>I am primary too</Button>
-  </div>
+  <ThemeProvider theme={{ mode: 'light' }}>
+    <div className="buttons-container">
+      <Button variant={BUTTON_VARIANT.PRIMARY}>I am primary</Button>
+      <Button variant={BUTTON_VARIANT.PRIMARY}>I am primary too</Button>
+    </div>
+  </ThemeProvider>
 );
 
 const defBtn = () => (
-  <div className="buttons-container">
-    <DefaultButton>I am default</DefaultButton>
-    <Button variant={BUTTON_VARIANT.DEFAULT}>I am default too</Button>
-  </div>
+  <ThemeProvider theme={{ mode: 'light' }}>
+    <div className="buttons-container">
+      <Button variant={BUTTON_VARIANT.DEFAULT}>I am default</Button>
+      <Button variant={BUTTON_VARIANT.DEFAULT}>I am default too</Button>
+    </div>
+  </ThemeProvider>
 );
 
-const circlePrimary = () => <CircleButton variant={BUTTON_VARIANT.PRIMARY}>?</CircleButton>;
-const circleDefault = () => <CircleButton variant={BUTTON_VARIANT.DEFAULT}>?</CircleButton>;
+const circlePrimary = () => (
+  <ThemeProvider theme={{ mode: 'light' }}>
+    <CircleButton variant={BUTTON_VARIANT.PRIMARY}>?</CircleButton>
+  </ThemeProvider>
+);
+const circleDefault = () => (
+  <ThemeProvider theme={{ mode: 'light' }}>
+    <CircleButton variant={BUTTON_VARIANT.DEFAULT}>?</CircleButton>
+  </ThemeProvider>
+);
 const circleWithIcon = () => (
-  <CircleButton variant={BUTTON_VARIANT.DEFAULT}>
-    <Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
-  </CircleButton>
+  <ThemeProvider theme={{ mode: 'light' }}>
+    <CircleButton variant={BUTTON_VARIANT.DEFAULT}>
+      <Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
+    </CircleButton>
+  </ThemeProvider>
 );
 
 const circleShowcase = () => (
-  <>
+  <ThemeProvider theme={{ mode: 'light' }}>
     <div className="buttons-container">
       <CircleButton variant={BUTTON_VARIANT.PRIMARY}>?</CircleButton>
     </div>
@@ -51,11 +64,11 @@ const circleShowcase = () => (
         <Icon icon={ICON.BOARD} color={ICONS_COLOR.WHITE} size={ICONS_SIZE.SMALL} />
       </CircleButton>
     </div>
-  </>
+  </ThemeProvider>
 );
 
 const transButtons = () => (
-  <>
+  <ThemeProvider theme={{ mode: 'light' }}>
     <div className="buttons-container">
       <Button>I am transparent</Button>
     </div>
@@ -71,18 +84,18 @@ const transButtons = () => (
         <Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
       </Button>
     </div>
-  </>
+  </ThemeProvider>
 );
 
 const iconButtons = () => (
-  <>
+  <ThemeProvider theme={{ mode: 'light' }}>
     <div className="buttons-container">
-      <PrimaryButton>
+      <Button variant={BUTTON_VARIANT.PRIMARY}>
         <Icon icon={ICON.BOARD} color={ICONS_COLOR.WHITE} size={ICONS_SIZE.SMALL} /> I love you
-      </PrimaryButton>
-      <PrimaryButton>
+      </Button>
+      <Button variant={BUTTON_VARIANT.PRIMARY}>
         I love you too <Icon icon={ICON.BOARD} color={ICONS_COLOR.WHITE} size={ICONS_SIZE.SMALL} />
-      </PrimaryButton>
+      </Button>
       <CircleButton variant={BUTTON_VARIANT.PRIMARY}>
         <Icon icon={ICON.BOARD} color={ICONS_COLOR.WHITE} size={ICONS_SIZE.SMALL} />
       </CircleButton>
@@ -96,39 +109,32 @@ const iconButtons = () => (
       </Button>
     </div>
     <div className="buttons-container">
-      <DefaultButton fullWidth>
+      <Button variant={BUTTON_VARIANT.DEFAULT} fullWidth>
         <Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} /> Love yourself
-      </DefaultButton>
+      </Button>
     </div>
-  </>
-);
-
-const buttonLike = () => (
-  <>
-    <div className="buttons-container">
-      <a href="http://google.com" className={PrimaryButtonStyle}>
-        I am a link that looks like a button
-      </a>
-    </div>
-    <div className="buttons-container">
-      <a href="http://google.com" className={DefaultButtonStyle}>
-        I am a link that looks like a button
-      </a>
-    </div>
-  </>
+  </ThemeProvider>
 );
 
 const showcase = () => (
-  <>
+  <ThemeProvider theme={{ mode: 'light' }}>
     <div className="buttons-container">
-      <PrimaryButton size={BUTTON_SIZE.BIG}>Big button</PrimaryButton>
-      <PrimaryButton>Medium button</PrimaryButton>
-      <PrimaryButton size={BUTTON_SIZE.SMALL}>Small button</PrimaryButton>
+      <Button variant={BUTTON_VARIANT.PRIMARY} size={BUTTON_SIZE.BIG}>
+        Big button
+      </Button>
+      <Button variant={BUTTON_VARIANT.PRIMARY}>Medium button</Button>
+      <Button variant={BUTTON_VARIANT.PRIMARY} size={BUTTON_SIZE.SMALL}>
+        Small button
+      </Button>
     </div>
     <div className="buttons-container">
-      <DefaultButton size={BUTTON_SIZE.BIG}>Big button</DefaultButton>
-      <DefaultButton>Medium button</DefaultButton>
-      <DefaultButton size={BUTTON_SIZE.SMALL}>Small button</DefaultButton>
+      <Button variant={BUTTON_VARIANT.DEFAULT} size={BUTTON_SIZE.BIG}>
+        Big button
+      </Button>
+      <Button variant={BUTTON_VARIANT.DEFAULT}>Medium button</Button>
+      <Button variant={BUTTON_VARIANT.DEFAULT} size={BUTTON_SIZE.SMALL}>
+        Small button
+      </Button>
     </div>
     <div className="buttons-container">
       <CircleButton variant={BUTTON_VARIANT.PRIMARY}>?</CircleButton>
@@ -149,29 +155,25 @@ const showcase = () => (
       </CircleButton>
     </div>
     <div className="buttons-container">
-      <PrimaryButton fullWidth>Full-width (100%) button</PrimaryButton>
+      <Button variant={BUTTON_VARIANT.PRIMARY} fullWidth>
+        Full-width (100%) button
+      </Button>
     </div>
     <div className="buttons-container">
-      <DefaultButton fullWidth>Full-width (100%) button</DefaultButton>
+      <Button variant={BUTTON_VARIANT.DEFAULT} fullWidth>
+        Full-width (100%) button
+      </Button>
     </div>
-    <div className="buttons-container">
-      <a href="http://google.com" className={PrimaryButtonStyle}>
-        I am a link that looks like a button
-      </a>
-    </div>
-    <div className="buttons-container">
-      <a href="http://google.com" className={DefaultButtonStyle}>
-        I am a link that looks like a button
-      </a>
-    </div>
-  </>
+  </ThemeProvider>
 );
 
 const sm = () => (
-  <div className="buttons-container">
-    <Button className="button-twitter">twitter button</Button>
-    <Button className="button-pinterest">pinterest button</Button>
-  </div>
+  <ThemeProvider theme={{ mode: 'light' }}>
+    <div className="buttons-container">
+      <Button className="button-twitter">twitter button</Button>
+      <Button className="button-pinterest">pinterest button</Button>
+    </div>
+  </ThemeProvider>
 );
 
 storiesOf('Buttons', module)
@@ -220,11 +222,6 @@ storiesOf('Buttons/Circle Button', module)
   .addDecorator(jsxDecorator)
   .addDecorator(buttonsFigma)
   .add('Circle with Icon', circleWithIcon, { notes: `Circle Button with Icon` });
-
-storiesOf('Buttons', module)
-  .addDecorator(jsxDecorator)
-  .addDecorator(buttonsFigma)
-  .add('Button-like Link', buttonLike, { notes: { markdown: buttonLikeNotes } });
 
 storiesOf('Buttons', module)
   .addDecorator(jsxDecorator)
