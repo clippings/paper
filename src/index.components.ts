@@ -22,6 +22,4 @@ export { FormGroup } from './components/FormGroup/FormGroup';
 export { FormError } from './components/FormError/FormError';
 export { Label } from './components/Label/Label';
 export { Button } from './components/Buttons/Button';
-export { DefaultButton } from './components/Buttons/DefaultButton';
-export { PrimaryButton } from './components/Buttons/PrimaryButton';
 export { CircleButton } from './components/Buttons/CircleButton';
