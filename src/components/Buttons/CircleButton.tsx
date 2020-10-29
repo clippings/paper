@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BUTTON_SHAPE, BUTTON_SIZE, BUTTON_TYPE } from '@paper/enums';
 import { ButtonPropsType } from './types/ButtonPropsType';
-import { StyledCircleButton } from './styles/buttonStyles';
+import { StyledCircleButton } from './styles/ButtonStyles';
 import { generateButtonClassName } from '@core/utils/ClassNameModifierUtil';
 
 export const CircleButton: React.FunctionComponent<ButtonPropsType> = ({

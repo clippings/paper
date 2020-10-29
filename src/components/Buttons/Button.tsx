@@ -2,7 +2,7 @@ import React from 'react';
 import { generateButtonClassName } from '@core/utils/ClassNameModifierUtil';
 import { BUTTON_SIZE, BUTTON_TYPE } from '@paper/enums';
 import { ButtonPropsType } from './types/ButtonPropsType';
-import { StyledButton } from './styles/buttonStyles';
+import { StyledButton } from './styles/ButtonStyles';
 
 export const Button: React.FunctionComponent<ButtonPropsType> = ({
   children = null,
