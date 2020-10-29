@@ -1,14 +1,13 @@
 import React from 'react';
 import { generateButtonClassName } from '@core/utils/ClassNameModifierUtil';
-import { BUTTON_TYPE } from '@paper/enums';
+import { BUTTON_SIZE, BUTTON_TYPE } from '@paper/enums';
 import { ButtonPropsType } from './types/ButtonPropsType';
-import '@paper/assets/scss/button.scss';
+import { StyledButton } from './styles/buttonStyles';
 
 export const Button: React.FunctionComponent<ButtonPropsType> = ({
   children = null,
   className = '',
-  size = '',
-  shape = '',
+  size = BUTTON_SIZE.DEFAULT,
   variant = '',
   fullWidth = false,
   type = BUTTON_TYPE.SUBMIT,
@@ -17,15 +16,13 @@ export const Button: React.FunctionComponent<ButtonPropsType> = ({
   const classes: string = generateButtonClassName({
     children,
     className,
-    size,
     variant,
-    shape,
     fullWidth,
   });
 
   return (
-    <button className={classes} {...rest} type={type}>
+    <StyledButton variant={variant} size={size} className={classes} {...rest} type={type}>
       {children}
-    </button>
+    </StyledButton>
   );
 };
