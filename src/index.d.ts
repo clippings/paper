@@ -83,10 +83,6 @@ export declare const Label: React.FunctionComponent<LabelPropType>;
 
 export declare const Button: React.FunctionComponent<ButtonPropsType>;
 
-export declare const PrimaryButton: React.FunctionComponent<ButtonPropsType>;
-
-export declare const DefaultButton: React.FunctionComponent<ButtonPropsType>;
-
 export declare const CircleButton: React.FunctionComponent<ButtonPropsType>;
 
 export declare enum HEADING_TYPE {
@@ -188,6 +184,25 @@ export declare enum SUBMIT_TYPE {
 export declare enum TEXT_TYPE {
   SMALL = 'small',
   MEDIUM = 'medium',
+}
+
+export declare enum BUTTON_SIZE {
+  DEFAULT = 'default',
+  SMALL = 'small',
+  BIG = 'big',
+}
+
+export declare enum BUTTON_TYPE {
+  SUBMIT = 'submit',
+  RESET = 'reset',
+  BUTTON = 'button',
+}
+
+export declare enum BUTTON_VARIANT {
+  PRIMARY = 'primary',
+  DEFAULT = 'default',
+  DANGER = 'danger',
+  NEUTRAL = 'neutral',
 }
 
 export declare function useDropdown(
