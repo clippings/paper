@@ -3,9 +3,9 @@ import {
   attention,
   brandPrimary,
   medium,
+  onPrimary,
   pinterestColor,
   twitterColor,
-  white,
 } from '@core/styles/variables';
 import { ButtonStylePropsType } from '../types/ButtonStylePropsType';
 
@@ -15,7 +15,7 @@ const buttonPrefix: string = 'p-button';
 const buttonVariationColors = {
   primary: {
     back: brandPrimary,
-    color: white,
+    color: onPrimary,
     border: brandPrimary,
   },
   default: {
@@ -24,18 +24,18 @@ const buttonVariationColors = {
     border: medium,
     hover: {
       back: brandPrimary,
-      color: white,
+      color: onPrimary,
       border: brandPrimary,
     },
   },
   danger: {
     back: attention,
-    color: white,
+    color: onPrimary,
     border: attention,
   },
   neutral: {
     back: medium,
-    color: white,
+    color: onPrimary,
     border: medium,
   },
 };
@@ -98,6 +98,9 @@ const colorVariationExtension = (color: string): FlattenSimpleInterpolation => {
   return css`
     background-color: ${buttonVariationColors[color]['back']};
     color: ${buttonVariationColors[color]['color']};
+    svg {
+      fill: ${buttonVariationColors[color]['color']};
+    }
     border-color: ${buttonVariationColors[color]['border']};
     &:not([disabled]) {
       &:visited {
@@ -183,7 +186,7 @@ export const StyledButton = styled.button<ButtonStylePropsType>`
   &.button-pinterest {
     ${props => filledExtension(props.size)}
     ${props => props.variant && colorVariationExtension(props.variant)}
-    color: ${white};
+    color: ${onPrimary};
   }
   
   &.button-twitter {
