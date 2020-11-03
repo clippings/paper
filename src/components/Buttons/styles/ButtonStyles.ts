@@ -1,7 +1,7 @@
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 import {
   attention,
-  brandPrimary,
+  btnPrimary,
   medium,
   onPrimary,
   pinterestColor,
@@ -14,18 +14,18 @@ const buttonPrefix: string = 'p-button';
 
 const buttonVariationColors = {
   primary: {
-    back: brandPrimary,
+    back: btnPrimary,
     color: onPrimary,
-    border: brandPrimary,
+    border: btnPrimary,
   },
   default: {
     back: 'transparent',
-    color: brandPrimary,
+    color: btnPrimary,
     border: medium,
     hover: {
-      back: brandPrimary,
+      back: btnPrimary,
       color: onPrimary,
-      border: brandPrimary,
+      border: btnPrimary,
     },
   },
   danger: {
