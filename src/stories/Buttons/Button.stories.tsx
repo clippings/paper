@@ -19,7 +19,7 @@ const buttonsFigma = figmaDecorator({
 const label = 'Themes';
 const options = {
   Light: 'light',
-  HM: 'hm',
+  Kazam: 'kazam',
 };
 const defaultValue = 'light';
 
