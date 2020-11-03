@@ -85,6 +85,7 @@ export declare const Label: React.FunctionComponent<LabelPropType>;
 export declare const Button: React.FunctionComponent<ButtonPropsType>;
 
 export declare const CircleButton: React.FunctionComponent<ButtonPropsType>;
+export declare const Overlay: React.FunctionComponent<OverlayPropsType>;
 
 export declare const Overlay: React.FunctionComponent<OverlayPropsType>;
 
