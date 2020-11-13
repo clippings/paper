@@ -9,8 +9,10 @@ export const FormError: React.FunctionComponent<FormErrorPropType> = ({
   ...rest
 }) => {
   return (
-    <div className={classnames(className, classNames.formError.container)} {...rest}>
-      {children}
-    </div>
+    children && (
+      <div className={classnames(className, classNames.formError.container)} {...rest}>
+        {children}
+      </div>
+    )
   );
 };
