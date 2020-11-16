@@ -9,4 +9,5 @@ export type SelectPropsType = {
   placeholder?: string;
   onChange?: (value: string) => void;
   name?: string;
+  className?: string;
 };

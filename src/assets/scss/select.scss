@@ -4,6 +4,7 @@
 .p-f-select {
   position: relative;
   display: flex;
+  min-width: 200px;
 
   svg {
     transition: transform 240ms;
@@ -20,7 +21,6 @@
     box-sizing: border-box;
     padding: 14px 16px;
     margin-left: 4px;
-    min-width: 200px;
     border-radius: $form-input-border-radius;
     width: 100%;
     cursor: pointer;
