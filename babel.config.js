@@ -17,7 +17,7 @@ module.exports = function babelConfig(api) {
   const plugins = [
     '@babel/plugin-proposal-class-properties',
     '@babel/plugin-syntax-dynamic-import',
-    'babel-plugin-styled-components'
+    'babel-plugin-styled-components',
   ];
 
   const env = {
