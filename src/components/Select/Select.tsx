@@ -9,7 +9,7 @@ import { SelectPropsType } from './types/SelectPropsType';
 
 export const Select: React.FunctionComponent<SelectPropsType> = forwardRef(
   (
-    { options, selected = null, placeholder = '', name = '', onChange = null },
+    { options, selected = null, placeholder = '', name = '', onChange = null, className = '' },
     ref: RefObject<HTMLInputElement>
   ) => {
     const selectedOptions = options.filter(option => option.value === selected);
@@ -29,9 +29,13 @@ export const Select: React.FunctionComponent<SelectPropsType> = forwardRef(
 
     return (
       <div
-        className={classnames(classNames.select.wrapper, {
-          open: isOpen,
-        })}
+        className={classnames(
+          classNames.select.wrapper,
+          {
+            open: isOpen,
+          },
+          className
+        )}
         ref={selectRef}
       >
         <div className={classNames.select.labelWrap} role="presentation" onClick={handleToggle}>
