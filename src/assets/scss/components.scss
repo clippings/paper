@@ -291,10 +291,10 @@
 
 .p-list {
   &.p-list__small-spacing {
-    &> * {
+    & > * {
       margin-bottom: 8px;
     }
-    &> *:last-child {
+    & > *:last-child {
       margin-bottom: 0;
     }
   }
