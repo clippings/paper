@@ -1,16 +1,25 @@
 name: CI
+
 on: push
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install modules
-        run: yarn
+
+      - name: NPM or Yarn install with caching
+        uses: bahmutov/npm-install@v1.1.0
+
+      - name: Yarn install
+        run: yarn --frozen-lockfile
+
       - name: Run tests
         run: yarn test-ci
-      - name: Run typescript check
+
+      - name: Check Typescript types
         run: yarn check-types
-      - name: Run lint
+
+      - name: Lint
         run: yarn lint-ci
 
