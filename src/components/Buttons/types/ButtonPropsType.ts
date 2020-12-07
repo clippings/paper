@@ -8,4 +8,5 @@ export type ButtonPropsType = {
   variant?: BUTTON_VARIANT;
   fullWidth?: boolean;
   type?: BUTTON_TYPE;
+  onClick?: (event: any) => void;
 };

@@ -24,3 +24,5 @@ export { Label } from './components/Label/Label';
 export { Button } from './components/Buttons/Button';
 export { CircleButton } from './components/Buttons/CircleButton';
 export { Overlay } from './components/Overlay/Overlay';
+export { Drawer } from './components/Drawer/Drawer';
+export { DrawerContext } from './components/Drawer/DrawerContext';
