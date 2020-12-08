@@ -3,7 +3,6 @@ import styled, { ThemeProvider } from 'styled-components';
 import { Button } from '@paper/components';
 import { BUTTON_VARIANT } from '../../components/Buttons/enums/ButtonVariantEnum';
 import { Drawer } from '../../components/Drawer/Drawer';
-import { DrawerContext } from '../../components/Drawer/DrawerContext';
 import { DrawerPropType } from '../../components/Drawer/types/DrawerPropType';
 
 const BasicDrawerUsageStyled = styled.div`
@@ -23,17 +22,13 @@ const BasicDrawerUsage: FC<DrawerPropType & { theme: string }> = ({ theme, ...re
         <Button variant={BUTTON_VARIANT.PRIMARY} onClick={() => setIsOpen(true)}>
           Open drawer
         </Button>
-        <Drawer {...rest} onClose={() => setIsOpen(false)} isOpen={isOpen}>
+        <Drawer {...rest} isOpen={isOpen}>
           Simple drawer content
-          <DrawerContext.Consumer>
-            {({ onClose }) => (
-              <div>
-                <Button variant={BUTTON_VARIANT.PRIMARY} onClick={() => onClose()}>
-                  Close drawer
-                </Button>
-              </div>
-            )}
-          </DrawerContext.Consumer>
+          <div>
+            <Button variant={BUTTON_VARIANT.PRIMARY} onClick={() => setIsOpen(false)}>
+              Close drawer
+            </Button>
+          </div>
         </Drawer>
       </BasicDrawerUsageStyled>
     </ThemeProvider>
