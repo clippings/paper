@@ -4,13 +4,17 @@ import { DRAWER_DIRECTION } from '../enums/DrawerDirectionEnum';
 export type DrawerPropType = {
   children: ReactNode;
   /** The width of the drawer */
-  width: number | string;
+  width: string;
   /**
    * The flag that controls, when the drawer should be open
    *
    * @default false
    */
   isOpen?: boolean;
+  /**
+   * Callback to be executed when the drawer has to close
+   */
+  onClose: () => void;
   /**
    * Top offset of the drawer
    *

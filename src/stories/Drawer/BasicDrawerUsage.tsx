@@ -22,7 +22,7 @@ const BasicDrawerUsage: FC<DrawerPropType & { theme: string }> = ({ theme, ...re
         <Button variant={BUTTON_VARIANT.PRIMARY} onClick={() => setIsOpen(true)}>
           Open drawer
         </Button>
-        <Drawer {...rest} isOpen={isOpen}>
+        <Drawer {...rest} isOpen={isOpen} onClose={() => setIsOpen(false)}>
           Simple drawer content
           <div>
             <Button variant={BUTTON_VARIANT.PRIMARY} onClick={() => setIsOpen(false)}>

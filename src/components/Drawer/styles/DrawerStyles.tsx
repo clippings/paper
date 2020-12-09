@@ -4,8 +4,7 @@ import { lightest } from '@core/styles/variables';
 
 const openDirection = (props: Partial<DrawerPropType>): FlattenSimpleInterpolation => {
   const direction = props.openDirection;
-  const width = isNaN(Number(props.width)) ? props.width : `${props.width}px`;
-  const offset = props.isOpen ? 0 : `-${width}`;
+  const offset = props.isOpen ? 0 : `-${props.width}`;
   return css`
     ${direction}: ${offset};
     transition: 100ms ${direction} cubic-bezier(0, 0, 0.56, 1);
@@ -18,7 +17,7 @@ export const StyledDrawer = styled.div<Partial<DrawerPropType>>`
   padding: 16px;
   box-sizing: border-box;
   background-color: ${lightest};
-  width: ${props => (isNaN(Number(props.width)) ? props.width : `${props.width}px`)};
+  width: ${props => props.width};
   position: absolute;
   top: ${props => props.top};
   bottom: ${props => props.bottom};

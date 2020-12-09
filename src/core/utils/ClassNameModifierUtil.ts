@@ -81,7 +81,6 @@ export const generateButtonClassName = ({
 
 export const generateDrawerClassName = ({
   openDirection,
-  position,
   className,
 }: {
   openDirection: DRAWER_DIRECTION;
@@ -89,10 +88,5 @@ export const generateDrawerClassName = ({
 }): string => {
   const baseClass = createClassName('drawer');
 
-  return classNames(
-    baseClass,
-    `${baseClass}--${openDirection}`,
-    `${baseClass}--${position}`,
-    className
-  );
+  return classNames(baseClass, `${baseClass}--${openDirection}`, className);
 };
