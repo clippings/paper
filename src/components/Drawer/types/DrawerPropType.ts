@@ -12,10 +12,6 @@ export type DrawerPropType = {
    */
   isOpen?: boolean;
   /**
-   * Callback to be executed when the drawer has to close
-   */
-  onClose: () => void;
-  /**
    * Top offset of the drawer
    *
    * @default 0
