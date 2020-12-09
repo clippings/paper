@@ -18,12 +18,6 @@ export type DrawerPropType = {
    */
   top?: number;
   /**
-   * Top offset of the drawer
-   *
-   * @default 0
-   */
-  bottom?: number;
-  /**
    * On which side the drawer should be opened
    *
    * @default DRAWER_DIRECTION.RIGHT

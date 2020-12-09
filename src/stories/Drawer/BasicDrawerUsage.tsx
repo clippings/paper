@@ -24,7 +24,7 @@ const BasicDrawerUsage: FC<DrawerPropType & { theme: string }> = ({ theme, ...re
         <Button variant={BUTTON_VARIANT.PRIMARY} onClick={handleOpen}>
           Open drawer
         </Button>
-        <Drawer {...rest} isOpen={isOpen} ref={selectRef}>
+        <Drawer {...rest} isOpen={isOpen} ref={selectRef} style={{ background: '#eee', bottom: 0 }}>
           Simple drawer content
           <div>
             <Button variant={BUTTON_VARIANT.PRIMARY} onClick={handleClose}>
