@@ -14,4 +14,3 @@ export { BUTTON_SIZE } from './components/Buttons/enums/ButtonSizeEnum';
 export { BUTTON_TYPE } from './components/Buttons/enums/ButtonTypeEnum';
 export { BUTTON_VARIANT } from './components/Buttons/enums/ButtonVariantEnum';
 export { DRAWER_DIRECTION } from './components/Drawer/enums/DrawerDirectionEnum';
-export { DRAWER_POSITIONS } from './components/Drawer/enums/DrawerPositionEnum';

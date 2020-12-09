@@ -1,7 +1,6 @@
 import { Meta, Story, ArgsTable } from '@storybook/addon-docs/blocks';
 import { Drawer } from '../../components/Drawer/Drawer';
 import BasicDrawerUsage from '@paper/enums/stories/Drawer/BasicDrawerUsage';
-import { DRAWER_POSITIONS } from '@paper/enums/components/Drawer/enums/DrawerPositionEnum';
 import { DRAWER_DIRECTION } from '@paper/enums/components/Drawer/enums/DrawerDirectionEnum';
 
 <Meta title="Drawer" component={Drawer} />
@@ -17,16 +16,15 @@ The basic idea for this component is to show a simple hidden drawer with additio
   name="Drawer basic usage"
   height="400px"
   argTypes={{
+    width: {
+      control: {
+        type: 'text',
+      },
+    },
     theme: {
       control: {
         type: 'select',
         options: ['light', 'kazam'],
-      },
-    },
-    position: {
-      control: {
-        type: 'select',
-        options: DRAWER_POSITIONS,
       },
     },
     openDirection: {
@@ -43,7 +41,6 @@ The basic idea for this component is to show a simple hidden drawer with additio
   }}
   args={{
     theme: 'light',
-    position: DRAWER_POSITIONS.ABSOLUTE,
     top: 0,
     bottom: 0,
     openDirection: DRAWER_DIRECTION.RIGHT,

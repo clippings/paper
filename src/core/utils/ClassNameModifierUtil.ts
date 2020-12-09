@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
 import { DRAWER_DIRECTION } from '../../components/Drawer/enums/DrawerDirectionEnum';
-import { DRAWER_POSITIONS } from '../../components/Drawer/enums/DrawerPositionEnum';
 
 const prefix: string = 'p-';
 const formPrefix: string = 'f-';
@@ -86,7 +85,6 @@ export const generateDrawerClassName = ({
   className,
 }: {
   openDirection: DRAWER_DIRECTION;
-  position: DRAWER_POSITIONS;
   className?: any;
 }): string => {
   const baseClass = createClassName('drawer');
