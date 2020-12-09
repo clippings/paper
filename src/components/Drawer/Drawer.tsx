@@ -12,19 +12,16 @@ export const Drawer: React.FC<DrawerPropType> = ({
   bottom = 0,
   top = 0,
   ...rest
-}) => {
-  console.log(isNaN(Number(width)));
-  return (
-    <StyledDrawer
-      width={width}
-      isOpen={isOpen}
-      openDirection={openDirection}
-      bottom={bottom}
-      top={top}
-      className={generateDrawerClassName({ openDirection, ...rest })}
-      {...rest}
-    >
-      {children}
-    </StyledDrawer>
-  );
-};
+}) => (
+  <StyledDrawer
+    width={width}
+    isOpen={isOpen}
+    openDirection={openDirection}
+    bottom={bottom}
+    top={top}
+    className={generateDrawerClassName({ openDirection, ...rest })}
+    {...rest}
+  >
+    {children}
+  </StyledDrawer>
+);
