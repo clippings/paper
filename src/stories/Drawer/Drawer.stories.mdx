@@ -1,0 +1,55 @@
+import { Meta, Story, ArgsTable } from '@storybook/addon-docs/blocks';
+import { Drawer } from '../../components/Drawer/Drawer';
+import BasicDrawerUsage from '@paper/enums/stories/Drawer/BasicDrawerUsage';
+import { DRAWER_DIRECTION } from '@paper/enums/components/Drawer/enums/DrawerDirectionEnum';
+
+<Meta title="Drawer" component={Drawer} />
+
+export const BasicDrawerUsageTemplate = args => <BasicDrawerUsage {...args} />;
+
+# Drawer
+
+This docs shows the simple usage of the drawers components.
+The basic idea for this component is to show a simple hidden drawer with additional information like menu items or other data.
+
+<Story
+  name="Drawer basic usage"
+  height="400px"
+  argTypes={{
+    width: {
+      control: {
+        type: 'text',
+      },
+    },
+    theme: {
+      control: {
+        type: 'select',
+        options: ['light', 'kazam'],
+      },
+    },
+    openDirection: {
+      control: {
+        type: 'select',
+        options: DRAWER_DIRECTION,
+      },
+    },
+    isOpen: {
+      control: {
+        disable: true,
+      },
+    },
+  }}
+  args={{
+    theme: 'light',
+    top: 0,
+    bottom: 0,
+    openDirection: DRAWER_DIRECTION.RIGHT,
+    width: '300px',
+  }}
+>
+  {BasicDrawerUsageTemplate.bind({})}
+</Story>
+
+## Props
+
+<ArgsTable of={Drawer} />

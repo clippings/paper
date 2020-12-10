@@ -7,6 +7,7 @@ const graphite60 = '#8f8f8f';
 const graphite30 = '#cccccc';
 const graphite10 = '#f5f5f5';
 const white = '#ffffff';
+const neutral60 = '#707070';
 
 const red60 = '#d74b46';
 const yellow50 = '#f1b056';
@@ -33,6 +34,8 @@ export const background = theme('mode', { light: white, kazam: white });
 
 export const brandPrimary = theme('mode', { light: graphite120 });
 export const btnPrimary = theme('mode', { light: graphite120, kazam: kazamRed });
+
+export const neutralMedium = theme('mode', { light: neutral60 });
 
 export const attention = theme('mode', { light: red60, kazam: red60 });
 export const caution = theme('mode', { light: yellow50, kazam: yellow50 });

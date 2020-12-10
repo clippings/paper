@@ -1,9 +1,10 @@
 import classNames from 'classnames';
 import React from 'react';
+import { DRAWER_DIRECTION } from '../../components/Drawer/enums/DrawerDirectionEnum';
 
 const prefix: string = 'p-';
 const formPrefix: string = 'f-';
-const buttonPrefix = 'p-button';
+const buttonPrefix: string = 'p-button';
 
 /**
  * @param {string} element
@@ -76,4 +77,16 @@ export const generateButtonClassName = ({
   });
 
   return classes;
+};
+
+export const generateDrawerClassName = ({
+  openDirection,
+  className,
+}: {
+  openDirection: DRAWER_DIRECTION;
+  className?: any;
+}): string => {
+  const baseClass = createClassName('drawer');
+
+  return classNames(baseClass, `${baseClass}--${openDirection}`, className);
 };
