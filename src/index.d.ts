@@ -24,6 +24,7 @@ import { FormErrorPropType } from './components/FormError/types/FormErrorPropTyp
 import { LabelPropType } from './components/Label/types/LabelPropType';
 import { ButtonPropsType } from './components/Buttons/types/ButtonPropsType';
 import { OverlayPropsType } from './components/Overlay/types/OverlayPropsType';
+import { RadioButtonPropType } from './components/RadioButton/types/RadioButtonPropType';
 
 export declare const AccordionBody: React.FunctionComponent<ComponentType>;
 
@@ -87,6 +88,8 @@ export declare const Button: React.FunctionComponent<ButtonPropsType>;
 export declare const CircleButton: React.FunctionComponent<ButtonPropsType>;
 
 export declare const Overlay: React.FunctionComponent<OverlayPropsType>;
+
+export declare const RadioButton: React.FunctionComponent<RadioButtonPropType>;
 
 export declare enum HEADING_TYPE {
   SMALL = 'small',

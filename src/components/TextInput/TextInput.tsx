@@ -1,27 +1,24 @@
-import React, { ChangeEvent, forwardRef, RefObject } from 'react';
+import React, { forwardRef, RefObject } from 'react';
 import classNames from '@core/config/ClassNames';
 import { TextInputPropsType } from './types/TextInputPropsType';
 import { FormGroup } from '../FormGroup/FormGroup';
 import { FormError } from '../FormError/FormError';
 import { Label } from '../Label/Label';
+import { handleChange } from '@core/utils/InputUtils';
 
 export const TextInput: React.FunctionComponent<TextInputPropsType> = forwardRef(
   (
     {
       id = undefined,
-      placeholderText,
+      placeholderText = '',
       title = null,
-      onChange = null,
+      onChange,
       error = null,
       className = '',
       ...rest
     },
     ref: RefObject<HTMLInputElement>
   ) => {
-    const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
-      onChange && onChange(e.target.value);
-    };
-
     return (
       <FormGroup className={className} hasError={error !== null}>
         {title && <Label htmlFor={id}>{title}</Label>}
@@ -31,7 +28,7 @@ export const TextInput: React.FunctionComponent<TextInputPropsType> = forwardRef
             ref={ref}
             type="text"
             placeholder={placeholderText}
-            onChange={handleChange}
+            onChange={handleChange(onChange)}
             {...rest}
           />
         </span>
