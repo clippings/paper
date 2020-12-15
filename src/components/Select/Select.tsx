@@ -1,4 +1,4 @@
-import React, { useRef, useState, forwardRef, RefObject } from 'react';
+import React, { useRef, useState, forwardRef, RefObject, useEffect } from 'react';
 import classnames from 'classnames';
 import '@paper/assets/scss/select.scss';
 import { ICON, ICONS_COLOR } from '@paper/enums';
@@ -12,14 +12,15 @@ export const Select: React.FunctionComponent<SelectPropsType> = forwardRef(
     { options, selected = null, placeholder = '', name = '', onChange = null, className = '' },
     ref: RefObject<HTMLInputElement>
   ) => {
-    const selectedOptions = options.filter(option => option.value === selected);
-
     const [selectedOption, setSelectedOption] = useState(
-      selectedOptions.length > 0 ? selectedOptions[0] : null
+      options.find(option => option.value === selected) || null
     );
-
     const selectRef = useRef<HTMLDivElement | null>(null);
     const { isOpen, handleToggle, handleClose } = useDropdown(selectRef);
+
+    useEffect(() => {
+      setSelectedOption(options.find(option => option.value === selected) || null);
+    }, [selected]);
 
     const onValueChange = option => {
       setSelectedOption(option);
