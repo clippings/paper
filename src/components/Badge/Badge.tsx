@@ -20,7 +20,6 @@ export const Badge: React.FunctionComponent<BadgeInterface> = forwardRef(
       className={`${classNames.badge[type]} ${classNames.badge[size]} ${className}`}
       {...rest}
     >
-      <span>Badge</span>
       {children}
     </span>
   )
