@@ -22,16 +22,15 @@ export const TextInput: React.FunctionComponent<TextInputPropsType> = forwardRef
     return (
       <FormGroup className={className} hasError={error !== null}>
         {title && <Label htmlFor={id}>{title}</Label>}
-        <span className={classNames.textInput.container}>
-          <input
-            id={id}
-            ref={ref}
-            type="text"
-            placeholder={placeholderText}
-            onChange={handleChange(onChange)}
-            {...rest}
-          />
-        </span>
+        <input
+          id={id}
+          ref={ref}
+          type="text"
+          placeholder={placeholderText}
+          className={classNames.textInput.input}
+          onChange={handleChange(onChange)}
+          {...rest}
+        />
         <FormError>{error}</FormError>
       </FormGroup>
     );
