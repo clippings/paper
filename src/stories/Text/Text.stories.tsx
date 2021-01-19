@@ -4,6 +4,11 @@ import { TEXT_TYPE } from '@paper/enums';
 import { Text } from '@paper/components';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
-const buildSmallText = () => <Text type={TEXT_TYPE.SMALL}>A text</Text>;
+const buildSmallText = () => (
+  <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <Text>A text</Text>
+    <Text type={TEXT_TYPE.SMALL}>A small text</Text>
+  </div>
+);
 
-storiesOf('Text', module).addDecorator(jsxDecorator).add('Text Small', buildSmallText);
+storiesOf('Text', module).addDecorator(jsxDecorator).add('Text', buildSmallText);
