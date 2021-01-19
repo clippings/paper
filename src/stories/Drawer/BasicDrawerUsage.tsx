@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState } from 'react';
+import React, { FC, useRef } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { Button } from '@paper/components';
 import { BUTTON_VARIANT } from '../../components/Buttons/enums/ButtonVariantEnum';
