@@ -109,8 +109,7 @@
   }
 
   &:disabled {
+    color: $graphite-60;
     cursor: not-allowed;
-    background: $graphite-20;
-    border-color: $graphite-20;
   }
 }
