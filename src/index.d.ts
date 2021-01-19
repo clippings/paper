@@ -26,6 +26,7 @@ import { ButtonPropsType } from './components/Buttons/types/ButtonPropsType';
 import { OverlayPropsType } from './components/Overlay/types/OverlayPropsType';
 import { RadioButtonPropType } from './components/RadioButton/types/RadioButtonPropType';
 import { DrawerPropType } from './components/Drawer/types/DrawerPropType';
+import { AvatarPropsType } from './components/Avatar/types/AvatarType';
 
 export declare const AccordionBody: React.FunctionComponent<ComponentType>;
 
@@ -213,6 +214,16 @@ export declare enum BUTTON_VARIANT {
   DEFAULT = 'default',
   DANGER = 'danger',
   NEUTRAL = 'neutral',
+}
+export enum AVATAR_SHAPE {
+  CIRCLE = 'circle',
+  SQUARE = 'square',
+}
+
+export enum AVATAR_SIZE {
+  DEFAULT = 'default',
+  SMALL = 'small',
+  BIG = 'big',
 }
 
 export declare function useDropdown(

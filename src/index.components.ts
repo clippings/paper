@@ -26,3 +26,4 @@ export { CircleButton } from './components/Buttons/CircleButton';
 export { Overlay } from './components/Overlay/Overlay';
 export { Drawer } from './components/Drawer/Drawer';
 export { RadioButton } from './components/RadioButton/RadioButton';
+export { Avatar } from './components/Avatar/Avatar';
