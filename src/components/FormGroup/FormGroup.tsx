@@ -6,16 +6,10 @@ import { FormGroupPropType } from './types/FormGroupPropType';
 export const FormGroup: React.FunctionComponent<FormGroupPropType> = ({
   children = null,
   className = '',
-  hasError = false,
   ...rest
 }) => {
   return (
-    <div
-      className={classnames(className, classNames.formGroup.container, {
-        [classNames.formGroup.hasError]: hasError,
-      })}
-      {...rest}
-    >
+    <div className={classnames(className, classNames.formGroup.container)} {...rest}>
       {children}
     </div>
   );

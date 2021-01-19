@@ -5,6 +5,7 @@ import { FormGroup } from '../FormGroup/FormGroup';
 import { FormError } from '../FormError/FormError';
 import { Label } from '../Label/Label';
 import { handleChange } from '@core/utils/InputUtils';
+import classnames from 'classnames';
 
 export const TextInput: React.FunctionComponent<TextInputPropsType> = forwardRef(
   (
@@ -20,18 +21,19 @@ export const TextInput: React.FunctionComponent<TextInputPropsType> = forwardRef
     ref: RefObject<HTMLInputElement>
   ) => {
     return (
-      <FormGroup className={className} hasError={error !== null}>
+      <FormGroup className={className}>
         {title && <Label htmlFor={id}>{title}</Label>}
-        <span className={classNames.textInput.container}>
-          <input
-            id={id}
-            ref={ref}
-            type="text"
-            placeholder={placeholderText}
-            onChange={handleChange(onChange)}
-            {...rest}
-          />
-        </span>
+        <input
+          id={id}
+          ref={ref}
+          type="text"
+          placeholder={placeholderText}
+          className={classnames(classNames.textInput.input, {
+            [classNames.formGroup.hasError]: error !== null,
+          })}
+          onChange={handleChange(onChange)}
+          {...rest}
+        />
         <FormError>{error}</FormError>
       </FormGroup>
     );

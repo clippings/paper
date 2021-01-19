@@ -5,12 +5,12 @@
   @extend %text-200;
   display: inline-flex;
   align-items: center;
-  margin: 4px 0;
+  padding: 4px 0;
 }
 
 .p-f-error {
   @extend %form-text;
-  color: #d9534f;
+  color: $red-60;
 }
 
 .p-f-label-title {
@@ -31,13 +31,13 @@
   outline: none;
 
   &:hover {
-    border-color: #cccccc;
+    border-color: $graphite-30;
   }
 
   &:active,
   &:focus,
   &:focus-within {
-    border-color: #111111;
+    border-color: $graphite-120;
   }
 
   input {
@@ -51,7 +51,7 @@
     display: flex;
     flex-grow: 1;
     align-items: center;
-    color: #111111;
+    color: $graphite-120;
   }
 }
 
@@ -60,7 +60,7 @@
   flex-direction: column;
   &.p-error {
     .p-f-input-container {
-      border-color: #d9534f;
+      border-color: $red-60;
     }
   }
 }
@@ -75,5 +75,41 @@
 
   .react-datepicker-popper {
     z-index: 3;
+  }
+}
+
+.p-f-input {
+  border: none;
+  background: $graphite-10;
+  border-radius: 2px;
+  overflow: hidden;
+  outline: none;
+  box-shadow: none;
+  font-size: 14px;
+  line-height: 20px;
+  color: $graphite-120;
+  padding: 14px 16px 12px;
+  width: 100%;
+  border-bottom: solid 2px $graphite-10;
+
+  &:not([disabled]):not(.p-error) {
+    &:hover {
+      border-color: $graphite-30;
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+      border-color: $graphite-120;
+    }
+  }
+
+  &.p-error {
+    border-color: $red-60;
+  }
+
+  &:disabled {
+    color: $graphite-60;
+    cursor: not-allowed;
   }
 }

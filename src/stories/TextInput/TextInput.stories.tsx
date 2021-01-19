@@ -1,9 +1,7 @@
 import React from 'react';
 import figmaDecorator from 'storybook-addon-figma';
 import { storiesOf } from '@storybook/react';
-import { withConsole } from '@storybook/addon-console';
 import { TextInput } from '@paper/components';
-import { jsxDecorator } from 'storybook-addon-jsx';
 import docs from './description.md';
 
 const ref = React.createRef();
@@ -12,7 +10,6 @@ const baseProps = {
   id: 'text-input',
   title: 'Label',
   placeholderText: 'Placeholder',
-  disabled: false,
   onChange: value => {
     console.log(`Value = ${value}`);
     console.log(ref.current);
@@ -27,17 +24,12 @@ const figmaFile = figmaDecorator({
 
 storiesOf('Inputs', module)
   .addDecorator(figmaFile)
-  .add('Default TextInput', buildTextInput(baseProps), { notes: { markdown: docs } });
-
-storiesOf('Inputs', module)
-  .addDecorator(jsxDecorator)
-  .addDecorator(figmaFile)
-  .addDecorator(withConsole)
+  .add('Default TextInput', buildTextInput({ ...baseProps }), { notes: { markdown: docs } })
+  .add('Default TextInput disabled', buildTextInput({ ...baseProps, disabled: true }), {
+    notes: { markdown: docs },
+  })
   .add(
-    'With Error TextInput',
-    buildTextInput({
-      ...baseProps,
-      error: 'Something went wrong',
-    }),
+    'Default TextInput with errors',
+    buildTextInput({ ...baseProps, error: 'Something went wrong' }),
     { notes: { markdown: docs } }
   );

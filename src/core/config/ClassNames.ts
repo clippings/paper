@@ -96,7 +96,7 @@ const classNames = {
     icon: createFormElementClassNameModifier('select', 'icon'),
   },
   textInput: {
-    container: createFormElementClassName('input-container'),
+    input: createFormElementClassName('input'),
   },
   formGroup: {
     container: createFormElementClassName('label'),

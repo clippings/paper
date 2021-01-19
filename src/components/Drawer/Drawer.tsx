@@ -1,4 +1,4 @@
-import React, { forwardRef, HTMLAttributes, HTMLProps, RefObject } from 'react';
+import React, { forwardRef, HTMLProps, RefObject } from 'react';
 import { DrawerPropType } from './types/DrawerPropType';
 import { StyledDrawer } from './styles/DrawerStyles';
 import { generateDrawerClassName } from '@core/utils/ClassNameModifierUtil';
