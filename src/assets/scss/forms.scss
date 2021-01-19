@@ -59,7 +59,7 @@
   display: flex;
   flex-direction: column;
   &.p-error {
-    .p-f-input-container{
+    .p-f-input-container {
       border-color: $red-60;
     }
   }
@@ -91,7 +91,6 @@
   padding: 14px 16px 12px;
   width: 100%;
   border-bottom: solid 2px $graphite-10;
-
 
   &:not([disabled]):not(.p-error) {
     &:hover {
