@@ -1,5 +1,6 @@
 export { HEADING_TYPE } from './components/Heading/enums/HeadingEnum';
 export { TEXT_TYPE } from './components/Text/enums/TextTypeEnum';
+export { TEXT_COLOR } from './components/Text/enums/TextColorEnum';
 export { BADGE_TYPE } from './components/Badge/enums/BadgeTypeEnum';
 export { BADGE_SIZE } from './components/Badge/enums/BadgeSizeEnum';
 export { IMAGE_COVER_TYPE } from './components/ImageCover/enums/ImageCoverTypeEnum';

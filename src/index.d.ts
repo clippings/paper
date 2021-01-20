@@ -197,6 +197,10 @@ export declare enum TEXT_TYPE {
   MEDIUM = 'medium',
 }
 
+export enum TEXT_COLOR {
+  MUTED = 'muted',
+}
+
 export declare enum BUTTON_SIZE {
   DEFAULT = 'default',
   SMALL = 'small',
