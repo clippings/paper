@@ -135,11 +135,6 @@
       "^@paper/assets/(.*)$": "<rootDir>/src/assets/$1",
       "^@core/(.*)$": "<rootDir>/src/core/$1"
     },
-    "files": [
-      "tsOutputs/**/*.js",
-      "tsOutputs/**/*.d.ts",
-      "tsOutputs/index.d.ts"
-    ],
     "reporters": [
       "jest-progress-bar-reporter"
     ]
