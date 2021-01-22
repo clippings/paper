@@ -10,8 +10,9 @@ export const IconAvatar: React.FunctionComponent<IconAvatarPropsType> = ({
   size,
   shape,
   className,
+  ...rest
 }) => (
-  <IconAvatarStyled size={size} shape={shape} className={className}>
+  <IconAvatarStyled size={size} shape={shape} className={className} {...rest}>
     <Icon size={ICONS_SIZE.SMALL} icon={icon} color={color} />
   </IconAvatarStyled>
 );

@@ -1,5 +1,12 @@
-import { Selector as SelectorStyles, SelectorRow as SelectorRowStyles } from './styles/Selector';
+import {
+  SelectorStyled,
+  SelectorRowStyled,
+  SelectorRowAvatarStyled,
+  SelectorRowAdditionStyled,
+} from './styles/Selector';
 export { SelectorItem } from './SelectorItem';
 
-export const Selector = SelectorStyles;
-export const SelectorRow = SelectorRowStyles;
+export const Selector = SelectorStyled;
+export const SelectorRow = SelectorRowStyled;
+export const SelectorRowAvatar = SelectorRowAvatarStyled;
+export const SelectorRowAddition = SelectorRowAdditionStyled;

@@ -1,20 +1,18 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Selector, SelectorRow } from '../../components/Selector/styles/Selector';
 import { jsxDecorator } from 'storybook-addon-jsx';
 import styled, { ThemeProvider } from 'styled-components';
-import { SelectorItem } from '@paper/components';
-import { AVATAR_SHAPE } from '../../components/Avatar/enums/AvatarShapeEnum';
-import { ICON } from '../../components/Icon/enums/IconEnum';
+import { SelectorItem, Selector } from '@paper/components';
+import { ICON, AVATAR_SHAPE } from '@paper/enums';
 import { IconAvatarStyled } from '../../components/Avatar';
+import { SelectorRowStyled } from '../../components/Selector/styles/Selector';
 
 const items = [
   {
     key: 'key-0',
     avatar: null,
     avatarShape: AVATAR_SHAPE.CIRCLE,
-    text: 'Item without picture',
-    subText: 'Sub tex',
+    description: { primary: 'Item without picture', secondary: 'Sub tex' },
     addition: '8 options',
   },
   {
@@ -22,8 +20,7 @@ const items = [
     avatar:
       'https://res.cloudinary.com/clippings/image/upload/v1519366670/fabrics/f-1288-c0472.jpg',
     avatarShape: AVATAR_SHAPE.CIRCLE,
-    text: 'Item with good quality img',
-    subText: 'Sub tex',
+    description: { primary: 'Item with good quality img', secondary: 'Sub tex' },
     addition: '9 options',
   },
 
@@ -32,8 +29,7 @@ const items = [
     avatar:
       'https://res.cloudinary.com/clippings/image/upload/v1480675752/fabrics/table-top-and-fronts-13-american-walnut-clippings-1793862.jpg',
     avatarShape: AVATAR_SHAPE.CIRCLE,
-    text: 'Item with low quality img',
-    subText: 'Sub tex',
+    description: { primary: 'Item with low quality img', secondary: 'Sub tex' },
     addition: '9 options',
   },
   {
@@ -41,8 +37,7 @@ const items = [
     avatar:
       'https://res.cloudinary.com/clippings/image/upload/v1480676106/fabrics/blotter-and-sideboard-cover-leather-premium-77-brown-clippings-8666772.jpg',
     avatarShape: AVATAR_SHAPE.CIRCLE,
-    text: 'Item without sub text',
-    subText: null,
+    description: { primary: 'Item without sub text', secondary: null },
     addition: '5 options',
   },
   {
@@ -50,8 +45,7 @@ const items = [
     avatar:
       'https://res.cloudinary.com/clippings/image/upload/v1480676084/fabrics/base-52-soft-light-powder-coated-smooth-clippings-8666755.jpg',
     avatarShape: AVATAR_SHAPE.CIRCLE,
-    text: 'Item without addition text',
-    subText: null,
+    description: { primary: 'Item without addition text', secondary: null },
     addition: null,
   },
 ];
@@ -63,8 +57,7 @@ const items2 = [
       'https://res.cloudinary.com/clippings/image/upload/t_square_tiny/dpr_auto,f_auto,w_auto/v9/products/iron-maiden-sofa-a6126-cosme-beige-h-bahia-200-x-90-moroso-diesel-creative-team-clippings-10497301.jpg',
     icon: ICON.MOVE_TO,
     avatarShape: AVATAR_SHAPE.SQUARE,
-    text: 'Project',
-    subText: null,
+    description: { primary: 'Project', secondary: null },
     addition: null,
   },
 
@@ -74,8 +67,7 @@ const items2 = [
       'https://res.cloudinary.com/clippings/image/upload/t_square_tiny/dpr_auto,f_auto,w_auto/v9/products/iron-maiden-sofa-a6126-cosme-beige-h-bahia-200-x-90-moroso-diesel-creative-team-clippings-10497301.jpg',
     icon: ICON.MOVE_TO,
     avatarShape: AVATAR_SHAPE.SQUARE,
-    text: 'Project',
-    subText: null,
+    description: { primary: 'Project', secondary: null },
     addition: ' ',
   },
 
@@ -85,8 +77,7 @@ const items2 = [
       'https://res.cloudinary.com/clippings/image/upload/t_square_tiny/dpr_auto,f_auto,w_auto/v9/products/iron-maiden-sofa-a6126-cosme-beige-h-bahia-200-x-90-moroso-diesel-creative-team-clippings-10497301.jpg',
     icon: ICON.MOVE_TO,
     avatarShape: AVATAR_SHAPE.SQUARE,
-    text: 'Project',
-    subText: null,
+    description: { primary: 'Project', secondary: null },
     addition: '3 spaces',
   },
   {
@@ -94,8 +85,7 @@ const items2 = [
     avatar: null,
     icon: ICON.MOVE_TO,
     avatarShape: AVATAR_SHAPE.SQUARE,
-    text: 'Space',
-    subText: null,
+    description: { primary: 'Space', secondary: null },
     addition: '',
   },
   {
@@ -104,8 +94,7 @@ const items2 = [
       'https://res.cloudinary.com/clippings/image/upload/v1525254144/placeholders/empty_project.png',
     icon: ICON.MOVE_TO,
     avatarShape: AVATAR_SHAPE.SQUARE,
-    text: 'Space',
-    subText: null,
+    description: { primary: 'Space', secondary: null },
     addition: '',
   },
   {
@@ -114,8 +103,7 @@ const items2 = [
       'https://res.cloudinary.com/clippings/image/upload/v1525254144/placeholders/empty_project.png',
     icon: ICON.MOVE_TO,
     avatarShape: AVATAR_SHAPE.SQUARE,
-    text: 'Space sub spaces',
-    subText: null,
+    description: { primary: 'Space sub spaces', secondary: null },
     addition: ' ',
   },
   {
@@ -124,19 +112,19 @@ const items2 = [
       'https://res.cloudinary.com/clippings/image/upload/v1525254144/placeholders/empty_project.png',
     icon: ICON.MOVE_TO,
     avatarShape: AVATAR_SHAPE.SQUARE,
-    text: 'Space sub spaces',
-    subText: null,
+    description: { primary: 'Space sub spaces', secondary: null },
     addition: '2 spaces',
   },
 ];
 
 const VariationSelectorContainer = styled.div`
   max-width: 500px;
-  background-color: #fff;
-  display: flex;
-  padding: 16px;
   margin: -1rem;
-  ${SelectorRow} {
+  display: flex;
+  background-color: #fff;
+  padding: 16px;
+  
+  ${SelectorRowStyled} {
     border-radius: 4px;
     margin-bottom: 8px;
     background-color: #f5f5f5;
@@ -145,9 +133,10 @@ const VariationSelectorContainer = styled.div`
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 768px) {
+
     background-color: #f5f5f5;
-    ${SelectorRow} {
+    ${SelectorRowStyled} {
       background-color: #fff;
 
       ${IconAvatarStyled} {
@@ -162,7 +151,7 @@ const SimpleSelectorContainer = styled.div`
   display: flex;
   padding: 16px;
   margin: -1rem;
-  ${SelectorRow}:hover {
+  ${SelectorRowStyled}:hover {
     background-color: #f5f5f5;
     ${IconAvatarStyled} {
       background-color: #fff;

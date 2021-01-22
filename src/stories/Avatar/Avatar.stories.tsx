@@ -2,6 +2,7 @@ import React from 'react';
 import { AVATAR_SHAPE, AVATAR_SIZE, ICON } from '@paper/enums';
 import { Avatar as AvatarComponent, IconAvatar as IconAvatarComponent } from '@paper/components';
 import { AvatarPropsType } from '../../components/Avatar/types/AvatarType';
+import { ThemeProvider } from 'styled-components';
 
 export default {
   component: AvatarComponent,
@@ -41,7 +42,9 @@ Avatar.args = {
 };
 
 export const IconAvatar: React.FunctionComponent<AvatarPropsType> = args => (
-  <IconAvatarComponent {...args} style={{ backgroundColor: '#F5F5F5' }} />
+  <ThemeProvider theme={{ mode: 'light' }}>
+    <IconAvatarComponent {...args} />
+  </ThemeProvider>
 );
 IconAvatar.args = {
   shape: AVATAR_SHAPE.CIRCLE,

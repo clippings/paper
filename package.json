@@ -97,7 +97,7 @@
     "lint-css": "prettier --list-different 'src/**/*.{scss,css}'",
     "fix-css": "prettier  --write --list-different 'src/**/*.{scss,css}'",
     "lint-ci": "yarn lint && yarn lint-css && yarn eslint-check",
-    "storybook": "start-storybook",
+    "storybook": "start-storybook -p 5000",
     "build-storybook": "build-storybook -c .storybook -o web/storybook --quiet"
   },
   "jest": {

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import { AvatarPropsType, AvatarShapeType } from '../types/AvatarType';
+import { AvatarShapeType } from '../types/AvatarType';
 import { AVATAR_SIZE } from '../enums/AvatarSizeEnum';
 import { AVATAR_SHAPE } from '../enums/AvatarShapeEnum';
+import { lightest } from '@core/styles/variables';
 
 const sizeMap = {
   [AVATAR_SIZE.SMALL]: '32px',
@@ -22,10 +23,9 @@ const buildStyles = ({
   min-width: ${sizeMap[size]};
   height: ${sizeMap[size]};
   min-height: ${sizeMap[size]};
-  border-radius: ${shapeMap[shape]};
-`;
+  border-radius: ${shapeMap[shape]};`;
 
-export const Avatar = styled.img.attrs((props: AvatarPropsType) => ({
+export const Avatar = styled.img.attrs(props => ({
   alt: props.alt || 'Avatar',
 }))(buildStyles);
 
@@ -33,5 +33,6 @@ export const IconAvatarStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: ${props => lightest(props)};
   ${(props: AvatarShapeType) => buildStyles(props)}
 `;
