@@ -34,3 +34,5 @@ export {
   SelectorRowAddition,
   SelectorItem,
 } from './components/Selector';
+
+export { Card, CardImgStyled, CardImgContainerStyled, CardStyled } from './components/Card';
