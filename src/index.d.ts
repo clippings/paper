@@ -110,6 +110,8 @@ export declare const SelectorRowAvatar: StyledComponent<'div', {mode: string} ,{
 
 export declare const SelectorRowAddition: StyledComponent<'div', {mode: string} ,{}, never>;
 
+export declare const SelectorItemStyled: StyledComponent<'div', {mode: string} ,{}, never>;
+
 export declare const SelectorItem: React.FunctionComponent<SelectorItemType>;
 
 export { Card, CardImgStyled, CardImgContainerStyled, CardStyled } from './components/Card';

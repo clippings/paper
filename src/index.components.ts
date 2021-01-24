@@ -32,6 +32,7 @@ export {
   SelectorRow,
   SelectorRowAvatar,
   SelectorRowAddition,
+  SelectorItemStyled,
   SelectorItem,
 } from './components/Selector';
 
