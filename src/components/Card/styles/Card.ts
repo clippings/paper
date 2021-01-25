@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { CardImgContainerPropTypes } from '../types/CardPropTypes';
 
+const borderSize = 2;
 export const CardImgStyled = styled.img`
   width: 100%;
   min-height: 100%;
@@ -14,15 +15,19 @@ export const CardImgContainerStyled = styled.div<CardImgContainerPropTypes>`
   height: 0;
   padding-bottom: 100%;
   overflow: hidden;
-  ${({ selected }) => selected && 'border: 2px solid #000; margin: -2px;'}
+  border: ${borderSize}px solid transparent;
+  margin: -${borderSize}px;
+  ${({ selected }) => selected && 'border-color: #000;'}
   ${CardImgStyled} {
-    ${({ selected }) => selected && 'border: 2px solid #fff; max-width: calc(100% - 4px);'}
+    ${({ selected }) =>
+      selected &&
+      `border: ${borderSize}px solid #fff; max-width: calc(100% - ${borderSize * 2}px);`}
   }
 `;
 
 export const CardStyled = styled.div`
   position: relative;
   ${CardImgContainerStyled} {
-    margin-bottom: 8px;
+    margin-bottom: ${8 - borderSize}px;
   }
 `;
