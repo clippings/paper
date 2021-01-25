@@ -1,4 +1,5 @@
 import React from 'react';
+import { StyledComponent } from 'styled-components';
 import { ComponentType } from './core/interfaces/ComponentType';
 import { AccordionItemPropsType } from './components/Accordion/types/AccordionItemPropsType';
 import { AccordionPropsType } from './components/Accordion/types/AccordionPropsType';
@@ -26,6 +27,9 @@ import { ButtonPropsType } from './components/Buttons/types/ButtonPropsType';
 import { OverlayPropsType } from './components/Overlay/types/OverlayPropsType';
 import { RadioButtonPropType } from './components/RadioButton/types/RadioButtonPropType';
 import { DrawerPropType } from './components/Drawer/types/DrawerPropType';
+import { AvatarPropsType, IconAvatarPropsType } from './components/Avatar/types/AvatarType';
+import { CardPropTypes } from './components/Card/types/CardPropTypes';
+import { SelectorItemType } from './components/Selector/types/SelectorItemTypes';
 
 export declare const AccordionBody: React.FunctionComponent<ComponentType>;
 
@@ -93,6 +97,28 @@ export declare const Overlay: React.FunctionComponent<OverlayPropsType>;
 export declare const RadioButton: React.FunctionComponent<RadioButtonPropType>;
 
 export declare const Drawer: React.FunctionComponent<DrawerPropType>;
+
+export declare const Avatar: StyledComponent<'img', {mode: string} , AvatarPropsType, never>;
+
+export declare const IconAvatar: React.FunctionComponent<IconAvatarPropsType>;
+
+export declare const Selector: StyledComponent<'ul', {mode: string} ,{}, never>;
+
+export declare const SelectorRow: StyledComponent<'li', {mode: string} ,{}, never>;
+
+export declare const SelectorRowAvatar: StyledComponent<'div', {mode: string} ,{}, never>;
+
+export declare const SelectorRowAddition: StyledComponent<'div', {mode: string} ,{}, never>;
+
+export declare const SelectorItemStyled: StyledComponent<'div', {mode: string} ,{}, never>;
+
+export declare const SelectorItem: React.FunctionComponent<SelectorItemType>;
+
+export { Card, CardImgStyled, CardImgContainerStyled, CardStyled } from './components/Card';
+
+
+
+export declare const Card: React.FunctionComponent<CardPropTypes>;
 
 export declare enum HEADING_TYPE {
   SMALL = 'small',
@@ -196,6 +222,10 @@ export declare enum TEXT_TYPE {
   MEDIUM = 'medium',
 }
 
+export enum TEXT_COLOR {
+  MUTED = 'muted',
+}
+
 export declare enum BUTTON_SIZE {
   DEFAULT = 'default',
   SMALL = 'small',
@@ -213,6 +243,16 @@ export declare enum BUTTON_VARIANT {
   DEFAULT = 'default',
   DANGER = 'danger',
   NEUTRAL = 'neutral',
+}
+export enum AVATAR_SHAPE {
+  CIRCLE = 'circle',
+  SQUARE = 'square',
+}
+
+export enum AVATAR_SIZE {
+  DEFAULT = 'default',
+  SMALL = 'small',
+  BIG = 'big',
 }
 
 export declare function useDropdown(

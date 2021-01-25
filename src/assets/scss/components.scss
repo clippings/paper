@@ -167,6 +167,9 @@
   &.p-text__medium {
     @extend %text-250e;
   }
+  &.p-text__muted {
+    color: $graphite-60;
+  }
 }
 
 .white {

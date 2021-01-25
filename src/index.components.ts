@@ -5,7 +5,7 @@ export { ListNumber } from './components/ListNumber/ListNumber';
 export { ListNumberItem } from './components/ListNumberItem';
 export { ListItem } from './components/ListItem/ListItem';
 export { Heading } from './components/Heading/Heading';
-export { Text } from './components/Text/Text';
+export { Text, TextDescription } from './components/Text';
 export { TextInput } from './components/TextInput/TextInput';
 export { Badge } from './components/Badge/Badge';
 export { ImageCover } from './components/ImageCover/ImageCover';
@@ -26,3 +26,14 @@ export { CircleButton } from './components/Buttons/CircleButton';
 export { Overlay } from './components/Overlay/Overlay';
 export { Drawer } from './components/Drawer/Drawer';
 export { RadioButton } from './components/RadioButton/RadioButton';
+export { Avatar, IconAvatar } from './components/Avatar';
+export {
+  Selector,
+  SelectorRow,
+  SelectorRowAvatar,
+  SelectorRowAddition,
+  SelectorItemStyled,
+  SelectorItem,
+} from './components/Selector';
+
+export { Card, CardImgStyled, CardImgContainerStyled, CardStyled } from './components/Card';

@@ -10,6 +10,7 @@ import { BADGE_TYPE } from '../../components/Badge/enums/BadgeTypeEnum';
 import { BADGE_SIZE } from '../../components/Badge/enums/BadgeSizeEnum';
 import { HEADING_TYPE } from '../../components/Heading/enums/HeadingEnum';
 import { TEXT_TYPE } from '../../components/Text/enums/TextTypeEnum';
+import { TEXT_COLOR } from '../../components/Text/enums/TextColorEnum';
 import { LIST_SPACING } from '../../components/List/enums/ListSpacingEnum';
 import { LIST_ITEM_SIZE } from '../../components/ListItem/enums/ListItemSizeEnum';
 
@@ -80,6 +81,7 @@ const classNames = {
   text: {
     [TEXT_TYPE.SMALL]: createClassNameModifier('text', 'small'),
     [TEXT_TYPE.MEDIUM]: createClassNameModifier('text', 'medium'),
+    [TEXT_COLOR.MUTED]: createClassNameModifier('text', 'muted'),
     container: createClassName('text'),
   },
   statusLabel: {

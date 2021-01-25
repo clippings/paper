@@ -1,5 +1,6 @@
 export { HEADING_TYPE } from './components/Heading/enums/HeadingEnum';
 export { TEXT_TYPE } from './components/Text/enums/TextTypeEnum';
+export { TEXT_COLOR } from './components/Text/enums/TextColorEnum';
 export { BADGE_TYPE } from './components/Badge/enums/BadgeTypeEnum';
 export { BADGE_SIZE } from './components/Badge/enums/BadgeSizeEnum';
 export { IMAGE_COVER_TYPE } from './components/ImageCover/enums/ImageCoverTypeEnum';
@@ -14,3 +15,5 @@ export { BUTTON_SIZE } from './components/Buttons/enums/ButtonSizeEnum';
 export { BUTTON_TYPE } from './components/Buttons/enums/ButtonTypeEnum';
 export { BUTTON_VARIANT } from './components/Buttons/enums/ButtonVariantEnum';
 export { DRAWER_DIRECTION } from './components/Drawer/enums/DrawerDirectionEnum';
+export { AVATAR_SIZE } from './components/Avatar/enums/AvatarSizeEnum';
+export { AVATAR_SHAPE } from './components/Avatar/enums/AvatarShapeEnum';
