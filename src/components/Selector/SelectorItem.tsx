@@ -32,7 +32,7 @@ export const SelectorItem: React.FunctionComponent<SelectorItemType> = ({
         onClick,
         onKeyPress,
         role: 'button',
-        tabIndex: -1,
+        tabIndex: 0,
       }
     : {};
   return (
