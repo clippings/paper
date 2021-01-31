@@ -17,7 +17,7 @@ import { ListNumberPropType } from './components/ListNumber/types/ListNumberProp
 import { PopoverPropsType } from './components/Popover/types/PopoverPropsType';
 import { SearchInputPropsType } from './components/SearchInput/types/SearchInputPropsType';
 import { SelectPropsType } from './components/Select/types/SelectPropsType';
-import { TextPropsType } from './components/Text/types/TextPropsType';
+import { TextDescriptionPropsType, TextPropsType } from './components/Text/types/TextPropsType';
 import { TextInputPropsType } from './components/TextInput/types/TextInputPropsType';
 import { ToastPropsType } from './components/Toast/types/ToastPropsType';
 import { FormGroupPropType } from './components/FormGroup/types/FormGroupPropType';
@@ -78,6 +78,8 @@ export declare const StatusLabel: React.FunctionComponent<ComponentType>;
 
 export declare const Text: React.FunctionComponent<TextPropsType>;
 
+export declare const TextDescription: React.FunctionComponent<TextDescriptionPropsType>;
+
 export declare const TextInput: React.FunctionComponent<TextInputPropsType>;
 
 export declare const Toast: React.FunctionComponent<ToastPropsType>;
@@ -114,9 +116,11 @@ export declare const SelectorItemStyled: StyledComponent<'div', {mode: string} ,
 
 export declare const SelectorItem: React.FunctionComponent<SelectorItemType>;
 
-export { Card, CardImgStyled, CardImgContainerStyled, CardStyled } from './components/Card';
+export declare const CardImgStyled : StyledComponent<'div', {mode: string} ,{}, never>;
 
+export declare const CardImgContainerStyled : StyledComponent<'img', {mode: string} ,{}, never>;
 
+export declare const CardStyled : StyledComponent<'div', {mode: string} ,{}, never>;
 
 export declare const Card: React.FunctionComponent<CardPropTypes>;
 
