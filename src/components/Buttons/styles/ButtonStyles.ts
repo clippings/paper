@@ -21,7 +21,7 @@ const buttonVariationColors = {
   default: {
     back: 'transparent',
     color: btnPrimary,
-    border: medium,
+    border: btnPrimary,
     hover: {
       back: btnPrimary,
       color: onPrimary,
