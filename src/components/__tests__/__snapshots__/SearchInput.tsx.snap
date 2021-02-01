@@ -12,7 +12,7 @@ exports[`Search input match snapshot 1`] = `
       value=""
     />
     <svg
-      fill="#8f8f8f"
+      fill="#707070"
       height="16"
       preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 14 14"

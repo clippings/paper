@@ -3,7 +3,7 @@ import theme from 'styled-theming';
 // Primitive theme colors
 const graphite120 = '#141414';
 const graphite90 = '#525252';
-const graphite60 = '#8f8f8f';
+const graphite60 = '#707070';
 const graphite30 = '#cccccc';
 const graphite10 = '#f5f5f5';
 const white = '#ffffff';

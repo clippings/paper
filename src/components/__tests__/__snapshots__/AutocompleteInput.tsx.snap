@@ -16,7 +16,7 @@ exports[`Autocomplete component matches snapshot 1`] = `
       />
       <svg
         class="p-f-autocomplete__input-wrapper__icon"
-        fill="#8f8f8f"
+        fill="#707070"
         height="16"
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 14 14"
