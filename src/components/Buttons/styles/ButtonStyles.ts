@@ -1,42 +1,36 @@
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
-import {
-  attention,
-  btnPrimary,
-  medium,
-  onPrimary,
-  pinterestColor,
-  twitterColor,
-} from '@core/styles/variables';
+import { pinterestColor, twitterColor } from '@core/styles/variables';
 import { ButtonStylePropsType } from '../types/ButtonStylePropsType';
+import {
+  brandBtnPrimaryBg,
+  brandBtnPrimaryBorder,
+  brandBtnPrimaryColor,
+  btnSecondaryBg,
+  btnSecondaryBorder,
+  btnSecondaryColor,
+  btnTertiaryBg,
+  btnTertiaryBorder,
+  btnTertiaryColor,
+} from './variables';
 
 const btnFontSize: string = '14px';
 const buttonPrefix: string = 'p-button';
 
 const buttonVariationColors = {
   primary: {
-    back: btnPrimary,
-    color: onPrimary,
-    border: btnPrimary,
+    background: brandBtnPrimaryBg,
+    border: brandBtnPrimaryBorder,
+    color: brandBtnPrimaryColor,
   },
-  default: {
-    back: 'transparent',
-    color: btnPrimary,
-    border: btnPrimary,
-    hover: {
-      back: btnPrimary,
-      color: onPrimary,
-      border: btnPrimary,
-    },
+  secondary: {
+    background: btnSecondaryBg,
+    border: btnSecondaryBorder,
+    color: btnSecondaryColor,
   },
-  danger: {
-    back: attention,
-    color: onPrimary,
-    border: attention,
-  },
-  neutral: {
-    back: medium,
-    color: onPrimary,
-    border: medium,
+  tertiary: {
+    background: btnTertiaryBg,
+    border: btnTertiaryBorder,
+    color: btnTertiaryColor,
   },
 };
 
@@ -93,10 +87,8 @@ const filledExtension = (size: string): FlattenSimpleInterpolation => {
 
 // This generates css for the color variations that you can pass to the component
 const colorVariationExtension = (color: string): FlattenSimpleInterpolation => {
-  const hover = buttonVariationColors[color]['hover'];
-
   return css`
-    background-color: ${buttonVariationColors[color]['back']};
+    background-color: ${buttonVariationColors[color]['background']};
     color: ${buttonVariationColors[color]['color']};
     svg {
       fill: ${buttonVariationColors[color]['color']};
@@ -106,24 +98,6 @@ const colorVariationExtension = (color: string): FlattenSimpleInterpolation => {
       &:visited {
         border-color: ${buttonVariationColors[color]['border']} !important;
       }
-      &:hover,
-      &:active,
-      &.active {
-        ${hover
-          ? css`
-              opacity: 1;
-              background-color: ${hover['back']};
-              color: ${hover['color']};
-              svg {
-                fill: ${hover['color']};
-              }
-              border-color: ${hover['border']};
-            `
-          : ''}
-      }
-    }
-    &[disabled] {
-      opacity: 0.2;
     }
   `;
 };
@@ -159,6 +133,10 @@ export const StyledButton = styled.button<ButtonStylePropsType>`
     -webkit-box-shadow: none;
     box-shadow: none;
   }
+  &[disabled] {
+    opacity: 0.2;
+    cursor: default;
+  }
   
   &.${buttonPrefix}--filled {
     ${props => filledExtension(props.size)}
@@ -171,22 +149,12 @@ export const StyledButton = styled.button<ButtonStylePropsType>`
   
   &.${buttonPrefix}--full-width {
     width: 100%;
-
-    &[disabled] {
-      opacity: 0.2;
-      cursor: default;
-    }
-  }
-  
-  &.${buttonPrefix}--borderless {
-    border: 0;
   }
 
   &.button-twitter,
   &.button-pinterest {
     ${props => filledExtension(props.size)}
     ${props => props.variant && colorVariationExtension(props.variant)}
-    color: ${onPrimary};
   }
   
   &.button-twitter {
