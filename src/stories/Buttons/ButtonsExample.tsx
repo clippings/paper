@@ -9,11 +9,13 @@ const ButtonRegularExample: FC<ButtonPropsType & { theme: string }> = ({
   variant,
   size,
   children,
+  startIcon,
+  endIcon,
   ...rest
 }) => {
   return (
     <ThemeProvider theme={{ mode: theme }}>
-      <Button variant={variant} size={size} {...rest}>
+      <Button startIcon={startIcon} endIcon={endIcon} variant={variant} size={size} {...rest}>
         {children}
       </Button>
     </ThemeProvider>

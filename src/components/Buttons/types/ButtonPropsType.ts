@@ -8,5 +8,7 @@ export type ButtonPropsType = {
   variant?: BUTTON_VARIANT;
   fullWidth?: boolean;
   type?: BUTTON_TYPE;
+  startIcon?: React.ReactNode;
+  endIcon?: React.ReactNode;
   onClick?: (event: any) => void;
 };

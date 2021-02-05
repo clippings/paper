@@ -1,5 +1,11 @@
 import theme from 'styled-theming';
-import { graphite120, graphite30, kazamRed, white } from '../../../core/styles/variables';
+import {
+  graphite120,
+  graphite30,
+  graphite60,
+  kazamRed,
+  white,
+} from '../../../core/styles/variables';
 
 export const btnSecondaryBg = graphite120;
 export const btnSecondaryBorder = btnSecondaryBg;
@@ -12,3 +18,4 @@ export const brandBtnPrimaryColor = btnSecondaryColor;
 export const btnTertiaryBg = 'transparent';
 export const btnTertiaryBorder = graphite30;
 export const btnTertiaryColor = graphite120;
+export const btnTertiaryBorderHover = graphite60;

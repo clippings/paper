@@ -10,6 +10,7 @@ import {
   btnSecondaryColor,
   btnTertiaryBg,
   btnTertiaryBorder,
+  btnTertiaryBorderHover,
   btnTertiaryColor,
 } from './variables';
 
@@ -31,6 +32,9 @@ const buttonVariationColors = {
     background: btnTertiaryBg,
     border: btnTertiaryBorder,
     color: btnTertiaryColor,
+    hover: {
+      border: btnTertiaryBorderHover,
+    },
   },
 };
 
@@ -87,6 +91,8 @@ const filledExtension = (size: string): FlattenSimpleInterpolation => {
 
 // This generates css for the color variations that you can pass to the component
 const colorVariationExtension = (color: string): FlattenSimpleInterpolation => {
+  const hover = buttonVariationColors[color]['hover'];
+
   return css`
     background-color: ${buttonVariationColors[color]['background']};
     color: ${buttonVariationColors[color]['color']};
@@ -97,6 +103,24 @@ const colorVariationExtension = (color: string): FlattenSimpleInterpolation => {
     &:not([disabled]) {
       &:visited {
         border-color: ${buttonVariationColors[color]['border']} !important;
+      }
+    }
+    &:hover,
+      &:active,
+      &.active {
+        ${
+          hover
+            ? css`
+                opacity: 1;
+                background-color: ${hover['background']};
+                color: ${hover['color']};
+                svg {
+                  fill: ${hover['color']};
+                }
+                border-color: ${hover['border']};
+              `
+            : ''
+        }
       }
     }
   `;
@@ -183,4 +207,14 @@ export const StyledCircleButton = styled(StyledButton)`
     }
     padding: 0 0;
   }
+`;
+
+export const StyledButtonEndIcon = styled.span`
+  display: flex;
+  margin-left: 6px;
+`;
+
+export const StyledButtonStartIcon = styled.span`
+  display: flex;
+  margin-right: 6px;
 `;
