@@ -4,7 +4,28 @@ import { CircleButtonExample }
 import { Icon } from '@paper/components';
 import { BUTTON_SIZE, BUTTON_VARIANT, ICON, ICONS_COLOR, ICONS_SIZE } from '@paper/enums';
 
-<Meta title="Buttons/Circle" />
+<Meta title="Buttons/Circle"
+      argTypes={{
+        theme: {
+          control: {
+            type: 'select',
+            options: ['light', 'kazam'],
+          },
+        },
+        size: {
+          control: {
+            type: 'select',
+            options: BUTTON_SIZE,
+          },
+        },
+        variant: {
+          control: {
+            type: 'select',
+            options: BUTTON_VARIANT,
+          },
+        }
+      }}
+/>
 
 export const CircleButton = args => <CircleButtonExample {...args} />;
 
@@ -14,14 +35,6 @@ Basic buttons usage of the `CircleButton`.
 <Canvas>
   <Story
     name="Default Circle button"
-    argTypes={{
-      theme: {
-        control: {
-          type: 'select',
-          options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.PRIMARY,
@@ -46,14 +59,6 @@ The Primary variant is only variant what is  going to be affected by the change 
 <Canvas>
   <Story
     name="Primary Circle button big"
-    argTypes={{
-      theme: {
-        control: {
-          type: 'select',
-          options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.PRIMARY,
@@ -66,14 +71,6 @@ The Primary variant is only variant what is  going to be affected by the change 
   </Story>
   <Story
     name="Primary Circle button default"
-    argTypes={{
-      theme: {
-        control: {
-          type: 'select',
-          options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.PRIMARY,
@@ -88,14 +85,6 @@ The Primary variant is only variant what is  going to be affected by the change 
   </Story>
   <Story
     name="Primary Circle button small"
-    argTypes={{
-      theme: {
-        control: {
-        type: 'select',
-        options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.PRIMARY,
@@ -115,15 +104,7 @@ The secondary variant is **not** going to be affected by the change of the theme
 <Canvas>
   <Story
     name="Secondary Circle button big"
-    argTypes={{
-      theme: {
-        control: {
-          type: 'select',
-          options: ['light', 'kazam'],
-        },
-      }
-    }}
-  args={{
+    args={{
       theme: 'light',
       variant: BUTTON_VARIANT.SECONDARY,
       size: BUTTON_SIZE.BIG
@@ -135,14 +116,6 @@ The secondary variant is **not** going to be affected by the change of the theme
   </Story>
   <Story
   name="Secondary button default"
-    argTypes={{
-      theme: {
-        control: {
-          type: 'select',
-          options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.SECONDARY,
@@ -155,14 +128,6 @@ The secondary variant is **not** going to be affected by the change of the theme
   </Story>
   <Story
     name="Secondary Circle button small"
-    argTypes={{
-      theme: {
-        control: {
-          type: 'select',
-          options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.SECONDARY,
@@ -181,16 +146,8 @@ The secondary variant is **not** going to be affected by the change of the theme
 The tertiary variant is **not** going to be affected by the change of the theme
 
 <Canvas>
-    <Story
-      name="Tertiary Circle button big"
-      argTypes={{
-        theme: {
-          control: {
-            type: 'select',
-            options: ['light', 'kazam'],
-          },
-        }
-      }}
+  <Story
+    name="Tertiary Circle button big"
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.TERTIARY,
@@ -203,14 +160,6 @@ The tertiary variant is **not** going to be affected by the change of the theme
   </Story>
   <Story
     name="Tertiary Circle button default"
-    argTypes={{
-      theme: {
-        control: {
-          type: 'select',
-          options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.TERTIARY,
@@ -223,14 +172,6 @@ The tertiary variant is **not** going to be affected by the change of the theme
   </Story>
   <Story
     name="Tertiary Circle button small"
-    argTypes={{
-      theme: {
-        control: {
-          type: 'select',
-          options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.TERTIARY,

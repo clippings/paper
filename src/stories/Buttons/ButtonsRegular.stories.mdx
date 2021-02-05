@@ -4,7 +4,28 @@ import { ButtonRegularExample }
 import { Icon } from '@paper/components';
 import { BUTTON_SIZE, BUTTON_VARIANT, ICON, ICONS_COLOR, ICONS_SIZE } from '@paper/enums';
 
-<Meta title="Buttons/Regular" />
+<Meta title="Buttons/Regular"
+      argTypes={{
+        theme: {
+          control: {
+            type: 'select',
+            options: ['light', 'kazam'],
+          },
+        },
+        size: {
+          control: {
+            type: 'select',
+            options: BUTTON_SIZE,
+          },
+        },
+        variant: {
+          control: {
+            type: 'select',
+            options: BUTTON_VARIANT,
+          },
+        }
+      }}
+/>
 
 export const Button = args => <ButtonRegularExample {...args} />;
 
@@ -14,14 +35,6 @@ Basic buttons usage
 <Canvas>
   <Story
     name="Default button"
-    argTypes={{
-      theme: {
-        control: {
-          type: 'select',
-          options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.PRIMARY,
@@ -45,14 +58,6 @@ The Primary variant is only variant what is  going to be affected by the change 
 <Canvas>
   <Story
     name="Primary button big"
-    argTypes={{
-      theme: {
-        control: {
-          type: 'select',
-          options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.PRIMARY,
@@ -67,14 +72,6 @@ The Primary variant is only variant what is  going to be affected by the change 
   </Story>
   <Story
     name="Primary button default"
-    argTypes={{
-      theme: {
-        control: {
-          type: 'select',
-          options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.PRIMARY,
@@ -85,14 +82,6 @@ The Primary variant is only variant what is  going to be affected by the change 
   </Story>
   <Story
     name="Primary button small"
-    argTypes={{
-      theme: {
-        control: {
-        type: 'select',
-        options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.PRIMARY,
@@ -110,14 +99,6 @@ The secondary variant is **not** going to be affected by the change of the theme
 <Canvas>
   <Story
     name="Secondary button big"
-    argTypes={{
-      theme: {
-        control: {
-          type: 'select',
-          options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.SECONDARY,
@@ -132,14 +113,6 @@ The secondary variant is **not** going to be affected by the change of the theme
   </Story>
   <Story
   name="Secondary button default"
-    argTypes={{
-      theme: {
-        control: {
-          type: 'select',
-          options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.SECONDARY,
@@ -153,14 +126,6 @@ The secondary variant is **not** going to be affected by the change of the theme
   </Story>
   <Story
     name="Secondary button small"
-    argTypes={{
-      theme: {
-        control: {
-          type: 'select',
-          options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.SECONDARY,
@@ -178,14 +143,6 @@ The tertiary variant is **not** going to be affected by the change of the theme
 <Canvas>
   <Story
     name="Tertiary button big"
-    argTypes={{
-      theme: {
-        control: {
-          type: 'select',
-          options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.TERTIARY,
@@ -200,14 +157,6 @@ The tertiary variant is **not** going to be affected by the change of the theme
   </Story>
   <Story
     name="Тertiary button default"
-    argTypes={{
-      theme: {
-        control: {
-          type: 'select',
-          options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.TERTIARY,
@@ -218,14 +167,6 @@ The tertiary variant is **not** going to be affected by the change of the theme
   </Story>
   <Story
     name="Тertiary button small"
-    argTypes={{
-      theme: {
-        control: {
-        type: 'select',
-          options: ['light', 'kazam'],
-        },
-      }
-    }}
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.TERTIARY,
@@ -238,49 +179,33 @@ The tertiary variant is **not** going to be affected by the change of the theme
 
 
 #### Text
-  <Canvas>
-    <Story
-      name="Text button big"
-      argTypes={{
-        theme: {
+<Canvas>
+  <Story
+    name="Text button big"
+  >
+    {(args) => <Button {...args}>Only Text</Button>}
+  </Story>
+  <Story
+    name="Text button icon start"
+    argTypes={{
+      theme: {
         control: {
-            type: 'select',
-            options: ['light', 'kazam'],
-          },
-        }
-      }}
-    >
-      {(args) => <Button {...args}>Only Text</Button>}
-    </Story>
-    <Story
-      name="Text button icon start"
-      argTypes={{
-        theme: {
-          control: {
-            type: 'select',
-            options: ['light', 'kazam'],
-          },
-        }
-      }}
-    >
-      {(args) => <Button startIcon={<Icon icon={ICON.PLUS} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />} {...args}>Text with icon</Button>}
-    </Story>
-    <Story
-      name="Text button icon end"
-      argTypes={{
-        theme: {
-          control: {
-            type: 'select',
-            options: ['light', 'kazam'],
-          },
-        }
-      }}
-    >
-      {(args) => <Button
-        endIcon={<Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />}
-        {...args}>
-        Tex and icon</Button>
+          type: 'select',
+          options: ['light', 'kazam'],
+        },
       }
-    </Story>
-  </Canvas>
+    }}
+  >
+    {(args) => <Button startIcon={<Icon icon={ICON.PLUS} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />} {...args}>Text with icon</Button>}
+  </Story>
+  <Story
+    name="Text button icon end"
+  >
+    {(args) => <Button
+      endIcon={<Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />}
+      {...args}>
+      Tex and icon</Button>
+    }
+  </Story>
+</Canvas>
 
