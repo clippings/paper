@@ -1,5 +1,5 @@
 export enum BUTTON_SIZE {
-  DEFAULT = 'default',
+  MEDIUM = 'medium',
   SMALL = 'small',
   BIG = 'big',
 }

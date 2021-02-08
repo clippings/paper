@@ -7,7 +7,7 @@ import { StyledButton, StyledButtonStartIcon, StyledButtonEndIcon } from './styl
 export const Button: React.FunctionComponent<ButtonPropsType> = ({
   children = null,
   className = '',
-  size = BUTTON_SIZE.DEFAULT,
+  size = BUTTON_SIZE.MEDIUM,
   variant = '',
   fullWidth = false,
   type = BUTTON_TYPE.SUBMIT,
