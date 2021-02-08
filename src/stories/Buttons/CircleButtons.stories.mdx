@@ -23,7 +23,7 @@ import { BUTTON_SIZE, BUTTON_VARIANT, ICON, ICONS_COLOR, ICONS_SIZE } from '@pap
             type: 'select',
             options: BUTTON_VARIANT,
           },
-        }
+        },
       }}
 />
 
@@ -38,7 +38,8 @@ Basic buttons usage of the `CircleButton`.
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.PRIMARY,
-      size: BUTTON_SIZE.BIG
+      size: BUTTON_SIZE.BIG,
+      disabled: false,
     }}
   >
     {(args) => (<CircleButton {...args} >

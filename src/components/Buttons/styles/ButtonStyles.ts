@@ -5,13 +5,16 @@ import {
   brandBtnPrimaryBg,
   brandBtnPrimaryBorder,
   brandBtnPrimaryColor,
+  brandPrimaryBgDisabled,
   btnSecondaryBg,
+  btnSecondaryBgDisabled,
   btnSecondaryBorder,
   btnSecondaryColor,
   btnTertiaryBg,
   btnTertiaryBorder,
   btnTertiaryBorderHover,
   btnTertiaryColor,
+  btnTertiaryColorDisabled,
 } from './variables';
 
 const btnFontSize: string = '14px';
@@ -22,11 +25,17 @@ const buttonVariationColors = {
     background: brandBtnPrimaryBg,
     border: brandBtnPrimaryBorder,
     color: brandBtnPrimaryColor,
+    disabled: {
+      background: brandPrimaryBgDisabled,
+    },
   },
   secondary: {
     background: btnSecondaryBg,
     border: btnSecondaryBorder,
     color: btnSecondaryColor,
+    disabled: {
+      background: btnSecondaryBgDisabled,
+    },
   },
   tertiary: {
     background: btnTertiaryBg,
@@ -34,6 +43,9 @@ const buttonVariationColors = {
     color: btnTertiaryColor,
     hover: {
       border: btnTertiaryBorderHover,
+    },
+    disabled: {
+      color: btnTertiaryColorDisabled,
     },
   },
 };
@@ -92,6 +104,8 @@ const filledExtension = (size: string): FlattenSimpleInterpolation => {
 // This generates css for the color variations that you can pass to the component
 const colorVariationExtension = (color: string): FlattenSimpleInterpolation => {
   const hover = buttonVariationColors[color]['hover'];
+  const disabledBg = buttonVariationColors[color]['disabled']['background'];
+  const disabledColor = buttonVariationColors[color]['disabled']['color'];
 
   return css`
     background-color: ${buttonVariationColors[color]['background']};
@@ -104,24 +118,45 @@ const colorVariationExtension = (color: string): FlattenSimpleInterpolation => {
       &:visited {
         border-color: ${buttonVariationColors[color]['border']} !important;
       }
-    }
-    &:hover,
-      &:active,
-      &.active {
-        ${
-          hover
-            ? css`
-                opacity: 1;
-                background-color: ${hover['background']};
-                color: ${hover['color']};
-                svg {
-                  fill: ${hover['color']};
-                }
-                border-color: ${hover['border']};
-              `
-            : ''
+      &:hover,
+        &:active,
+        &.active {
+          ${
+            hover
+              ? css`
+                  opacity: 1;
+                  background-color: ${hover['background']};
+                  color: ${hover['color']};
+                  svg {
+                    fill: ${hover['color']};
+                  }
+                  border-color: ${hover['border']};
+                `
+              : ''
+          }
         }
       }
+    }
+    
+    &:disabled {
+      ${
+        disabledBg &&
+        css`
+          background-color: ${disabledBg};
+          border-color: ${disabledBg};
+        `
+      }
+      ${
+        disabledColor &&
+        css`
+          color: ${disabledColor};
+          svg {
+            fill: ${disabledColor};
+          }
+        `
+      }
+      
+      cursor: default;
     }
   `;
 };
@@ -142,24 +177,24 @@ export const StyledButton = styled.button<ButtonStylePropsType>`
   cursor: pointer;
   padding: 0;
   transition: all 0.3s;
-  * {
+  
+  &:not([disabled]) {
+    * {
+      &:hover {
+        cursor: pointer;
+      }
+    }
     &:hover {
-      cursor: pointer;
+      opacity: 0.88;
+      text-decoration: none;
     }
   }
-  &:hover {
-    opacity: 0.9;
-    text-decoration: none;
-  }
+  
   &:active,
   &:focus {
     outline: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-  }
-  &[disabled] {
-    opacity: 0.2;
-    cursor: default;
   }
   
   &.${buttonPrefix}--filled {
