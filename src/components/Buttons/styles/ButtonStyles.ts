@@ -51,7 +51,7 @@ const buttonVariationColors = {
 };
 
 const buttonSizeStyles = {
-  default: css`
+  medium: css`
     height: 40px;
     max-height: 40px;
     padding: 0 20px 1px 20px;
@@ -72,7 +72,7 @@ const buttonSizeStyles = {
 };
 
 const circleButtonSizeStyles = {
-  default: css`
+  medium: css`
     height: 40px;
     width: 40px;
   `,
