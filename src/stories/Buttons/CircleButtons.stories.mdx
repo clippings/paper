@@ -41,10 +41,9 @@ Basic buttons usage of the `CircleButton`.
       size: BUTTON_SIZE.BIG
     }}
   >
-    {(args) => <CircleButton
-      endIcon={<Icon icon={ICON.ARROW_UP} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />}
-      {...args} />
-    }
+    {(args) => (<CircleButton {...args} >
+      <Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
+    </CircleButton>)}
   </Story>
 </Canvas>
 
