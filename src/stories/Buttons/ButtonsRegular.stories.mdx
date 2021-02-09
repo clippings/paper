@@ -65,20 +65,27 @@ The Primary variant is only variant what is  going to be affected by the change 
     }}
   >
     {(args) => <Button
-      endIcon={<Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />}
-      {...args}>
-      Primary big
-    </Button>}
+        endIcon={<Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />}
+        {...args}
+      >
+        Primary big
+      </Button>
+    }
   </Story>
   <Story
-    name="Primary button default"
+    name="Primary button medium"
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.PRIMARY,
       size: BUTTON_SIZE.MEDIUM
     }}
   >
-    {(args) => <Button{...args}>Primary default </Button>}
+    {(args) => <Button
+      {...args}
+    >
+      Primary Medium
+    </Button>
+    }
   </Story>
   <Story
     name="Primary button small"
@@ -88,7 +95,9 @@ The Primary variant is only variant what is  going to be affected by the change 
       size: BUTTON_SIZE.SMALL
     }}
   >
-    {(args) => <Button {...args}>Primary Small</Button>}
+    {(args) =>
+      <Button {...args}>Primary Small</Button>
+    }
   </Story>
 </Canvas>
 
@@ -156,24 +165,29 @@ The tertiary variant is **not** going to be affected by the change of the theme
     }
   </Story>
   <Story
-    name="Тertiary button default"
+    name="Primary button medium"
     args={{
       theme: 'light',
-      variant: BUTTON_VARIANT.TERTIARY,
+      variant: BUTTON_VARIANT.PRIMARY,
       size: BUTTON_SIZE.MEDIUM
     }}
   >
-    {(args) => <Button {...args}>Tertiary Default</Button>}
+    {(args) => <Button
+      {...args}
+    >
+      Primary Medium
+    </Button>
+    }
   </Story>
   <Story
-    name="Тertiary button small"
+    name="Tertiary button small"
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.TERTIARY,
       size: BUTTON_SIZE.SMALL
     }}
   >
-    {(args) => <Button {...args}>Тertiary Small</Button>}
+    {(args) => <Button {...args}>Tertiary Small</Button>}
   </Story>
 </Canvas>
 

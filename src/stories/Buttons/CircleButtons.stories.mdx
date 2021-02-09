@@ -34,17 +34,16 @@ Basic buttons usage of the `CircleButton`.
 
 <Canvas>
   <Story
-    name="Default Circle button"
+    name="Primary Circle button"
     args={{
       theme: 'light',
       variant: BUTTON_VARIANT.PRIMARY,
-      size: BUTTON_SIZE.BIG,
-      disabled: false,
+      size: BUTTON_SIZE.BIG
     }}
   >
-    {(args) => (<CircleButton {...args} >
-      <Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
-    </CircleButton>)
+    {(args) => <CircleButton
+      endIcon={<Icon icon={ICON.ARROW_UP} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />}
+      {...args} />
     }
   </Story>
 </Canvas>
@@ -71,18 +70,20 @@ The Primary variant is only variant what is  going to be affected by the change 
     </CircleButton>)}
   </Story>
   <Story
-    name="Primary Circle button default"
-    args={{
-      theme: 'light',
-      variant: BUTTON_VARIANT.PRIMARY,
-      size: BUTTON_SIZE.MEDIUM
-    }}
-  >
-    {(args) => (
-      <CircleButton {...args} >
+      name="Primary Circle button big"
+      args={{
+        theme: 'light',
+        variant: BUTTON_VARIANT.PRIMARY,
+        size: BUTTON_SIZE.BIG
+      }}
+    >
+    {(args) =>
+      <CircleButton
+        {...args}
+      >
         <Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
       </CircleButton>
-    )}
+    }
   </Story>
   <Story
     name="Primary Circle button small"
@@ -92,9 +93,13 @@ The Primary variant is only variant what is  going to be affected by the change 
       size: BUTTON_SIZE.SMALL
     }}
   >
-  {(args) => (<CircleButton {...args} >
-      <Icon icon={ICON.PLUS} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
-    </CircleButton>)}
+    {(args) =>
+      <CircleButton
+        {...args}
+      >
+        <Icon icon={ICON.PLUS} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
+      </CircleButton>
+    }
   </Story>
 </Canvas>
 
@@ -111,9 +116,13 @@ The secondary variant is **not** going to be affected by the change of the theme
       size: BUTTON_SIZE.BIG
     }}
   >
-    {(args) => (<CircleButton {...args} >
-      <Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
-    </CircleButton>)}
+    {(args) =>
+      <CircleButton
+        {...args}
+      >
+        <Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
+      </CircleButton>
+    }
   </Story>
   <Story
   name="Secondary button default"
@@ -123,9 +132,13 @@ The secondary variant is **not** going to be affected by the change of the theme
       size: BUTTON_SIZE.MEDIUM
     }}
   >
-    {(args) => (<CircleButton {...args} >
-      <Icon icon={ICON.PLUS} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
-    </CircleButton>)}
+    {(args) =>
+      <CircleButton
+        {...args}
+      >
+        <Icon icon={ICON.PLUS} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
+      </CircleButton>
+    }
   </Story>
   <Story
     name="Secondary Circle button small"
@@ -167,9 +180,13 @@ The tertiary variant is **not** going to be affected by the change of the theme
       size: BUTTON_SIZE.MEDIUM
     }}
   >
-    {(args) => (<CircleButton {...args} >
-      <Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
-    </CircleButton>)}
+    {(args) =>
+      <CircleButton
+        {...args}
+      >
+        <Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
+      </CircleButton>
+    }
   </Story>
   <Story
     name="Tertiary Circle button small"
@@ -179,9 +196,13 @@ The tertiary variant is **not** going to be affected by the change of the theme
       size: BUTTON_SIZE.SMALL
     }}
   >
-    {(args) => (<CircleButton {...args} >
-      <Icon icon={ICON.PLUS} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
-    </CircleButton>)}
+    {(args) =>
+      <CircleButton
+        {...args}
+      >
+        <Icon icon={ICON.PLUS} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
+      </CircleButton>
+    }
   </Story>
 </Canvas>
 
