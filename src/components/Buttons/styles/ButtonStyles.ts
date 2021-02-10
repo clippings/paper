@@ -118,9 +118,14 @@ const colorVariationExtension = (color: string): FlattenSimpleInterpolation => {
       &:visited {
         border-color: ${buttonVariationColors[color]['border']} !important;
       }
+      &:hover {
+        cursor: pointer;
+      }
       &:hover,
-        &:active,
-        &.active {
+      &:active,
+      &.active {
+        opacity: 0.88;
+        text-decoration: none;
           ${
             hover
               ? css`
@@ -179,15 +184,7 @@ export const StyledButton = styled.button<ButtonStylePropsType>`
   transition: all 0.3s;
   
   &:not([disabled]) {
-    * {
-      &:hover {
-        cursor: pointer;
-      }
-    }
-    &:hover {
-      opacity: 0.88;
-      text-decoration: none;
-    }
+   
   }
   
   &:active,
