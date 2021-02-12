@@ -1,22 +1,22 @@
 import theme from 'styled-theming';
 
 // Primitive theme colors
-const graphite120 = '#141414';
-const graphite90 = '#525252';
-const graphite60 = '#707070';
-const graphite30 = '#cccccc';
-const graphite10 = '#f5f5f5';
-const white = '#ffffff';
-const neutral60 = '#707070';
+export const graphite120 = '#141414';
+export const graphite90 = '#525252';
+export const graphite60 = '#707070';
+export const graphite30 = '#cccccc';
+export const graphite10 = '#f5f5f5';
+export const white = '#ffffff';
+export const neutral60 = '#707070';
 
-const red60 = '#d74b46';
-const yellow50 = '#f1b056';
-const green30 = '#4aab4a';
-const blue50 = '#66c4e0';
-const beige10 = '#f3ede9';
+export const red60 = '#d74b46';
+export const yellow50 = '#f1b056';
+export const green30 = '#4aab4a';
+export const blue50 = '#66c4e0';
+export const beige10 = '#f3ede9';
 
-const kazamRed = '#D13F21';
-const kazamDark = '#111111';
+export const kazamRed = '#D13F21';
+export const kazamDark = '#111111';
 
 export const twitterColor = '#03aaf5';
 export const pinterestColor = '#d02621';

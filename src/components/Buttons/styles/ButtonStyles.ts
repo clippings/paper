@@ -1,47 +1,57 @@
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
-import {
-  attention,
-  btnPrimary,
-  medium,
-  onPrimary,
-  pinterestColor,
-  twitterColor,
-} from '@core/styles/variables';
+import { pinterestColor, twitterColor } from '@core/styles/variables';
 import { ButtonStylePropsType } from '../types/ButtonStylePropsType';
+import {
+  brandBtnPrimaryBg,
+  brandBtnPrimaryBorder,
+  brandBtnPrimaryColor,
+  brandPrimaryBgDisabled,
+  btnSecondaryBg,
+  btnSecondaryBgDisabled,
+  btnSecondaryBorder,
+  btnSecondaryColor,
+  btnTertiaryBg,
+  btnTertiaryBorder,
+  btnTertiaryBorderHover,
+  btnTertiaryColor,
+  btnTertiaryColorDisabled,
+} from './variables';
 
 const btnFontSize: string = '14px';
 const buttonPrefix: string = 'p-button';
 
 const buttonVariationColors = {
   primary: {
-    back: btnPrimary,
-    color: onPrimary,
-    border: btnPrimary,
-  },
-  default: {
-    back: 'transparent',
-    color: btnPrimary,
-    border: btnPrimary,
-    hover: {
-      back: btnPrimary,
-      color: onPrimary,
-      border: btnPrimary,
+    background: brandBtnPrimaryBg,
+    border: brandBtnPrimaryBorder,
+    color: brandBtnPrimaryColor,
+    disabled: {
+      background: brandPrimaryBgDisabled,
     },
   },
-  danger: {
-    back: attention,
-    color: onPrimary,
-    border: attention,
+  secondary: {
+    background: btnSecondaryBg,
+    border: btnSecondaryBorder,
+    color: btnSecondaryColor,
+    disabled: {
+      background: btnSecondaryBgDisabled,
+    },
   },
-  neutral: {
-    back: medium,
-    color: onPrimary,
-    border: medium,
+  tertiary: {
+    background: btnTertiaryBg,
+    border: btnTertiaryBorder,
+    color: btnTertiaryColor,
+    hover: {
+      border: btnTertiaryBorderHover,
+    },
+    disabled: {
+      color: btnTertiaryColorDisabled,
+    },
   },
 };
 
 const buttonSizeStyles = {
-  default: css`
+  medium: css`
     height: 40px;
     max-height: 40px;
     padding: 0 20px 1px 20px;
@@ -62,7 +72,7 @@ const buttonSizeStyles = {
 };
 
 const circleButtonSizeStyles = {
-  default: css`
+  medium: css`
     height: 40px;
     width: 40px;
   `,
@@ -94,9 +104,11 @@ const filledExtension = (size: string): FlattenSimpleInterpolation => {
 // This generates css for the color variations that you can pass to the component
 const colorVariationExtension = (color: string): FlattenSimpleInterpolation => {
   const hover = buttonVariationColors[color]['hover'];
+  const disabledBg = buttonVariationColors[color]['disabled']['background'];
+  const disabledColor = buttonVariationColors[color]['disabled']['color'];
 
   return css`
-    background-color: ${buttonVariationColors[color]['back']};
+    background-color: ${buttonVariationColors[color]['background']};
     color: ${buttonVariationColors[color]['color']};
     svg {
       fill: ${buttonVariationColors[color]['color']};
@@ -106,24 +118,50 @@ const colorVariationExtension = (color: string): FlattenSimpleInterpolation => {
       &:visited {
         border-color: ${buttonVariationColors[color]['border']} !important;
       }
+      &:hover {
+        cursor: pointer;
+      }
       &:hover,
       &:active,
       &.active {
-        ${hover
-          ? css`
-              opacity: 1;
-              background-color: ${hover['back']};
-              color: ${hover['color']};
-              svg {
-                fill: ${hover['color']};
-              }
-              border-color: ${hover['border']};
-            `
-          : ''}
+        opacity: 0.88;
+        text-decoration: none;
+          ${
+            hover
+              ? css`
+                  opacity: 1;
+                  background-color: ${hover['background']};
+                  color: ${hover['color']};
+                  svg {
+                    fill: ${hover['color']};
+                  }
+                  border-color: ${hover['border']};
+                `
+              : ''
+          }
+        }
       }
     }
-    &[disabled] {
-      opacity: 0.2;
+    
+    &:disabled {
+      ${
+        disabledBg &&
+        css`
+          background-color: ${disabledBg};
+          border-color: ${disabledBg};
+        `
+      }
+      ${
+        disabledColor &&
+        css`
+          color: ${disabledColor};
+          svg {
+            fill: ${disabledColor};
+          }
+        `
+      }
+      
+      cursor: default;
     }
   `;
 };
@@ -144,15 +182,11 @@ export const StyledButton = styled.button<ButtonStylePropsType>`
   cursor: pointer;
   padding: 0;
   transition: all 0.3s;
-  * {
-    &:hover {
-      cursor: pointer;
-    }
+  
+  &:not([disabled]) {
+   
   }
-  &:hover {
-    opacity: 0.9;
-    text-decoration: none;
-  }
+  
   &:active,
   &:focus {
     outline: none;
@@ -171,22 +205,12 @@ export const StyledButton = styled.button<ButtonStylePropsType>`
   
   &.${buttonPrefix}--full-width {
     width: 100%;
-
-    &[disabled] {
-      opacity: 0.2;
-      cursor: default;
-    }
-  }
-  
-  &.${buttonPrefix}--borderless {
-    border: 0;
   }
 
   &.button-twitter,
   &.button-pinterest {
     ${props => filledExtension(props.size)}
     ${props => props.variant && colorVariationExtension(props.variant)}
-    color: ${onPrimary};
   }
   
   &.button-twitter {
@@ -215,4 +239,14 @@ export const StyledCircleButton = styled(StyledButton)`
     }
     padding: 0 0;
   }
+`;
+
+export const StyledButtonEndIcon = styled.span`
+  display: flex;
+  margin-left: 6px;
+`;
+
+export const StyledButtonStartIcon = styled.span`
+  display: flex;
+  margin-right: 6px;
 `;

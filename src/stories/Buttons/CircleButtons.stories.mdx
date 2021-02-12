@@ -1,0 +1,207 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { CircleButtonExample }
+  from '@paper/enums/stories/Buttons/ButtonsExample';
+import { Icon } from '@paper/components';
+import { BUTTON_SIZE, BUTTON_VARIANT, ICON, ICONS_COLOR, ICONS_SIZE } from '@paper/enums';
+
+<Meta title="Buttons/Circle"
+      argTypes={{
+        theme: {
+          control: {
+            type: 'select',
+            options: ['light', 'kazam'],
+          },
+        },
+        size: {
+          control: {
+            type: 'select',
+            options: BUTTON_SIZE,
+          },
+        },
+        variant: {
+          control: {
+            type: 'select',
+            options: BUTTON_VARIANT,
+          },
+        },
+      }}
+/>
+
+export const CircleButton = args => <CircleButtonExample {...args} />;
+
+# Buttons
+Basic buttons usage of the `CircleButton`.
+
+<Canvas>
+  <Story
+    name="Primary Circle button"
+    args={{
+      theme: 'light',
+      variant: BUTTON_VARIANT.PRIMARY,
+      size: BUTTON_SIZE.BIG
+    }}
+  >
+    {(args) => (<CircleButton {...args} >
+      <Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
+    </CircleButton>)}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default Circle button"/>
+
+## Stories
+
+#### Primary
+
+The Primary variant is only variant what is  going to be affected by the change of the theme
+
+<Canvas>
+  <Story
+    name="Primary Circle button big"
+    args={{
+      theme: 'light',
+      variant: BUTTON_VARIANT.PRIMARY,
+      size: BUTTON_SIZE.BIG
+    }}
+  >
+    {(args) => (<CircleButton {...args} >
+      <Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
+    </CircleButton>)}
+  </Story>
+  <Story
+      name="Primary Circle button big"
+      args={{
+        theme: 'light',
+        variant: BUTTON_VARIANT.PRIMARY,
+        size: BUTTON_SIZE.BIG
+      }}
+    >
+    {(args) =>
+      <CircleButton
+        {...args}
+      >
+        <Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
+      </CircleButton>
+    }
+  </Story>
+  <Story
+    name="Primary Circle button small"
+    args={{
+      theme: 'light',
+      variant: BUTTON_VARIANT.PRIMARY,
+      size: BUTTON_SIZE.SMALL
+    }}
+  >
+    {(args) =>
+      <CircleButton
+        {...args}
+      >
+        <Icon icon={ICON.PLUS} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
+      </CircleButton>
+    }
+  </Story>
+</Canvas>
+
+#### Secondary
+
+The secondary variant is **not** going to be affected by the change of the theme
+
+<Canvas>
+  <Story
+    name="Secondary Circle button big"
+    args={{
+      theme: 'light',
+      variant: BUTTON_VARIANT.SECONDARY,
+      size: BUTTON_SIZE.BIG
+    }}
+  >
+    {(args) =>
+      <CircleButton
+        {...args}
+      >
+        <Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
+      </CircleButton>
+    }
+  </Story>
+  <Story
+  name="Secondary button default"
+    args={{
+      theme: 'light',
+      variant: BUTTON_VARIANT.SECONDARY,
+      size: BUTTON_SIZE.MEDIUM
+    }}
+  >
+    {(args) =>
+      <CircleButton
+        {...args}
+      >
+        <Icon icon={ICON.PLUS} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
+      </CircleButton>
+    }
+  </Story>
+  <Story
+    name="Secondary Circle button small"
+    args={{
+      theme: 'light',
+      variant: BUTTON_VARIANT.SECONDARY,
+      size: BUTTON_SIZE.SMALL
+    }}
+  >
+    {(args) => (<CircleButton {...args} >
+      <Icon icon={ICON.BELL} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
+    </CircleButton>)}
+  </Story>
+</Canvas>
+
+
+#### Tertiary
+
+The tertiary variant is **not** going to be affected by the change of the theme
+
+<Canvas>
+  <Story
+    name="Tertiary Circle button big"
+    args={{
+      theme: 'light',
+      variant: BUTTON_VARIANT.TERTIARY,
+      size: BUTTON_SIZE.BIG
+    }}
+  >
+    {(args) => (<CircleButton {...args} >
+      <Icon icon={ICON.ARROW_UP} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
+    </CircleButton>)}
+  </Story>
+  <Story
+    name="Tertiary Circle button default"
+    args={{
+      theme: 'light',
+      variant: BUTTON_VARIANT.TERTIARY,
+      size: BUTTON_SIZE.MEDIUM
+    }}
+  >
+    {(args) =>
+      <CircleButton
+        {...args}
+      >
+        <Icon icon={ICON.BOARD} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
+      </CircleButton>
+    }
+  </Story>
+  <Story
+    name="Tertiary Circle button small"
+    args={{
+      theme: 'light',
+      variant: BUTTON_VARIANT.TERTIARY,
+      size: BUTTON_SIZE.SMALL
+    }}
+  >
+    {(args) =>
+      <CircleButton
+        {...args}
+      >
+        <Icon icon={ICON.PLUS} color={ICONS_COLOR.DARK} size={ICONS_SIZE.SMALL} />
+      </CircleButton>
+    }
+  </Story>
+</Canvas>
+
