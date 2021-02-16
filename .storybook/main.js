@@ -1,7 +1,7 @@
 const path = require('path')
 module.exports = {
   stories: ['../src/stories/**/*.stories.*'],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-actions', '@storybook/addon-links', '@storybook/addon-viewport', '@storybook/addon-knobs', 'storybook-addon-jsx'],
+  addons: ['@storybook/addon-essentials', '@storybook/addon-links', '@storybook/addon-knobs', 'storybook-addon-jsx'],
   webpackFinal:  async config => {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
@@ -9,9 +9,11 @@ module.exports = {
         {
           loader: require.resolve('babel-loader'),
         },
-        // Optional
         {
           loader: require.resolve('react-docgen-typescript-loader'),
+          options: {
+            tsconfigPath: path.resolve(__dirname, '../tsconfig.json'),
+          },
         },
       ],
     });
@@ -25,6 +27,7 @@ module.exports = {
         {
           loader: 'css-loader',
         },
+
         {
           loader: 'sass-loader',
           options: {
