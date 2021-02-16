@@ -115,9 +115,6 @@ const colorVariationExtension = (color: string): FlattenSimpleInterpolation => {
     }
     border-color: ${buttonVariationColors[color]['border']};
     &:not([disabled]) {
-      &:visited {
-        border-color: ${buttonVariationColors[color]['border']} !important;
-      }
       &:hover {
         cursor: pointer;
       }
