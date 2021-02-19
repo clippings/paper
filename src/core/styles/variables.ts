@@ -15,7 +15,7 @@ export const green30 = '#4aab4a';
 export const blue50 = '#66c4e0';
 export const beige10 = '#f3ede9';
 
-export const kazamRed = '#D13F21';
+export const kazamRed = '#e22d00';
 export const kazamDark = '#111111';
 
 export const twitterColor = '#03aaf5';
