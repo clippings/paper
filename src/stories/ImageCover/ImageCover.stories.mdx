@@ -1,0 +1,43 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { IMAGE_COVER_TYPE, ImageCover } from '@paper/components';
+
+<Meta title="Image Cover"
+      component={ImageCover}
+      argTypes={{
+        type: {
+          control: {
+            type: 'select',
+            options: IMAGE_COVER_TYPE,
+          },
+        },
+      }}
+/>
+
+
+# Image Cover
+Basic ImageCover component usage .
+
+<Canvas>
+  <Story
+    name="Image Cover"
+    args={{
+      image: "https://res.cloudinary.com/clippings/image/upload/t_big/dpr_auto,f_auto,w_auto/v1565239179/products/edge-table-jennifer-newman-jennifer-newman-clippings-11280725.png",
+      type: IMAGE_COVER_TYPE.SINGLE
+    }}
+  >
+    {(args) =>
+      <ImageCover {...args}>
+        {
+          args.type === IMAGE_COVER_TYPE.SINGLE ?
+            <>
+              <span>Title</span>
+              <span>Sub Title</span>
+            </>
+          : +5
+        }
+      </ImageCover>
+    }
+  </Story>
+</Canvas>
+
+<ArgsTable story="Image Cover"/>
