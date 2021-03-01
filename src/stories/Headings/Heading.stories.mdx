@@ -1,0 +1,31 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { Heading, HEADING_TYPE } from '@paper/components';
+
+<Meta title="Heading"
+      component={Heading}
+      argTypes={{
+        type: {
+          control: {
+            type: 'select',
+            options: HEADING_TYPE,
+          },
+        },
+      }}
+/>
+
+
+# Heading
+Basic Heading component usage .
+
+<Canvas>
+  <Story
+    name="Heading"
+    args={{
+      type: HEADING_TYPE.LARGE
+    }}
+  >
+    {(args) => <Heading {...args}>Heading</Heading>}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Heading"/>
