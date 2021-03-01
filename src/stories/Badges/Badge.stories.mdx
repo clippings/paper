@@ -1,0 +1,57 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { Badge, BADGE_SIZE, BADGE_TYPE, Text, TEXT_TYPE } from '@paper/components';
+
+<Meta title="Badge"
+      component={Badge}
+      argTypes={{
+        type: {
+          control: {
+            type: 'select',
+            options: BADGE_TYPE,
+          },
+        },
+        size: {
+          control: {
+            type: 'select',
+            options: BADGE_SIZE,
+          },
+        }
+      }}
+/>
+
+
+# Badge
+Basic Badge component usage .
+
+<Canvas>
+  <Story
+    name="Badge"
+    args={{
+      type: BADGE_TYPE.SUCCESS,
+      size: BADGE_SIZE.MEDIUM
+    }}
+  >
+    {(args) => <Badge {...args}/>}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Badge"/>
+
+## Stories
+
+<Canvas>
+  <Story
+    name="Badge with text"
+    args={{
+      type: BADGE_TYPE.SUCCESS,
+      size: BADGE_SIZE.MEDIUM
+    }}
+  >
+    {(args) =>
+      <Badge {...args}>
+      <Text type={TEXT_TYPE.SMALL}>
+        888
+      </Text>
+    </Badge>}
+  </Story>
+</Canvas>
