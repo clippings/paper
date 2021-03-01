@@ -1,0 +1,35 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { SearchInput, SUBMIT_TYPE } from '@paper/components';
+
+<Meta title="Input/Search Input"
+      component={SearchInput}
+      argTypes={{
+        submitOn: {
+          control: {
+            type: "select",
+            options: SUBMIT_TYPE
+          }
+        }
+      }}
+/>
+
+
+# Search Input
+Basic Search Input component usage.
+
+<Canvas>
+  <Story
+    name="Search Input"
+    args={{
+      debounceRate: 300,
+      placeholder: "Search input placeholder",
+      onChange: (value) => {
+        alert(value);
+      }
+    }}
+  >
+    {(args) => <SearchInput {...args}/>}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Search Input"/>
