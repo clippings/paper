@@ -1,0 +1,61 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { ThemeProvider } from 'styled-components';
+import { AVATAR_SHAPE, AVATAR_SIZE, ICON, IconAvatar as IconAvatarComponent } from '@paper/components';
+
+export const IconAvatar = args => (
+  <ThemeProvider theme={{ mode: 'light' }}>
+    <IconAvatarComponent {...args} />
+  </ThemeProvider>
+);
+
+<Meta title="Avatar/Icon"
+      argTypes={{
+        theme: {
+          control: {
+            type: 'select',
+            options: ['light', 'kazam'],
+          },
+        },
+        shape: {
+          control: {
+            type: 'select',
+            options: AVATAR_SHAPE,
+          },
+        },
+        size:{
+          control: {
+            type: 'select',
+            options:  AVATAR_SIZE,
+          },
+        },
+        icon:{
+          control: {
+            type: 'select',
+            options:  ICON,
+          },
+        }
+      }}
+/>
+
+
+# Avatar
+Basic iconAvatar component usage.
+
+
+<Canvas>
+  <Story
+    name="Avatar"
+    args={{
+      theme: 'light',
+      icon: ICON.LIST,
+      shape: AVATAR_SHAPE.CIRCLE,
+      size: AVATAR_SIZE.MEDIUM,
+      src: 'https://gravatar.com/avatar/121ff0578688ee755613ce94b41bd298?s=400&d=mp&r=pg',
+      alt: 'Avatar',
+    }}
+  >
+    {(args) => <IconAvatar {...args}/>}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Avatar"/>
