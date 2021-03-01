@@ -1,0 +1,21 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Badge, BADGE_TYPE, StatusLabel } from '@paper/components';
+
+<Meta title="Status Label" />
+
+
+# Status Label
+Basic Status Label component usage .
+
+<Canvas>
+  <Story
+    name="Status Label"
+  >
+    {(args) =>
+      <StatusLabel {...args}>
+        <Badge type={BADGE_TYPE.SUCCESS} />
+        Success
+      </StatusLabel>}
+  </Story>
+</Canvas>
+
