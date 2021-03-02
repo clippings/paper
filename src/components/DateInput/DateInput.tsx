@@ -9,7 +9,7 @@ import { DateInputPropsTypes } from './types/DateInputPropsTypes';
 
 export const DateInput: React.FunctionComponent<DateInputPropsTypes> = ({
   className = '',
-  dateFormat = 'dd/MM/yyyy',
+  dateFormat = 'P',
   maxDate,
   minDate,
   onChange,
