@@ -1,10 +1,6 @@
-import React, { useState } from 'react';
-import figmaDecorator from 'storybook-addon-figma';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, text } from '@storybook/addon-knobs';
-import { jsxDecorator } from 'storybook-addon-jsx';
-import { AutocompleteInput } from '@paper/components';
-import docs from './description.md';
+import React, { FC, useState } from 'react';
+import { AutocompleteInput as AutocompleteInputComponent } from '../../components/Autocomplete/AutocompleteInput';
+import { AutocompleteInputPropsType } from '../../components/Autocomplete/types/AutocompleteInputPropsType';
 
 const hits = [
   {
@@ -54,52 +50,12 @@ const hits = [
   },
 ];
 
-const AutocompleteInputStory = () => {
-  const placeholder = text('Placeholder', 'Search ...');
+export const AutocompleteInputExample: FC<AutocompleteInputPropsType> = props => {
   const [data, setData] = useState(hits);
 
   const onSearch = value => {
     setData(hits.filter(v => v.label.includes(value)));
   };
 
-  return <AutocompleteInput placeholder={placeholder} hits={data} onSearch={onSearch} />;
+  return <AutocompleteInputComponent {...props} hits={data} onSearch={onSearch} />;
 };
-
-const CustomAutocompleteInputStory = () => {
-  const placeholder = text('Placeholder', 'Search ...');
-  const [data, setData] = useState(hits);
-
-  const onSearch = value => {
-    setData(hits.filter(v => v.label.includes(value)));
-  };
-
-  return (
-    <AutocompleteInput
-      placeholder={placeholder}
-      hits={data}
-      onSearch={onSearch}
-      onChange={value => console.log(value)}
-    >
-      {hit => (
-        <>
-          <img src={hit.image} title={hit.label} alt={hit.label} style={{ height: 30 }} />{' '}
-          <span>{hit.label}</span>
-        </>
-      )}
-    </AutocompleteInput>
-  );
-};
-
-const figmaFile = figmaDecorator({
-  url:
-    'https://www.figma.com/file/2wb8Kz7wTsJmSiPMyRy8Tc/Build-%E2%80%94%C2%A0Materials-library?node-id=505%3A11649',
-});
-
-storiesOf('Inputs/Autocomplete', module)
-  .addDecorator(jsxDecorator)
-  .addDecorator(withKnobs)
-  .addDecorator(figmaFile)
-  .add('Autocomplete basic usage', AutocompleteInputStory, { notes: { markdown: docs } })
-  .add('Custom autocomplete basic usage', CustomAutocompleteInputStory, {
-    notes: { markdown: docs },
-  });
