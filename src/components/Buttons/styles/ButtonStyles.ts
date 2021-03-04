@@ -51,34 +51,34 @@ const buttonVariationColors = {
 };
 
 const buttonSizeStyles = {
-  medium: css`
-    height: 40px;
-    max-height: 40px;
-    padding: 0 20px 1px 20px;
-    line-height: ${btnFontSize};
-  `,
   small: css`
     height: 32px;
     max-height: 32px;
-    padding: 0 10px 0.5px 10px;
+    padding: 0 8px;
+    line-height: ${btnFontSize};
+  `,
+  medium: css`
+    height: 40px;
+    max-height: 40px;
+    padding: 0 16px;
     line-height: ${btnFontSize};
   `,
   big: css`
     height: 48px;
     max-height: 48px;
-    padding: 0 30px 1px 30px;
+    padding: 0 24px;
     line-height: ${btnFontSize};
   `,
 };
 
 const circleButtonSizeStyles = {
-  medium: css`
-    height: 40px;
-    width: 40px;
-  `,
   small: css`
     height: 32px;
     width: 32px;
+  `,
+  medium: css`
+    height: 40px;
+    width: 40px;
   `,
   big: css`
     height: 48px;
