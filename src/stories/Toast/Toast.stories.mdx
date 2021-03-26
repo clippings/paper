@@ -1,0 +1,29 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { Toast } from '@paper/components';
+
+<Meta title="Toast"
+      component={Toast}
+/>
+
+export const Template = (args) => (<div style={{ transform: 'scale(1)', height: '200px', margin: '-10px' }}>
+  <Toast {...args}>
+    Toast message
+  </Toast>
+</div>);
+
+# Toast
+Basic Toast component usage.
+
+<Canvas>
+  <Story
+    name="Toast"
+    component={Toast}
+    args={{
+      show: true
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Toast"/>
