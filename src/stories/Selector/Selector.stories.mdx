@@ -1,0 +1,63 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { AVATAR_SHAPE, ICON, SelectorItem } from '@paper/components';
+import { BuildVariant1, BuildVariant2 } from './Selector';
+
+<Meta title="Selector item"
+      component={SelectorItem}
+      argTypes={{
+        avatarShape: {
+          control: {
+            type: 'select',
+            options: AVATAR_SHAPE,
+          },
+        },
+        icon: {
+          control: {
+            type: 'select',
+            options: ICON,
+          },
+        }
+      }}
+/>
+
+
+# Selector
+Basic SelectorItem component usage.
+
+<Canvas>
+  <Story
+    name="Selector item"
+    args={{
+      avatar:
+        'https://res.cloudinary.com/clippings/image/upload/t_square_tiny/dpr_auto,f_auto,w_auto/v9/products/iron-maiden-sofa-a6126-cosme-beige-h-bahia-200-x-90-moroso-diesel-creative-team-clippings-10497301.jpg',
+      icon: ICON.MOVE_TO,
+      avatarShape: AVATAR_SHAPE.SQUARE,
+      description: { primary: 'Project', secondary: null },
+      addition: null,
+    }}
+  >
+    {(args) =>   <SelectorItem {...args}/>}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Selector item"/>
+
+### Selector List Variant 1
+
+<Canvas>
+  <Story
+    name="Selector list 1"
+  >
+    {BuildVariant1}
+  </Story>
+</Canvas>
+
+### Selector List Variant 2
+
+<Canvas>
+  <Story
+    name="Selector list 2"
+  >
+    {BuildVariant2}
+  </Story>
+</Canvas>
