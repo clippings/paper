@@ -1,0 +1,37 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { Select } from '@paper/components';
+
+<Meta title="Input/Select"
+    component={Select}
+/>
+
+
+# Select
+Basic Select component usage .
+
+<Canvas>
+  <Story
+    name="Select"
+    height="200px"
+    args={{
+      className: 'p-f-select',
+      label: 'Select',
+      disabled: false,
+      error: '',
+      options: [
+        {
+          label: 'Test',
+          value: 'value',
+        },
+        {
+          label: 'Test2',
+          value: 'value2',
+        },
+      ]
+    }}
+  >
+    {(args) => <Select {...args}/>}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Select"/>

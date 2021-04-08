@@ -2,12 +2,10 @@ import React from 'react';
 
 export type SelectPropsType = {
   options: {
-    value?: any | number | string;
+    value?: number | string;
     label?: string | React.ReactNode;
   }[];
-  selected?: any | number | string;
-  placeholder?: string;
-  onChange?: (value: string) => void;
-  name?: string;
-  className?: string;
+  name: string;
+  label?: string;
+  error?: string;
 };

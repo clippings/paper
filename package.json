@@ -73,6 +73,7 @@
     "webpack-cli": "^4.0.0"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
     "classnames": "^2.2.6",
     "lodash": "^4.17.19",
     "react": "^16.13.1",
