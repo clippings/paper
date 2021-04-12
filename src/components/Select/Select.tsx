@@ -1,32 +1,43 @@
 import React from 'react';
-import '@paper/assets/scss/select.scss';
+import { MenuItem, Select as MaterialSelect, Input, Container } from '@material-ui/core';
+import { FormHelperText } from '../FormHelperText/FormHelperText';
+import { KeyboardArrowDown } from '@material-ui/icons';
+import { FormLabel } from '../FormLabel/FormLabel';
 import { SelectPropsType } from './types/SelectPropsType';
-import {
-  MenuItem,
-  Select as MaterialSelect,
-  InputLabel,
-  FormControl,
-  FormHelperText,
-} from '@material-ui/core';
+import { selectStyles, inputStyles, containerStyles, menuItemStyles } from './styles/SelectStyles';
 
 export const Select: React.FunctionComponent<SelectPropsType> = ({
   options,
   label,
   name,
   error,
+  required,
   ...rest
 }) => {
+  const selectClasses = selectStyles();
+  const inputClasses = inputStyles();
+  const containerClasses = containerStyles();
+  const menuItemClasses = menuItemStyles();
+
   return (
-    <FormControl error={!!error}>
-      {label && <InputLabel shrink>{label}</InputLabel>}
-      <MaterialSelect name={name} {...rest}>
+    <Container classes={containerClasses}>
+      {label && <FormLabel required={required}>{label}</FormLabel>}
+      <MaterialSelect
+        classes={selectClasses}
+        IconComponent={KeyboardArrowDown}
+        input={<Input classes={inputClasses} />}
+        defaultValue=""
+        name={name}
+        error={!!error}
+        {...rest}
+      >
         {options.map(({ label, value }) => (
-          <MenuItem value={value} key={value}>
+          <MenuItem disableRipple classes={menuItemClasses} value={value} key={value}>
             {label}
           </MenuItem>
         ))}
       </MaterialSelect>
-      {error && <FormHelperText>{error}</FormHelperText>}
-    </FormControl>
+      {error && <FormHelperText error={!!error}>{error}</FormHelperText>}
+    </Container>
   );
 };
