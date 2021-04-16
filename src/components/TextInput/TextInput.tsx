@@ -34,7 +34,7 @@ export const TextInput: React.FunctionComponent<TextInputPropsType> = forwardRef
           onChange={handleChange(onChange)}
           {...rest}
         />
-        <FormError>{error}</FormError>
+        {error && <FormError>{error}</FormError>}
       </FormGroup>
     );
   }
