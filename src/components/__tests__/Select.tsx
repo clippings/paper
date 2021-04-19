@@ -1,6 +1,8 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { Select } from '../Select/Select';
+import userEvent from '@testing-library/user-event';
+
 const onChange = jest.fn();
 
 const options = [
@@ -10,7 +12,9 @@ const options = [
   },
 ];
 
-const select = <Select options={options} onChange={onChange} />;
+const select = (
+  <Select options={options} label="Test label" data-testid="test-select" onChange={onChange} />
+);
 
 describe('Select component', () => {
   test('matches snapshot', () => {
@@ -19,12 +23,11 @@ describe('Select component', () => {
   });
 
   test('onChange is triggered', () => {
-    const { getByText } = render(select);
-    const option = getByText('Test');
+    const { getByText, getByRole } = render(select);
 
-    fireEvent.click(option);
+    userEvent.click(getByRole('button'));
+    userEvent.click(getByText('Test'));
 
-    expect(onChange).toBeCalled();
-    expect(onChange).toBeCalledWith(1);
+    expect(onChange).toBeCalledTimes(1);
   });
 });
