@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select component matches snapshot 1`] = `
+<div>
+  <div
+    class="MuiContainer-root makeStyles-root-6 MuiContainer-maxWidthLg"
+  >
+    <label
+      class="MuiFormLabel-root makeStyles-root-8"
+    >
+      Test label
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root makeStyles-root-4 MuiInput-underline makeStyles-underline-5"
+      data-testid="test-select"
+    >
+      <div
+        aria-haspopup="listbox"
+        class="MuiSelect-root makeStyles-root-1 MuiSelect-select makeStyles-select-2 MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+        role="button"
+        tabindex="0"
+      >
+        <span>
+          ​
+        </span>
+      </div>
+      <input
+        aria-hidden="true"
+        class="MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSelect-icon makeStyles-icon-3"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
