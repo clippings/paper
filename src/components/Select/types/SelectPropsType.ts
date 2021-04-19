@@ -6,7 +6,7 @@ export type SelectPropsType = {
     label?: string | React.ReactNode;
   }[];
   required?: boolean;
-  name: string;
+  name?: string;
   label?: string;
   error?: string;
 };
