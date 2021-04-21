@@ -3,45 +3,44 @@
 exports[`Select component matches snapshot 1`] = `
 <div>
   <div
-    class="p-f-select"
+    class="MuiContainer-root makeStyles-root-6 MuiContainer-maxWidthLg"
   >
-    <div
-      class="p-f-select__label-wrap"
-      role="presentation"
+    <label
+      class="MuiFormLabel-root makeStyles-root-8"
     >
-      <span
-        class="p-f-select__label-default"
+      Test label
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root makeStyles-root-4 MuiInput-underline makeStyles-underline-5"
+      data-testid="test-select"
+    >
+      <div
+        aria-haspopup="listbox"
+        class="MuiSelect-root makeStyles-root-1 MuiSelect-select makeStyles-select-2 MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+        role="button"
+        tabindex="0"
+      >
+        <span>
+          ​
+        </span>
+      </div>
+      <input
+        aria-hidden="true"
+        class="MuiSelect-nativeInput"
+        tabindex="-1"
+        value=""
       />
       <svg
-        class="p-f-select__icon"
-        fill="#141414"
-        height="16"
-        preserveAspectRatio="xMidYMid meet"
-        viewBox="0 0 14 14"
-        width="16"
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSelect-icon makeStyles-icon-3"
+        focusable="false"
+        viewBox="0 0 24 24"
       >
         <path
-          clip-rule="evenodd"
-          d="M7 11.3L1.46968 5.76967L2.53033 4.70901L7 9.17868L11.4697 4.70901L12.5303 5.76967L7 11.3Z"
-          fill-rule="evenodd"
+          d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
         />
       </svg>
     </div>
-    <input
-      name=""
-      type="hidden"
-      value=""
-    />
-    <ul
-      class="p-f-select__dropdown"
-    >
-      <li
-        class="p-f-select__dropdown__item"
-        role="presentation"
-      >
-        Test
-      </li>
-    </ul>
   </div>
 </div>
 `;
