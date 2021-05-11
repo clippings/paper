@@ -13,7 +13,7 @@ export const selectStyles = makeStyles(() => ({
   },
   icon: {
     color: graphite120,
-    paddingRight: '6px',
+    right: '6px',
     fontSize: '24px',
     width: 'auto',
   },
