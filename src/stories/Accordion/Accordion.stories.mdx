@@ -1,0 +1,43 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { Accordion } from '@paper/components';
+import { items } from './Accordion';
+
+<Meta title="Accordion" />
+
+export const Template = args => (
+  <Accordion defaultOpened={null} disabled={false} {...args} >
+    {items.map(item => (
+      <Accordion.Item key={item.id} onOpen={() => {}} eventKey={item} id={item.id}>
+        <Accordion.Item.Title>{item.title + item.id}</Accordion.Item.Title>
+        <Accordion.Item.Body>{item.body + item.id}</Accordion.Item.Body>
+      </Accordion.Item>
+    ))}
+  </Accordion>
+);
+
+
+# Accordion
+Basic Accordion component usage.
+
+#### **Accordion**
+<ArgsTable of={Accordion}/>
+
+#### **Accordion.Item**
+<ArgsTable of={Accordion.Item}/>
+
+#### **Accordion.Item.Title**
+<ArgsTable of={Accordion.Item.Title}/>
+
+#### **Accordion.Item.Body**
+<ArgsTable of={Accordion.Item.Body}/>
+
+<Canvas>
+  <Story
+    name="Accordion"
+    args={{}}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+

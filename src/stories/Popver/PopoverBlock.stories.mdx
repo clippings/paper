@@ -1,0 +1,42 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import {
+  Heading,
+  HEADING_TYPE,
+  ICON,
+  Icon,
+  ICONS_COLOR,
+  ICONS_SIZE,
+  PopoverBlock, Text,
+  TEXT_TYPE,
+} from '@paper/components';
+
+<Meta title="Popover/Popover Block"
+      component={PopoverBlock}
+/>
+
+
+# Popover block
+Basic Popover block component usage.
+
+<Canvas>
+  <Story
+    name="Popover Block"
+    args={{
+    }}
+  >
+    {(args) => <PopoverBlock {...args}>
+      <Icon
+        size={ICONS_SIZE.LARGER}
+        icon={ICON.SEARCH}
+        color={ICONS_COLOR.DARK}
+        className="p-icon__animated"
+      />
+      <Heading type={HEADING_TYPE.SMALL} className="popover-heading">
+        From Clippings
+      </Heading>
+      <Text type={TEXT_TYPE.SMALL} className="graphite-60 text-align-center">
+        Add a product from the Clippings catalogue
+      </Text>
+    </PopoverBlock>}
+  </Story>
+</Canvas>

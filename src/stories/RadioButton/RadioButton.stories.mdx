@@ -1,21 +1,42 @@
-import { Meta, Story, ArgsTable } from '@storybook/addon-docs/blocks';
-import { RadioButton } from '../../components/RadioButton/RadioButton';
-import RadioButtonExample from './RadioButtonExample'
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { RadioButton } from '@paper/components';
 
-<Meta title="Radio Button" component={RadioButton} />
 
-export const RadioButtonTemplate = args => <RadioButtonExample {...args} />;
+<Meta title="Radio Button" />
 
 # Radio button
 
-This docs shows the simple usage of the Radio Button component.
+Simple usage of the Radio Button component.
 
-<Story
-  name="Drawer basic usage"
->
-  {RadioButtonTemplate.bind({})}
-</Story>
+
+<Canvas>
+  <Story
+    name="Default Radio Button"
+    args={{
+      value:"yes",
+      name:"radio"
+    }}
+  >
+    {(args) => <RadioButton {...args}>Radio Button</RadioButton>}
+  </Story>
+</Canvas>
 
 ## Props
+<ArgsTable of={RadioButton}/>
 
-<ArgsTable of={RadioButton} />
+## Stories
+
+<Canvas>
+  <Story
+    name="Example Radio Button group"
+  >
+    <div>
+      <RadioButton value="yes" name="radio">
+        Yes
+      </RadioButton>
+      <RadioButton value="no" name="radio">
+        No
+      </RadioButton>
+    </div>
+  </Story>
+</Canvas>

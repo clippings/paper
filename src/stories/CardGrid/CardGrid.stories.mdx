@@ -1,0 +1,25 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { Card } from '@paper/components';
+import { gridCardUtild, CardGrid as Div } from '@paper/enums/stories/CardGrid/gridCardUtild';
+
+
+<Meta title="Card Grid" component={Card} />
+
+# Card Grid
+Basic Card Grid component usage.
+
+<Canvas>
+  <Story
+    name="Card Grid"
+  >
+    {(args) =>
+      <Div>
+        {gridCardUtild.map(item => (
+          <Card {...args} {...item} selected={item.key === 'key-1'} key={item.key} />
+        ))}
+      </Div>
+    }
+  </Story>
+</Canvas>
+
+<ArgsTable story="Card Grid"/>

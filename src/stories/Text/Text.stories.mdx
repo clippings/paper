@@ -1,0 +1,33 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { Text, TEXT_COLOR, TEXT_TYPE } from '@paper/components';
+
+<Meta title="Text"
+      argTypes={{
+        color: {
+          control: {
+            type: 'select',
+            options: TEXT_COLOR,
+          },
+        },
+        type: {
+          control: {
+            type: 'select',
+            options: TEXT_TYPE,
+          },
+        },
+      }}
+/>
+
+
+# Text
+Basic text component usage .
+
+<Canvas>
+  <Story
+    name="Default text"
+  >
+    {(args) => <Text {...args}>A text</Text>}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default text"/>

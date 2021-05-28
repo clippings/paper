@@ -1,0 +1,69 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { Icon, ICONS_SIZE, ICONS_COLOR, ICON, Text, TEXT_TYPE } from '@paper/components';
+
+
+<Meta title="Icon"
+      component={Icon}
+      argTypes={{
+        icon: {
+          control: {
+            type: 'select',
+            options: ICON,
+          },
+        },
+        color: {
+          control: {
+            type: 'select',
+            options: ICONS_COLOR,
+          },
+        },
+        size: {
+          control: {
+            type: 'select',
+            options: ICONS_SIZE,
+          },
+        },
+      }}
+/>
+
+# Icon
+Basic Icon component usage.
+
+<Canvas
+  style={{
+    backgroundColor: 'LightGrey',
+  }}
+>
+  <Story
+    name="Icon"
+    args={{
+      color:ICONS_COLOR.DARK,
+      icon: ICON.ARROW_UP,
+      size: ICONS_SIZE.MEDIUM
+    }}
+  >
+    {(args) => <Icon {...args}/>}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Icon"/>
+
+## Icons List
+
+<Story
+  name="Icons List"
+>
+  <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    {Object.keys(ICON).map(key => (
+      <div style={{ padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center' }} key={key}>
+        <Icon
+          color={ICONS_COLOR.DARK}
+          icon={ICON[key]}
+          size={ICONS_SIZE.SMALL}
+        />
+        <Text type={TEXT_TYPE.SMALL} style={{ paddingTop: '5px' }}>{key}</Text>
+      </div>
+    ))}
+  </div>
+</Story>
+

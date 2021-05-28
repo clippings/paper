@@ -1,0 +1,56 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { AutocompleteInputExample as AutocompleteInput} from './AutocompleteInputExample';
+import { AutocompleteInput as AutocompleteInputComponent } from '@paper/components';
+
+<Meta title="Input/Autocomplete Input"
+      component={AutocompleteInputComponent}
+/>
+
+
+# Autocomplete Input
+Basic Autocomplete Input component usage.
+
+<Canvas>
+  <Story
+    height="300px"
+    name="Autocomplete Input"
+    args={{
+      placeholder: "Search...",
+      onChange: value => console.log(value)
+    }}
+  >
+    {(args) => <AutocompleteInput {...args}/>}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Autocomplete Input"/>
+
+## Stories
+
+#### Autocomplete input with custom list
+
+<Canvas>
+  <Story
+    height="300px"
+    name="Autocomplete Input Custom"
+    args={{
+      placeholder: "Search...",
+      onChange: value => console.log(value)
+    }}
+  >
+    {(args) =>
+      <AutocompleteInput
+        {...args}
+      >
+        {hit => (
+          <>
+            <img src={hit.image} title={hit.label} alt={hit.label} style={{ height: 30 }} />{' '}
+            <span>{hit.label}</span>
+          </>
+        )}
+      </AutocompleteInput>}
+  </Story>
+</Canvas>
+
+
+

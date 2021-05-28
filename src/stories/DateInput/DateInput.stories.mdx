@@ -1,0 +1,67 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { DateInput as DateInputComponent, TextInput } from '@paper/components';
+import { useState } from 'react';
+
+<Meta title="Input/Date Input"
+      component={TextInput}
+/>
+
+export const DateInput = args => {
+  const [selected, setSelected] = useState();
+  return <DateInputComponent selected={selected} onChange={setSelected} {...args} />;
+};
+
+# Date Input
+Basic Date Input component usage.
+
+<Canvas>
+  <Story
+    height="300px"
+    name="Date Input"
+    args={{
+      title: 'Deadline',
+      placeholderText: 'e.g. 18/10/2020',
+      disabled: false,
+    }}
+  >
+    {DateInput.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Date Input"/>
+
+## Stories
+
+
+#### Disabled input
+<Canvas>
+  <Story
+    height="300px"
+    name="Disabled Date Input"
+    args={{
+      title: "Disabled Date Input example",
+      placeholderText: 'e.g. 18/10/2020',
+      disabled: true
+    }}
+  >
+    {DateInput.bind({})}
+  </Story>
+</Canvas>
+
+#### Date Input with error
+
+<Canvas>
+  <Story
+    height="300px"
+    name="Date Input with error"
+    args={{
+      title: "Error example",
+      placeholderText: 'e.g. 18/10/2020',
+      disabled: false,
+      error: "I have error"
+    }}
+  >
+    {DateInput.bind({})}
+  </Story>
+</Canvas>
+

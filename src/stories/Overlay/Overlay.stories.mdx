@@ -1,0 +1,37 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { Overlay, Text } from '@paper/components';
+
+<Meta title="Overlay" component={Overlay} />
+
+
+# Overlay
+Basic Overlay component usage .
+
+<Canvas>
+  <Story
+    name="Overlay"
+    args={{
+      content: <Text>Overlay text</Text>,
+      open: true
+    }}
+  >
+    {(args) => <Overlay {...args}>
+      <Text>Random content to be obstructed</Text>
+      <Text>Random content to be obstructed</Text>
+      <Text>Random content to be obstructed</Text>
+      <Text>Random content to be obstructed</Text>
+      <Text>Random content to be obstructed</Text>
+      <Text>Random content to be obstructed</Text>
+      <Text>Random content to be obstructed</Text>
+      <br />
+      <Text>Random content to be obstructed</Text>
+      <Text>Random content to be obstructed</Text>
+      <Text>Random content to be obstructed</Text>
+      <Text>Random content to be obstructed</Text>
+      <Text>Random content to be obstructed</Text>
+      <Text>Random content to be obstructed</Text>
+    </Overlay>}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Overlay"/>

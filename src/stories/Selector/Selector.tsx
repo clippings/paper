@@ -1,6 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { jsxDecorator } from 'storybook-addon-jsx';
 import styled, { ThemeProvider } from 'styled-components';
 import { SelectorItem, Selector } from '@paper/components';
 import { ICON, AVATAR_SHAPE } from '@paper/enums';
@@ -159,30 +157,26 @@ const SimpleSelectorContainer = styled.div`
   }
 `;
 
-const buildVariant1 = () => (
+export const BuildVariant1 = args => (
   <ThemeProvider theme={{ mode: 'light' }}>
     <VariationSelectorContainer>
       <Selector>
         {items.map(item => (
-          <SelectorItem {...item} key={item.key} />
+          <SelectorItem {...item} key={item.key} {...args} />
         ))}
       </Selector>
     </VariationSelectorContainer>
   </ThemeProvider>
 );
 
-const buildVariant2 = () => (
+export const BuildVariant2 = args => (
   <ThemeProvider theme={{ mode: 'light' }}>
     <SimpleSelectorContainer>
       <Selector>
         {items2.map(item => (
-          <SelectorItem {...item} key={item.key} />
+          <SelectorItem {...item} key={item.key} {...args} />
         ))}
       </Selector>
     </SimpleSelectorContainer>
   </ThemeProvider>
 );
-
-storiesOf('Selector', module).addDecorator(jsxDecorator).add('Selector Variant 1', buildVariant1);
-
-storiesOf('Selector', module).addDecorator(jsxDecorator).add('Selector Variant 2', buildVariant2);

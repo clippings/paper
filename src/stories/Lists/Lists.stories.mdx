@@ -1,0 +1,84 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import {
+  Badge,
+  BADGE_TYPE,
+  Heading,
+  HEADING_TYPE,
+  List, LIST_ITEM_SIZE, LIST_SPACING,
+  ListItem, ListNumber, ListNumberItem,
+  StatusLabel,
+} from '@paper/components';
+
+<Meta title="Lists" />
+
+# List
+<ArgsTable components={{List, ListItem, ListNumber, ListNumberItem}}/>
+
+## Pretty List component example.
+<Canvas>
+  <Story
+    name="Pretty List"
+  >
+    {(args) =>  <List {...args}>
+      <ListItem>
+        <Heading type={HEADING_TYPE.DEFAULT}>An item</Heading>
+        <StatusLabel>
+          <Badge type={BADGE_TYPE.UNSPECIFIED} />A status
+        </StatusLabel>
+      </ListItem>
+      <ListItem>
+        <Heading type={HEADING_TYPE.DEFAULT}>An item</Heading>
+        <StatusLabel>
+          <Badge type={BADGE_TYPE.SUCCESS} />A successful status
+        </StatusLabel>
+      </ListItem>
+    </List>}
+  </Story>
+</Canvas>
+
+## Clickable List component example.
+
+<Canvas>
+  <Story
+    name="Clickable List"
+  >
+    {() =>   <List>
+      <ListItem onClick={() => {}}>
+        <Heading>An item</Heading>
+        <StatusLabel>
+          <Badge type={BADGE_TYPE.UNSPECIFIED} />A status
+        </StatusLabel>
+      </ListItem>
+      <ListItem onClick={() => {}}>
+        <Heading>An item</Heading>
+        <StatusLabel>
+          <Badge type={BADGE_TYPE.SUCCESS} />A successful status
+        </StatusLabel>
+      </ListItem>
+    </List>}
+  </Story>
+</Canvas>
+
+
+## Small List component example.
+
+<Canvas>
+  <Story
+    name="Small List"
+  >
+    {() =>   <List spacing={LIST_SPACING.SMALL}>
+      <ListItem size={LIST_ITEM_SIZE.SMALL}>
+        <Heading>An item</Heading>
+        <StatusLabel>
+          <Badge type={BADGE_TYPE.UNSPECIFIED} />A status
+        </StatusLabel>
+      </ListItem>
+      <ListItem size={LIST_ITEM_SIZE.SMALL}>
+        <Heading>An item</Heading>
+        <StatusLabel>
+          <Badge type={BADGE_TYPE.SUCCESS} />A successful status
+        </StatusLabel>
+      </ListItem>
+    </List>}
+  </Story>
+</Canvas>

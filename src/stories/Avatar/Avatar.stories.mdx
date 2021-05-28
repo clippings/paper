@@ -1,0 +1,43 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { Avatar, AVATAR_SHAPE, AVATAR_SIZE } from '@paper/components';
+
+export const AvatarExample = args => (
+  <Avatar {...args} />
+);
+
+<Meta title="Avatar/Image"
+      argTypes={{
+        shape: {
+          control: {
+            type: 'select',
+            options: AVATAR_SHAPE,
+          },
+        },
+        size:{
+          control: {
+            type: 'select',
+            options:  AVATAR_SIZE,
+          },
+        }
+      }}
+/>
+
+
+# Avatar
+Basic avatar component usage.
+
+<Canvas>
+  <Story
+    name="Avatar"
+    args={{
+      shape: AVATAR_SHAPE.CIRCLE,
+      size: AVATAR_SIZE.MEDIUM,
+      src: 'https://gravatar.com/avatar/121ff0578688ee755613ce94b41bd298?s=400&d=mp&r=pg',
+      alt: 'Avatar',
+    }}
+  >
+    {(args) => <Avatar {...args}/>}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Avatar"/>
