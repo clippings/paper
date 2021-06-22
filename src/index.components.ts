@@ -7,6 +7,7 @@ export { ListItem } from './components/ListItem/ListItem';
 export { Heading } from './components/Heading/Heading';
 export { Text, TextDescription } from './components/Text';
 export { TextInput } from './components/TextInput/TextInput';
+export { EmailInput } from './components/EmailInput/EmailInput';
 export { Badge } from './components/Badge/Badge';
 export { ImageCover } from './components/ImageCover/ImageCover';
 export { Icon } from './components/Icon/Icon';

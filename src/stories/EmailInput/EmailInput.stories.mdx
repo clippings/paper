@@ -1,0 +1,58 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { EmailInput } from '@paper/components';
+
+<Meta title="Input/Email Input"
+      component={EmailInput}
+/>
+
+# Email Input
+Basic Email Input component usage.
+
+<Canvas>
+  <Story
+    name="Email Input"
+    args={{
+      title: "Title example",
+      placeholderText: "Email Input example",
+      disabled: false
+    }}
+  >
+    {(args) => <EmailInput {...args}/>}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Email Input"/>
+
+## Stories
+
+
+#### Disabled input
+<Canvas>
+  <Story
+    name="Disabled Email Input"
+    args={{
+      title: "Disabled input example",
+      placeholderText: "Disabled input example",
+      disabled: true
+    }}
+  >
+    {(args) => <EmailInput {...args}/>}
+  </Story>
+</Canvas>
+
+#### Input with error
+
+<Canvas>
+  <Story
+    name="Input with error"
+    args={{
+      title: "Error example",
+      placeholderText: "Error input example",
+      disabled: false,
+      error: "I have error"
+    }}
+  >
+    {(args) => <EmailInput {...args}/>}
+  </Story>
+</Canvas>
+
