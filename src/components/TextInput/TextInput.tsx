@@ -1,8 +1,8 @@
 import React, { forwardRef, RefObject } from 'react';
-import { TextInputPropsType } from './types/TextInputPropsType';
+import { InputFieldBase } from '@core/interfaces/InputFieldBase';
 import { InputField } from '../InputField/InputField';
 
-export const TextInput: React.FunctionComponent<TextInputPropsType> = forwardRef(
+export const TextInput: React.FunctionComponent<InputFieldBase> = forwardRef(
   ({ ...rest }, ref: RefObject<HTMLInputElement>) => {
     return <InputField ref={ref} type="text" {...rest} />;
   }
