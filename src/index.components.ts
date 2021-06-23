@@ -8,6 +8,8 @@ export { Heading } from './components/Heading/Heading';
 export { Text, TextDescription } from './components/Text';
 export { TextInput } from './components/TextInput/TextInput';
 export { EmailInput } from './components/EmailInput/EmailInput';
+export { UrlInput } from './components/UrlInput/UrlInput';
+export { PhoneInput } from './components/PhoneInput/PhoneInput';
 export { Badge } from './components/Badge/Badge';
 export { ImageCover } from './components/ImageCover/ImageCover';
 export { Icon } from './components/Icon/Icon';

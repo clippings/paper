@@ -1,5 +1,5 @@
 import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
-import { TextInput, UrlInput } from '@paper/components';
+import { PhoneInput, TextInput, UrlInput } from '@paper/components';
 
 <Meta title="Input/Simple Input Types"
   component={TextInput}
@@ -58,3 +58,21 @@ Please be advised when you use different types of field they will come with the 
 </Canvas>
 
 <ArgsTable story="Email input"/>
+
+## Phone Input
+
+<Canvas>
+  <Story
+    name="Phone input"
+    args={{
+      title: "Phone example",
+      placeholderText: "+000 000 000",
+      disabled: false
+    }}
+  >
+    {(args) => <PhoneInput {...args}/>}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Phone input"/>
+
