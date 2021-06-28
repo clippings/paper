@@ -1,28 +1,27 @@
 import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
-import { TextInput } from '@paper/components';
+import { EmailInput } from '@paper/components';
 
-<Meta title="Input/Text Input"
-      component={TextInput}
+<Meta title="Input/Email Input"
+      component={EmailInput}
 />
 
-
-# Text Input
-Basic Text Input component usage.
+# Email Input
+Basic Email Input component usage.
 
 <Canvas>
   <Story
-    name="Text Input"
+    name="Email Input"
     args={{
       title: "Title example",
-      placeholderText: "Text input example",
+      placeholderText: "Email Input example",
       disabled: false
     }}
   >
-    {(args) => <TextInput {...args}/>}
+    {(args) => <EmailInput {...args}/>}
   </Story>
 </Canvas>
 
-<ArgsTable story="Text Input"/>
+<ArgsTable story="Email Input"/>
 
 ## Stories
 
@@ -30,14 +29,14 @@ Basic Text Input component usage.
 #### Disabled input
 <Canvas>
   <Story
-    name="Disabled Text Input"
+    name="Disabled Email Input"
     args={{
       title: "Disabled input example",
       placeholderText: "Disabled input example",
       disabled: true
     }}
   >
-    {(args) => <TextInput {...args}/>}
+    {(args) => <EmailInput {...args}/>}
   </Story>
 </Canvas>
 
@@ -53,7 +52,7 @@ Basic Text Input component usage.
       error: "I have error"
     }}
   >
-    {(args) => <TextInput {...args}/>}
+    {(args) => <EmailInput {...args}/>}
   </Story>
 </Canvas>
 
