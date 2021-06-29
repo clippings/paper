@@ -31,7 +31,7 @@ export const InputField: React.ForwardRefExoticComponent<
           id={id}
           type={type}
           ref={ref}
-          className={classnames(className, {
+          className={classnames({
             [classNames.formGroup.hasError]: error !== null,
           })}
           onChange={onChange}
