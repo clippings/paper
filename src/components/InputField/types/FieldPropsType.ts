@@ -8,5 +8,6 @@ export type FieldPropsType = {
   error?: string | number | null;
   onChange?: (value: string) => void;
   className?: string;
+  note?: string | React.ReactNode;
   ref?: RefObject<HTMLInputElement>;
 };

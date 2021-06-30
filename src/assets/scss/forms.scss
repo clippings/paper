@@ -9,6 +9,10 @@
   margin: 0;
 }
 
+.p-f-note {
+  @extend %form-text;
+}
+
 .p-f-error {
   @extend %form-text;
   color: $red-60;

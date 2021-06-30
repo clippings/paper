@@ -97,6 +97,9 @@ const classNames = {
     selected: createFormElementClassNameModifier('select', 'dropdown__item-selected'),
     icon: createFormElementClassNameModifier('select', 'icon'),
   },
+  inputField: {
+    note: createFormElementClassName('note'),
+  },
   textInput: {
     input: createFormElementClassName('input'),
   },
