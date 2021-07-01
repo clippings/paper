@@ -1,0 +1,24 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { TextareaField } from '@paper/components';
+
+<Meta title="Input/Textarea" component={TextareaField}/>
+
+# Textarea
+Basic textarea component usage.
+
+<Canvas>
+  <Story
+    name="Text area"
+    args={{
+      title: "Email example",
+      placeholder: "example@clipping.com",
+      disabled: false,
+      note: "Some Example Note",
+      resizable: false
+    }}
+  >
+    {(args) => <TextareaField {...args}/>}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Text area"/>
