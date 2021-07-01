@@ -10,6 +10,7 @@ export { TextInput } from './components/TextInput/TextInput';
 export { EmailInput } from './components/EmailInput/EmailInput';
 export { UrlInput } from './components/UrlInput/UrlInput';
 export { PhoneInput } from './components/PhoneInput/PhoneInput';
+export { TextareaField } from './components/TextareaField/TextareaField';
 export { Badge } from './components/Badge/Badge';
 export { ImageCover } from './components/ImageCover/ImageCover';
 export { Icon } from './components/Icon/Icon';

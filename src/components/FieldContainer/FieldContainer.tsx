@@ -1,4 +1,4 @@
-import React, { forwardRef, RefObject } from 'react';
+import React from 'react';
 import classNames from '@core/config/ClassNames';
 import { FieldContainerPropTypes } from './types/FieldContainerPropTypes';
 import { FormGroup } from '../FormGroup/FormGroup';
