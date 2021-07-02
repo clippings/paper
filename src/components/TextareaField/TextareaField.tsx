@@ -8,15 +8,7 @@ export const TextareaField: React.ForwardRefExoticComponent<
   React.PropsWithoutRef<TextareaPropsType> & React.RefAttributes<HTMLTextAreaElement>
 > = forwardRef(
   (
-    {
-      resizable = false,
-      id = '',
-      title = null,
-      error = null,
-      className = '',
-      note = '',
-      ...rest
-    },
+    { resizable = false, id = '', title = null, error = null, className = '', note = '', ...rest },
     ref: RefObject<HTMLTextAreaElement>
   ) => {
     return (
@@ -25,6 +17,7 @@ export const TextareaField: React.ForwardRefExoticComponent<
           ref={ref}
           className={classnames(classNames.textareaField.textarea, {
             [classNames.textareaField.resizable]: resizable,
+            [classNames.formGroup.hasError]: error,
           })}
           {...rest}
         />
