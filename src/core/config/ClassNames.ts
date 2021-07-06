@@ -100,6 +100,10 @@ const classNames = {
   inputField: {
     note: createFormElementClassName('note'),
   },
+  textareaField: {
+    textarea: createFormElementClassName('textarea'),
+    resizable: createFormElementClassNameModifier('textarea', 'resizable'),
+  },
   textInput: {
     input: createFormElementClassName('input'),
   },
